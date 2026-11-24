@@ -1,0 +1,1326 @@
+/* ==========================================================================
+   HTL Island Social Engine — RPG NPC Dialogue & Multiplayer Virtual Plaza
+   Five-Star Grand NKUHT Concierge Aesthetic (Dark Emerald & Champagne Gold)
+   ========================================================================== */
+
+/* ── 線上玩家 3D 頭頂名牌與即時對話氣泡 ── */
+.is-peer-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 19;
+  overflow: hidden;
+}
+
+.is-peer-tag {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px 2px 7px;
+  border-radius: 999px;
+  background: rgba(13, 28, 24, 0.88);
+  border: 1px solid rgba(230, 202, 138, 0.72);
+  color: #faf6ed;
+  font: 700 11.5px/1.5 "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.32);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  will-change: transform;
+}
+.is-peer-tag:hover {
+  border-color: #f5d33a;
+  background: rgba(19, 42, 36, 0.96);
+}
+.is-peer-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3fe08c;
+  box-shadow: 0 0 6px #3fe08c;
+  flex: none;
+}
+.is-peer-role {
+  color: #e6ca8a;
+  font-weight: 600;
+  font-size: 10.5px;
+  margin-left: 2px;
+}
+
+.is-peer-say {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  max-width: 220px;
+  width: max-content;
+  padding: 6px 12px;
+  border-radius: 13px;
+  background: linear-gradient(180deg, rgba(255, 251, 242, 0.97), rgba(246, 237, 219, 0.96));
+  border: 1.5px solid #c6a15b;
+  color: #1c1917;
+  font: 600 12px/1.45 "Noto Sans TC", "PingFang TC", sans-serif;
+  box-shadow: 0 8px 22px rgba(10, 20, 17, 0.28);
+  pointer-events: none;
+  will-change: transform;
+  z-index: 20;
+}
+.is-peer-say::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #f6eddb;
+  border-right: 1.5px solid #c6a15b;
+  border-bottom: 1.5px solid #c6a15b;
+}
+
+/* ── RPG 沉浸式 NPC 對話視窗（師長／群賢館長／學長姐／玩家名片） ── */
+.is-npc-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 38;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px 16px calc(20px + env(safe-area-inset-bottom, 0px));
+  background: radial-gradient(ellipse at 50% 85%, rgba(10, 22, 19, 0.42), rgba(7, 15, 13, 0.18));
+  pointer-events: auto;
+}
+.is-npc-backdrop.open {
+  display: flex;
+}
+
+.is-npc-modal {
+  width: min(740px, 100%);
+  max-height: min(76dvh, 620px);
+  display: flex;
+  flex-direction: column;
+  border-radius: 22px;
+  background: linear-gradient(175deg, rgba(13, 28, 24, 0.96) 0%, rgba(20, 39, 34, 0.97) 100%);
+  border: 1.5px solid rgba(230, 202, 138, 0.65);
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 248, 226, 0.16);
+  color: #faf6ed;
+  font: 14px/1.55 "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  animation: isNpcPop 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes isNpcPop {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.is-npc-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: linear-gradient(90deg, rgba(198, 161, 91, 0.16), rgba(198, 161, 91, 0.03));
+  border-bottom: 1px solid rgba(230, 202, 138, 0.28);
+  flex: none;
+}
+
+.is-npc-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  border: 2px solid #e6ca8a;
+  background: radial-gradient(circle at 50% 35%, #24483e, #0d1c18);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+.is-npc-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.is-npc-meta {
+  flex: 1;
+  min-width: 0;
+}
+.is-npc-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #e6ca8a;
+  text-transform: uppercase;
+}
+.is-npc-name {
+  margin: 2px 0 0;
+  font: 900 19px/1.25 "Noto Serif TC", Georgia, serif;
+  color: #fff9ee;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.is-npc-badge {
+  font: 700 11px/1.3 "Noto Sans TC", sans-serif;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(230, 202, 138, 0.18);
+  border: 1px solid rgba(230, 202, 138, 0.45);
+  color: #f7e4b4;
+}
+.is-npc-sub {
+  margin-top: 3px;
+  font-size: 12px;
+  color: rgba(250, 246, 237, 0.76);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.is-npc-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: none;
+}
+.is-btn-top {
+  border: 1px solid rgba(230, 202, 138, 0.45);
+  background: rgba(255, 255, 255, 0.07);
+  color: #faf6ed;
+  border-radius: 999px;
+  padding: 6px 11px;
+  font: 700 12px/1.2 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s;
+}
+.is-btn-top:hover {
+  background: rgba(230, 202, 138, 0.22);
+  border-color: #e6ca8a;
+}
+.is-btn-close {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: #faf6ed;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.is-btn-close:hover {
+  background: rgba(220, 90, 70, 0.35);
+  border-color: rgba(255, 140, 120, 0.65);
+}
+
+/* 對話紀錄串流 */
+.is-npc-log {
+  flex: 1;
+  min-height: 140px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overscroll-behavior: contain;
+}
+
+.is-msg {
+  max-width: 88%;
+  padding: 10px 14px;
+  border-radius: 15px;
+  font-size: 13.5px;
+  line-height: 1.58;
+  word-break: break-word;
+}
+.is-msg.npc {
+  align-self: flex-start;
+  background: rgba(255, 250, 240, 0.95);
+  color: #1f1b18;
+  border: 1px solid rgba(198, 161, 91, 0.6);
+  border-top-left-radius: 4px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+.is-msg.me {
+  align-self: flex-end;
+  background: linear-gradient(145deg, #e6ca8a, #c6a15b);
+  color: #16130f;
+  font-weight: 700;
+  border-top-right-radius: 4px;
+}
+.is-msg-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #0f523f;
+  background: rgba(15, 82, 63, 0.1);
+  border-radius: 6px;
+  padding: 1px 7px;
+  margin-bottom: 5px;
+}
+.is-msg-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.is-msg-go {
+  border: 1px solid #b58d43;
+  background: linear-gradient(180deg, #fffdf8, #f4ead6);
+  color: #1b352e;
+  border-radius: 999px;
+  padding: 4px 11px;
+  font: 700 12px/1.3 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.is-msg-go:hover {
+  background: #e6ca8a;
+  color: #111;
+}
+
+/* 快捷提問晶片列 */
+.is-npc-chips {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  padding: 8px 18px;
+  border-top: 1px solid rgba(230, 202, 138, 0.18);
+  background: rgba(9, 20, 17, 0.55);
+  flex: none;
+  scrollbar-width: thin;
+}
+.is-q-chip {
+  flex: none;
+  border: 1px solid rgba(230, 202, 138, 0.42);
+  background: rgba(255, 255, 255, 0.07);
+  color: #f7eedb;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font: 600 12.5px/1.25 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+  transition: background 0.14s, transform 0.1s;
+}
+.is-q-chip:hover {
+  background: rgba(230, 202, 138, 0.24);
+  border-color: #e6ca8a;
+}
+.is-q-chip.gold {
+  background: rgba(230, 202, 138, 0.2);
+  border-color: #e6ca8a;
+  color: #ffe8ad;
+}
+
+/* 自由提問輸入列 */
+.is-npc-form {
+  display: flex;
+  gap: 8px;
+  padding: 10px 18px 14px;
+  background: rgba(7, 16, 14, 0.78);
+  border-top: 1px solid rgba(230, 202, 138, 0.2);
+  flex: none;
+}
+.is-npc-input {
+  flex: 1;
+  min-width: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(230, 202, 138, 0.42);
+  background: rgba(255, 255, 255, 0.94);
+  color: #1c1917;
+  padding: 8px 15px;
+  font: 500 14px/1.3 "Noto Sans TC", sans-serif;
+  outline: none;
+}
+.is-npc-input:focus {
+  border-color: #f5d33a;
+  box-shadow: 0 0 0 2px rgba(245, 211, 58, 0.28);
+}
+.is-npc-send {
+  border: 0;
+  border-radius: 999px;
+  padding: 0 18px;
+  background: linear-gradient(145deg, #f3dca2, #c6a15b);
+  color: #17140f;
+  font: 800 13.5px/1 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+  flex: none;
+}
+.is-npc-send:hover {
+  filter: brightness(1.06);
+}
+
+/* ── 多人即時虛擬人旅伴廣場抽屜 (.is-plaza-drawer) ── */
+.is-plaza-drawer {
+  position: fixed;
+  right: 16px;
+  top: 66px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  width: min(350px, calc(100vw - 24px));
+  max-height: 620px;
+  z-index: 35;
+  display: none;
+  flex-direction: column;
+  border-radius: 20px;
+  background: linear-gradient(175deg, rgba(12, 26, 22, 0.95) 0%, rgba(18, 36, 31, 0.96) 100%);
+  border: 1.5px solid rgba(230, 202, 138, 0.62);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.48);
+  color: #faf6ed;
+  font: 13.5px/1.5 "Noto Sans TC", "PingFang TC", sans-serif;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+.is-plaza-drawer.open {
+  display: flex;
+}
+
+.is-plaza-head {
+  padding: 13px 15px 11px;
+  background: linear-gradient(90deg, rgba(198, 161, 91, 0.18), transparent);
+  border-bottom: 1px solid rgba(230, 202, 138, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+.is-plaza-title {
+  margin: 0;
+  font: 900 16.5px/1.25 "Noto Serif TC", Georgia, serif;
+  color: #fff8eb;
+}
+.is-plaza-status {
+  margin-top: 3px;
+  font-size: 11.5px;
+  color: #9de8c0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+.is-plaza-status .is-net-text {
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.is-plaza-status .is-net-retry {
+  flex: none;
+}
+
+.is-plaza-rooms {
+  display: flex;
+  gap: 5px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.22);
+  border-bottom: 1px solid rgba(230, 202, 138, 0.16);
+}
+.is-room-btn {
+  flex: 1;
+  border: 1px solid rgba(230, 202, 138, 0.28);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(250, 246, 237, 0.82);
+  border-radius: 9px;
+  padding: 5px 4px;
+  font: 700 11.5px/1.2 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+}
+.is-room-btn.active {
+  background: linear-gradient(145deg, #e6ca8a, #c6a15b);
+  color: #16130f;
+  border-color: #f3dca2;
+}
+
+.is-plaza-netcfg {
+  padding: 8px 12px;
+  background: rgba(7, 15, 13, 0.65);
+  border-bottom: 1px solid rgba(230, 202, 138, 0.18);
+  font-size: 11.5px;
+  display: none;
+}
+.is-plaza-netcfg.open {
+  display: block;
+}
+.is-plaza-netcfg-row {
+  display: flex;
+  gap: 6px;
+  margin-top: 5px;
+}
+.is-plaza-netcfg input {
+  flex: 1;
+  min-width: 0;
+  border-radius: 7px;
+  border: 1px solid rgba(230, 202, 138, 0.4);
+  background: #fff;
+  color: #1c1917;
+  padding: 4px 8px;
+  font: 12px/1.3 monospace;
+}
+
+.is-plaza-roster {
+  padding: 8px 12px;
+  max-height: 118px;
+  overflow-y: auto;
+  border-bottom: 1px solid rgba(230, 202, 138, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.is-roster-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+}
+.is-roster-who {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.is-roster-go {
+  border: 1px solid rgba(230, 202, 138, 0.45);
+  background: rgba(230, 202, 138, 0.14);
+  color: #ffe8ad;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font: 700 11px/1.3 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+  flex: none;
+}
+/* 私訊列的「回覆／封鎖」按鈕：統一尺寸（覆寫全站 button 44px 最小高度；32px 仍符合 WCAG 2.2 觸控目標 ≥ 24px） */
+.is-dm-actions .is-roster-go {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  height: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  white-space: nowrap;
+}
+.is-roster-go:hover {
+  background: #e6ca8a;
+  color: #14120e;
+}
+
+.is-plaza-chat {
+  flex: 1;
+  min-height: 120px;
+  overflow-y: auto;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  overscroll-behavior: contain;
+}
+.is-chat-row {
+  font-size: 12.5px;
+  line-height: 1.45;
+  padding: 6px 10px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.07);
+  word-break: break-word;
+}
+.is-chat-row.sys {
+  background: rgba(230, 202, 138, 0.12);
+  color: #f4dfab;
+  font-size: 11.5px;
+}
+.is-chat-row b {
+  color: #e6ca8a;
+  margin-right: 6px;
+}
+
+.is-plaza-phrases {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding: 6px 10px;
+  border-top: 1px solid rgba(230, 202, 138, 0.16);
+  background: rgba(0, 0, 0, 0.2);
+  flex: none;
+}
+.is-phrase-btn {
+  flex: none;
+  border: 1px solid rgba(230, 202, 138, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f7eedb;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font: 600 11.5px/1.2 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+}
+.is-phrase-btn:hover {
+  background: rgba(230, 202, 138, 0.22);
+}
+
+.is-plaza-form {
+  display: flex;
+  gap: 6px;
+  padding: 8px 10px 11px;
+  background: rgba(7, 15, 13, 0.82);
+  border-top: 1px solid rgba(230, 202, 138, 0.2);
+}
+.is-plaza-input {
+  flex: 1;
+  min-width: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(230, 202, 138, 0.4);
+  background: rgba(255, 255, 255, 0.94);
+  color: #1c1917;
+  padding: 7px 12px;
+  font: 500 13.5px/1.2 "Noto Sans TC", sans-serif;
+  outline: none;
+}
+
+@media (max-width: 800px) {
+  #htl-plaza-open {
+    display: none !important;
+  }
+  .is-peer-tag,
+  .is-npc-modal,
+  .is-plaza-drawer {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+  .is-npc-backdrop {
+    z-index: 44;
+    padding: 8px 8px calc(14px + env(safe-area-inset-bottom, 0px));
+  }
+  .is-npc-modal {
+    max-height: 82dvh;
+    border-radius: 18px;
+  }
+  .is-npc-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+  .is-npc-name {
+    font-size: 16.5px;
+  }
+  .is-npc-input,
+  .is-plaza-input {
+    font-size: 16px;
+  }
+  .is-plaza-drawer {
+    left: 10px;
+    right: 10px;
+    top: auto;
+    bottom: calc(70px + env(safe-area-inset-bottom, 0px));
+    width: auto;
+    max-height: calc(100dvh - 142px - env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* ── 離線角色（away）與私訊（丟水球） ─────────────────────────────── */
+.is-peer-tag.off {
+  opacity: 0.7;
+  z-index: 0;
+  gap: 3px;
+  padding: 1px 8px 1px 6px;
+  font-size: 10.5px;
+  border-color: rgba(190, 196, 192, 0.45);
+  background: rgba(13, 28, 24, 0.6);
+}
+.is-peer-tag:not(.off) {
+  z-index: 1;
+}
+.is-peer-dot.off {
+  background: #9aa19d;
+  box-shadow: none;
+}
+.is-roster-item.off {
+  opacity: 0.72;
+}
+.is-chat-row.dm {
+  background: rgba(255, 170, 200, 0.14);
+  border: 1px solid rgba(255, 170, 200, 0.4);
+}
+.is-chat-row.dm.mine {
+  background: rgba(255, 170, 200, 0.07);
+}
+.is-chat-row.dm b {
+  color: #ffc2d6;
+}
+.is-dm-actions {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+.is-dm-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 5px 10px;
+  background: rgba(255, 170, 200, 0.16);
+  border-top: 1px solid rgba(255, 170, 200, 0.4);
+  color: #ffe1ea;
+  font-size: 11.5px;
+  flex: none;
+}
+.is-dm-pill[hidden] {
+  display: none;
+}
+.is-dm-pill-x {
+  border: 1px solid rgba(255, 194, 214, 0.6);
+  background: transparent;
+  color: #ffe1ea;
+  border-radius: 999px;
+  min-width: 24px;
+  min-height: 24px;
+  cursor: pointer;
+}
+
+/* ── 星等（只顯示 1–5 顆星；稱號由觀看者端查表） ───────────────── */
+.is-peer-lv,
+/* 只顯示圖示的名單按鈕：文字標籤仍保留給螢幕閱讀器 */
+.is-roster-act .is-vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.is-roster-lv {
+  color: #f5d33a;
+  font-size: 10px;
+  letter-spacing: -1px;
+  flex: none;
+}
+
+/* ── 2026-11 旅伴廣場互動優化：連線狀態、在線名單動作、表情列、未讀徽章、手機底部面板 ── */
+.is-plaza-headtxt {
+  min-width: 0;
+}
+.is-plaza-headbtns {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex: none;
+}
+.is-net-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: none;
+  background: #e6ca8a;
+}
+.is-net-dot.ok {
+  background: #3fe08c;
+  box-shadow: 0 0 6px #3fe08c;
+}
+.is-net-dot.wait {
+  background: #f3c969;
+  animation: is-net-pulse 1.2s ease-in-out infinite;
+}
+.is-net-dot.bad {
+  background: #ef7d6b;
+}
+.is-net-dot.local {
+  background: #9fb8ae;
+}
+@keyframes is-net-pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+.is-net-text {
+  min-width: 0;
+}
+.is-net-retry {
+  border: 1px solid rgba(230, 202, 138, 0.6);
+  background: rgba(230, 202, 138, 0.16);
+  color: #ffe8ad;
+  border-radius: 999px;
+  padding: 1px 9px;
+  min-height: 0 !important;
+  font: 700 11px/1.4 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+}
+.is-net-retry:hover {
+  background: #e6ca8a;
+  color: #14120e;
+}
+
+.is-plaza-roster {
+  max-height: min(42vh, 330px);
+  gap: 4px;
+}
+.is-roster-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 800 11px/1.3 "Noto Sans TC", sans-serif;
+  letter-spacing: 0.04em;
+  color: #e6ca8a;
+  padding: 0 2px 2px;
+}
+.is-roster-count {
+  color: #9de8c0;
+}
+.is-roster-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.is-roster-item {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.is-roster-item.me {
+  background: rgba(230, 202, 138, 0.1);
+}
+.is-roster-item.following {
+  box-shadow: inset 0 0 0 1.5px #3fe08c;
+}
+.is-roster-item.muted .is-roster-who {
+  opacity: 0.55;
+}
+.is-roster-sw {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex: none;
+  border: 1.5px solid rgba(255, 248, 235, 0.75);
+}
+.is-roster-who {
+  flex: 1 1 140px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  white-space: normal;
+}
+.is-roster-who b {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.is-roster-meta {
+  opacity: 0.75;
+  font-size: 11px;
+  line-height: 1.3;
+}
+.is-roster-acts {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+.is-roster-act {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 30px;
+  border: 1px solid rgba(230, 202, 138, 0.45);
+  background: rgba(230, 202, 138, 0.12);
+  color: #ffe8ad;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font: 700 11.5px/1.2 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+}
+.is-roster-act:hover,
+.is-roster-act:focus-visible {
+  background: #e6ca8a;
+  color: #14120e;
+}
+.is-roster-act.on {
+  background: rgba(63, 224, 140, 0.22);
+  border-color: #3fe08c;
+  color: #c9ffe2;
+}
+.is-roster-empty {
+  font-size: 11.5px;
+  color: rgba(250, 246, 237, 0.7);
+  padding: 4px 4px 2px;
+}
+.is-roster-away-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-height: 36px;
+  padding: 6px 10px;
+  border: 1px dashed rgba(190, 196, 192, 0.45);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(250, 246, 237, 0.78);
+  font: 700 11.5px/1.3 "Noto Sans TC", sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+.is-roster-away-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.is-plaza-emotes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(230, 202, 138, 0.16);
+  flex: none;
+}
+.is-emote-btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid rgba(230, 202, 138, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f7eedb;
+  border-radius: 12px;
+  font: 700 11px/1.15 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.is-emote-btn:hover,
+.is-emote-btn:focus-visible {
+  background: rgba(230, 202, 138, 0.22);
+}
+.is-emote-btn:active {
+  transform: scale(0.95);
+}
+.is-emote-ico {
+  font-size: 18px;
+  line-height: 1.1;
+}
+.is-emote-key {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  font: 700 9px/1 ui-monospace, monospace;
+  color: rgba(230, 202, 138, 0.75);
+}
+
+.is-plaza-chatwrap {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 110px;
+  display: flex;
+  overflow: hidden;
+}
+.is-plaza-drawer > :not(.is-plaza-chatwrap):not(.is-plaza-roster) {
+  flex: none;
+}
+.is-plaza-roster {
+  flex: 0 1 auto;
+  min-height: 70px;
+}
+.is-plaza-chatwrap .is-plaza-chat {
+  flex: 1;
+  min-height: 90px;
+}
+.is-chat-row.mine {
+  background: rgba(63, 224, 140, 0.1);
+}
+.is-chat-row.sys.mine {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(250, 246, 237, 0.75);
+}
+.is-chat-row.mention {
+  background: rgba(230, 202, 138, 0.24);
+  box-shadow: inset 3px 0 0 #f5d33a;
+}
+.is-chat-sw {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: 1px;
+}
+.is-chat-newpill {
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  transform: translateX(-50%);
+  border: 1px solid #f3dca2;
+  background: linear-gradient(145deg, #e6ca8a, #c6a15b);
+  color: #16130f;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font: 800 12px/1.2 "Noto Sans TC", sans-serif;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+.is-chat-newpill[hidden] {
+  display: none;
+}
+.is-phrase-btn.short {
+  border-color: rgba(230, 202, 138, 0.6);
+  color: #ffe8ad;
+}
+.is-plaza-inputwrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+.is-plaza-inputwrap .is-plaza-input {
+  width: 100%;
+}
+.is-chat-counter {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font: 700 10.5px/1 ui-monospace, monospace;
+  color: #8a6d2f;
+  pointer-events: none;
+}
+.is-plaza-input:focus {
+  box-shadow: 0 0 0 2px rgba(245, 211, 58, 0.55);
+}
+
+/* 頂部「旅伴」與手機 👥 鈕上的徽章：未讀（金）優先，否則顯示在線人數（綠） */
+:where(#htl-plaza-open, #mob-plaza-btn) {
+  position: relative;
+}
+.is-plaza-badge {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 999px;
+  font: 800 10.5px/17px "Noto Sans TC", sans-serif;
+  text-align: center;
+  pointer-events: none;
+  box-shadow: 0 0 0 1.5px rgba(12, 26, 22, 0.9);
+  z-index: 2;
+}
+.is-plaza-badge[hidden] {
+  display: none;
+}
+.is-plaza-badge.unread {
+  background: #f5d33a;
+  color: #16130f;
+  animation: is-badge-pop 0.3s ease-out;
+}
+.is-plaza-badge.online {
+  background: #20a862;
+  color: #fff;
+}
+@keyframes is-badge-pop {
+  from {
+    transform: scale(0.4);
+  }
+}
+
+/* 桌機：抽屜可用到整個右側高度；漫遊時讓出右下動作鍵 */
+@media (min-width: 801px) {
+  .is-plaza-drawer {
+    max-height: 760px;
+  }
+  body.hm-driving .is-plaza-drawer {
+    bottom: 186px;
+  }
+}
+
+@media (pointer: coarse), (max-width: 800px) {
+  .is-roster-act,
+  .is-room-btn,
+  .is-phrase-btn,
+  .is-npc-send,
+  .is-plaza-drawer .is-btn-top,
+  .is-plaza-drawer .is-btn-close {
+    min-height: 44px;
+  }
+  .is-plaza-drawer .is-btn-close {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  .is-net-retry {
+    min-height: 34px !important;
+    padding: 4px 12px;
+  }
+  .is-roster-act {
+    min-width: 44px;
+    justify-content: center;
+    padding: 3px 10px;
+    font-size: 12.5px;
+  }
+  .is-emote-btn {
+    min-height: 50px;
+  }
+  .is-peer-say {
+    max-width: min(64vw, 260px);
+    font-size: 13.5px;
+    line-height: 1.4;
+    padding: 7px 12px;
+    max-height: calc(1.4em * 3 + 14px);
+    overflow: hidden;
+  }
+  .is-peer-tag {
+    font-size: 12.5px;
+    padding: 4px 11px 4px 8px;
+  }
+}
+
+@media (max-width: 800px) {
+  /* 底部面板：浮在底部 Dock 之上（含安全區）；漫遊模式時再讓出左下搖桿與右下動作鍵 */
+  .is-plaza-drawer {
+    left: 8px;
+    right: 8px;
+    top: auto;
+    width: auto;
+    bottom: calc(66px + env(safe-area-inset-bottom, 0px));
+    max-height: calc(100dvh - 66px - 70px - env(safe-area-inset-bottom, 0px));
+    border-radius: 18px;
+  }
+  body.hm-driving .is-plaza-drawer {
+    bottom: calc(180px + env(safe-area-inset-bottom, 0px));
+    max-height: calc(100dvh - 180px - 60px - env(safe-area-inset-bottom, 0px));
+  }
+  .is-plaza-head {
+    padding: 8px 12px 8px;
+  }
+  .is-plaza-title {
+    font-size: 15px;
+  }
+  .is-plaza-rooms {
+    padding: 6px 10px;
+  }
+  .is-roster-act-lbl {
+    font-size: 12px;
+  }
+  /* 手機高度有限：整個面板可捲動，輸入列固定在面板底部；房間切換移到最下方（較少用） */
+  .is-plaza-drawer {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+  .is-plaza-drawer > * {
+    flex: none !important;
+  }
+  .is-plaza-head {
+    order: 0;
+  }
+  .is-plaza-netcfg {
+    order: 1;
+  }
+  .is-plaza-roster {
+    order: 2;
+    max-height: none;
+    overflow: visible;
+  }
+  .is-plaza-emotes {
+    order: 3;
+  }
+  .is-plaza-chatwrap {
+    order: 4;
+    min-height: 0;
+  }
+  .is-plaza-chatwrap .is-plaza-chat {
+    height: max(150px, 28dvh);
+    min-height: 0;
+  }
+  .is-plaza-phrases {
+    order: 5;
+  }
+  .is-plaza-form {
+    order: 6;
+    position: sticky;
+    bottom: 0;
+    z-index: 3;
+    padding: 8px 10px 10px;
+  }
+  .is-plaza-rooms {
+    order: 7;
+  }
+  .is-plaza-input {
+    min-height: 44px;
+  }
+}
+@media (max-width: 380px) {
+  .is-roster-act-lbl {
+    display: none;
+  }
+}
+
+/* ── 2026-11-14 旅伴廣場 UX 重整：聊天／在線分頁、名單動作收合、表情與片語合併一列 ── */
+.is-plaza-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 8px 12px 6px;
+  flex: none;
+}
+.is-ptab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 38px;
+  border: 1px solid rgba(230, 202, 138, 0.3);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(250, 246, 237, 0.8);
+  font: 800 13px/1.2 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+}
+.is-ptab.active {
+  background: rgba(230, 202, 138, 0.2);
+  border-color: #e6ca8a;
+  color: #fff3d4;
+}
+.is-ptab:focus-visible {
+  outline: 2px solid #f5d33a;
+  outline-offset: 1px;
+}
+.is-ptab-n {
+  min-width: 20px;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: rgba(63, 224, 140, 0.22);
+  color: #c9ffe2;
+  font-size: 11.5px;
+}
+.is-ptab-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f5d33a;
+  box-shadow: 0 0 0 2px rgba(12, 26, 22, 0.9);
+}
+.is-ptab-dot[hidden] {
+  display: none;
+}
+/* 分頁內容 */
+.is-plaza-drawer.tab-chat .is-plaza-roster {
+  display: none;
+}
+.is-plaza-drawer.tab-people .is-plaza-emotes,
+.is-plaza-drawer.tab-people .is-plaza-chatwrap,
+.is-plaza-drawer.tab-people .is-plaza-phrases,
+.is-plaza-drawer.tab-people .is-dm-pill,
+.is-plaza-drawer.tab-people .is-plaza-form {
+  display: none !important;
+}
+.is-plaza-drawer.tab-people .is-plaza-roster {
+  flex: 1 1 auto;
+  max-height: none;
+  min-height: 0;
+  overflow-y: auto;
+}
+.is-plaza-drawer.tab-chat .is-plaza-chatwrap {
+  min-height: 160px;
+}
+/* 名單：每列只有名字與「⋯」，展開後才出現動作按鈕 */
+.is-roster-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 6px;
+}
+.is-roster-item .is-roster-acts {
+  display: none;
+  grid-column: 1 / -1;
+  margin-left: 0;
+}
+.is-roster-item.expanded .is-roster-acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.is-roster-item.expanded {
+  background: rgba(230, 202, 138, 0.1);
+}
+.is-roster-item.expanded .is-roster-act {
+  min-height: 36px;
+  padding: 4px 12px;
+}
+.is-roster-more {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(230, 202, 138, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffe8ad;
+  font: 900 16px/1 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+}
+.is-roster-more:hover,
+.is-roster-more:focus-visible,
+.is-roster-more.on {
+  background: #e6ca8a;
+  color: #14120e;
+}
+/* 表情＋片語：一列五顆小按鈕（圖示在左、文字在右） */
+.is-plaza-emotes {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  padding: 6px 12px;
+}
+.is-plaza-emotes .is-emote-btn {
+  flex-direction: row;
+  gap: 4px;
+  min-height: 38px;
+  padding: 0 4px;
+  font-size: 11.5px;
+}
+.is-plaza-emotes .is-emote-ico {
+  font-size: 15px;
+}
+.is-plaza-emotes .is-emote-key {
+  display: none;
+}
+.is-phrase-toggle.on {
+  background: rgba(230, 202, 138, 0.28);
+  border-color: #e6ca8a;
+}
+.is-plaza-phrases[hidden] {
+  display: none !important;
+}
+@media (max-width: 420px) {
+  .is-plaza-emotes .is-emote-lbl {
+    display: none;
+  }
+}

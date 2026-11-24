@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5efe6"/>
+      <stop offset="100%" stop-color="#e3d5c5"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#28354a"/>
+      <stop offset="100%" stop-color="#1b2434"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="360" fill="url(#bg)"/>
+  <g transform="translate(0, 30)">
+    <circle cx="120" cy="115" r="92" fill="#fffdf8" opacity="0.55"/>
+    <!-- Suit shoulders -->
+    <path d="M18 330 C26 226 68 204 120 204 C172 204 214 226 222 330 Z" fill="url(#suit)"/>
+    <!-- White shirt V -->
+    <polygon points="94,205 146,205 120,285" fill="#ffffff"/>
+    <!-- Burgundy tie -->
+    <polygon points="113,216 127,216 132,295 120,315 108,295" fill="#8c2d38"/>
+    <polygon points="111,206 129,206 125,218 115,218" fill="#70202a"/>
+    <!-- Suit lapels -->
+    <polygon points="94,205 70,252 114,284" fill="#32415a"/>
+    <polygon points="146,205 170,252 126,284" fill="#32415a"/>
+    <!-- Gold lapel pin -->
+    <circle cx="152" cy="246" r="4.5" fill="#e5a922"/>
+    <!-- Neck -->
+    <rect x="103" y="176" width="34" height="34" rx="12" fill="#eab896"/>
+    <!-- Ears -->
+    <ellipse cx="68" cy="130" rx="10" ry="15" fill="#eab896"/>
+    <ellipse cx="172" cy="130" rx="10" ry="15" fill="#eab896"/>
+    <!-- Head -->
+    <rect x="72" y="68" width="96" height="118" rx="44" fill="#f3c6a5"/>
+    <!-- Hair (scholarly dark grey with silver temples) -->
+    <path d="M68 116 C64 78 88 54 120 54 C152 54 176 78 172 116 C168 92 154 78 134 76 C110 74 84 82 68 116 Z" fill="#383434"/>
+    <path d="M68 106 C68 118 71 128 74 132 C76 118 75 106 72 98 Z" fill="#7a7674"/>
+    <path d="M172 106 C172 118 169 128 166 132 C164 118 165 106 168 98 Z" fill="#7a7674"/>
+    <!-- Eyebrows -->
+    <path d="M88 108 Q100 103 110 107" stroke="#383434" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M130 107 Q140 103 152 108" stroke="#383434" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- Glasses -->
+    <rect x="83" y="113" width="30" height="20" rx="5" fill="#ffffff" fill-opacity="0.25" stroke="#2c2623" stroke-width="3"/>
+    <rect x="127" y="113" width="30" height="20" rx="5" fill="#ffffff" fill-opacity="0.25" stroke="#2c2623" stroke-width="3"/>
+    <line x1="113" y1="122" x2="127" y2="122" stroke="#2c2623" stroke-width="3"/>
+    <line x1="72" y1="120" x2="83" y2="121" stroke="#2c2623" stroke-width="2.5"/>
+    <line x1="157" y1="121" x2="168" y2="120" stroke="#2c2623" stroke-width="2.5"/>
+    <!-- Eyes -->
+    <circle cx="98" cy="123" r="3.8" fill="#211d1d"/>
+    <circle cx="142" cy="123" r="3.8" fill="#211d1d"/>
+    <circle cx="99.2" cy="121.8" r="1.2" fill="#ffffff"/>
+    <circle cx="143.2" cy="121.8" r="1.2" fill="#ffffff"/>
+    <!-- Nose -->
+    <path d="M120 124 L117 143 Q120 146 124 143" stroke="#cc9674" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- Warm smile -->
+    <path d="M104 156 Q120 168 136 156" stroke="#9e5240" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

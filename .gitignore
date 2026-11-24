@@ -1,0 +1,17 @@
+/media/
+.DS_Store
+
+__pycache__/
+*.pyc
+.wrangler/
+/素材/
+
+
+# Secrets & local credentials — never commit (ISO/IEC 27001 Annex A 5.17 / 8.12)
+.env
+.env.*
+.dev.vars
+*.pem
+*.key
+*.p12
+node_modules/

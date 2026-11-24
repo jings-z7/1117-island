@@ -1,0 +1,274 @@
+{
+ "grb": {
+  "source": "https://www.grb.gov.tw/",
+  "rule": "teacher listed as host, 執行機關 國立高雄餐旅大學, period ending ROC 110 or later",
+  "capturedAt": "2026-11-15"
+ },
+ "projects": [
+  {
+   "grbId": 19547234,
+   "teacher": "許孟鈞",
+   "role": "主持",
+   "year": 115,
+   "title": "基於小語言模型(SLM)與檢索增強生成(RAG)的服務溫度感知對話式餐旅機器人:跨世代生成式AI素養教學模式的實證研究",
+   "agency": "國家科學及技術委員會(本會)",
+   "executingUnit": "國立高雄餐旅大學旅館管理系",
+   "planNo": "NSTC114-2628-H328-001-MY2",
+   "period": [
+    "11508",
+    "11607"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=19547234"
+  },
+  {
+   "grbId": 20102578,
+   "teacher": "謝金龍",
+   "role": "共同主持",
+   "year": 115,
+   "title": "智慧旅宿服務載具應用於AIoT備品巡檢及智能客服示範計畫",
+   "agency": "國家科學及技術委員會(本會)",
+   "executingUnit": "國立高雄餐旅大學餐旅管理研究所",
+   "planNo": "NSTC115-2622-8328-001",
+   "period": [
+    "11509",
+    "11603"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=20102578"
+  },
+  {
+   "grbId": 18001902,
+   "teacher": "許孟鈞",
+   "role": "主持",
+   "year": 114,
+   "title": "基於小語言模型(SLM)與檢索增強生成(RAG)的服務溫度感知對話式餐旅機器人:跨世代生成式AI素養教學模式的實證研究",
+   "agency": "國家科學及技術委員會(本會)",
+   "executingUnit": "國立高雄餐旅大學旅館管理系",
+   "planNo": "NSTC114-2628-H328-001-MY2",
+   "period": [
+    "11408",
+    "11507"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=18001902"
+  },
+  {
+   "grbId": 16588317,
+   "teacher": "許孟鈞",
+   "role": "主持",
+   "year": 113,
+   "title": "旅館綠色轉型ESG勢在必行、數位科技革新碳盤無所遁形-旅館綠色人才ESG素養加值教學發展模式",
+   "agency": "國家科學及技術委員會(本會)",
+   "executingUnit": "國立高雄餐旅大學旅館管理系",
+   "planNo": "NSTC113-2410-H328-006",
+   "period": [
+    "11308",
+    "11407"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=16588317"
+  },
+  {
+   "grbId": 16637435,
+   "teacher": "謝金龍",
+   "role": "共同主持",
+   "year": 113,
+   "title": "餐旅業之台式殷勤款待服務資本：概念化、衡量與實證應用",
+   "agency": "國家科學及技術委員會(本會)",
+   "executingUnit": "國立高雄餐旅大學觀光研究所",
+   "planNo": "NSTC112-2410-H328-007-SS2",
+   "period": [
+    "11308",
+    "11407"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=16637435"
+  },
+  {
+   "grbId": 15483373,
+   "teacher": "許孟鈞",
+   "role": "主持",
+   "year": 112,
+   "title": "餐旅智慧應用即服務產業創新採用之研究：餐旅智慧應用即服務(HaaS)採用就緒準備決定因素與成效改善建議之驗證",
+   "agency": "國家科學及技術委員會(本會)",
+   "executingUnit": "國立高雄餐旅大學旅館管理系",
+   "planNo": "NSTC112-2410-H328-003",
+   "period": [
+    "11208",
+    "11307"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=15483373"
+  },
+  {
+   "grbId": 15482889,
+   "teacher": "謝金龍",
+   "role": "共同主持",
+   "year": 112,
+   "title": "餐旅業之台式殷勤款待服務資本：概念化、衡量與實證應用",
+   "agency": "國家科學及技術委員會(本會)",
+   "executingUnit": "國立高雄餐旅大學觀光研究所",
+   "planNo": "NSTC112-2410-H328-007-SS2",
+   "period": [
+    "11208",
+    "11307"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=15482889"
+  },
+  {
+   "grbId": 14519321,
+   "teacher": "許孟鈞",
+   "role": "主持",
+   "year": 111,
+   "title": "餐旅智慧應用即服務(HaaS-Qual)品質指標建構與採用之研究:使用者與管理者對智慧應用即服務的採用行為模式之建構與實證",
+   "agency": "科技部",
+   "executingUnit": "國立高雄餐旅大學旅館管理系",
+   "planNo": "MOST111-2410-H328-003",
+   "period": [
+    "11108",
+    "11207"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=14519321"
+  },
+  {
+   "grbId": 13789244,
+   "teacher": "許孟鈞",
+   "role": "主持",
+   "year": 110,
+   "title": "邊看邊買抓住誰的心? 影響直播電子商務平台賣家與買家的差異採用行為模式建構與實證",
+   "agency": "科技部",
+   "executingUnit": "國立高雄餐旅大學旅館管理系",
+   "planNo": "MOST109-2410-H328-001-MY2",
+   "period": [
+    "11008",
+    "11107"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=13789244"
+  },
+  {
+   "grbId": 13543872,
+   "teacher": "許孟鈞",
+   "role": "主持",
+   "year": 109,
+   "title": "邊看邊買抓住誰的心? 影響直播電子商務平台賣家與買家的差異採用行為模式建構與實證",
+   "agency": "科技部",
+   "executingUnit": "國立高雄餐旅大學旅館管理系",
+   "planNo": "MOST109-2410-H328-001-MY2",
+   "period": [
+    "10908",
+    "11007"
+   ],
+   "type": "學術補助",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=13543872"
+  },
+  {
+   "grbId": 13281972,
+   "teacher": "沙荃",
+   "role": "主持",
+   "year": 108,
+   "title": "星級旅館評鑑制度革新之研究",
+   "agency": "交通部觀光局",
+   "executingUnit": "國立高雄餐旅大學旅館管理系(科)",
+   "planNo": null,
+   "period": [
+    "10812",
+    "11012"
+   ],
+   "type": "委託辦理",
+   "url": "https://www.grb.gov.tw/search/planDetail?id=13281972"
+  }
+ ],
+ "top2": {
+  "source": "https://doi.org/10.17632/btchxktzyw",
+  "englishNames": {
+   "Yang, Jen Te": {
+    "teacher": "楊仁德",
+    "matchedBy": "same institution (NKUHT); publications 2004–2015 in hospitality management; GRB lists 楊仁德 (國立高雄餐旅大學旅館管理系) as PI of MOST hospitality-organisation research in the same period"
+   }
+  },
+  "versions": [
+   {
+    "version": 3,
+    "doi": "10.17632/btchxktzyw.3",
+    "title": "August 2021 data-update for \"Updated science-wide author databases of standardized citation indicators\"",
+    "published": "2021-10-19",
+    "career": [],
+    "careerUniversityCount": 0,
+    "singleYear": [
+     {
+      "author": "Yang, Jen Te",
+      "institution": "National Kaohsiung University of Hospitality and Tourism",
+      "teacher": "楊仁德"
+     }
+    ],
+    "singleYearUniversityCount": 1
+   },
+   {
+    "version": 5,
+    "doi": "10.17632/btchxktzyw.5",
+    "title": "September 2022 data-update for \"Updated science-wide author databases of standardized citation indicators\"",
+    "published": "2022-11-03",
+    "career": [],
+    "careerUniversityCount": 0,
+    "singleYear": [
+     {
+      "author": "Yang, Jen Te",
+      "institution": "National Kaohsiung University of Hospitality and Tourism",
+      "teacher": "楊仁德"
+     }
+    ],
+    "singleYearUniversityCount": 1
+   },
+   {
+    "version": 6,
+    "doi": "10.17632/btchxktzyw.6",
+    "title": "October 2023 data-update for \"Updated science-wide author databases of standardized citation indicators\"",
+    "published": "2023-10-04",
+    "career": [],
+    "careerUniversityCount": 0,
+    "singleYear": [
+     {
+      "author": "Yang, Jen Te",
+      "institution": "National Kaohsiung University of Hospitality and Tourism",
+      "teacher": "楊仁德"
+     }
+    ],
+    "singleYearUniversityCount": 2
+   },
+   {
+    "version": 7,
+    "doi": "10.17632/btchxktzyw.7",
+    "title": "August 2024 data-update for \"Updated science-wide author databases of standardized citation indicators\"",
+    "published": "2024-09-16",
+    "career": [],
+    "careerUniversityCount": 0,
+    "singleYear": [],
+    "singleYearUniversityCount": 1
+   },
+   {
+    "version": 8,
+    "doi": "10.17632/btchxktzyw.8",
+    "title": "August 2025 data-update for \"Updated science-wide author databases of standardized citation indicators\"",
+    "published": "2025-09-19",
+    "career": [],
+    "careerUniversityCount": 0,
+    "singleYear": [],
+    "singleYearUniversityCount": 3
+   },
+   {
+    "version": 9,
+    "doi": "10.17632/btchxktzyw.9",
+    "title": "August 2026 data-update for \"Updated science-wide author databases of standardized citation indicators\"",
+    "published": "2026-10-07",
+    "career": [],
+    "careerUniversityCount": 0,
+    "singleYear": [],
+    "singleYearUniversityCount": 4
+   }
+  ]
+ }
+}

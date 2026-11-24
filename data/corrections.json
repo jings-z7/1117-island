@@ -1,0 +1,57 @@
+{
+ "_doc": "Confirmed corrections for data the official sites currently show wrongly. Each entry records what the official site shows (\"officialShows\") so scripts/sync.py can remind you until the site is fixed, and warn if the site changes to something else. Remove an entry once the official site is correct.",
+ "faculty": {
+  "許孟鈞": {
+   "ext": [
+    {
+     "number": "36322",
+     "label": "研究室"
+    },
+    {
+     "number": "10141",
+     "label": "校務策略研究組（行政）"
+    }
+   ],
+   "officialShows": {
+    "ext": [
+     "10180",
+     "36322"
+    ]
+   },
+   "confirmedBy": "本人確認",
+   "confirmedAt": "2026-11-10",
+   "note": "餐旅學院師資頁列 #10180,36322；研究室 36322 正確，行政分機應為 10141（非 10180）。"
+  },
+  "沙荃": {
+   "title": "助理教授級專技人員",
+   "ext": [
+    {
+     "number": "34121",
+     "label": ""
+    }
+   ],
+   "officialShows": {
+    "title": "助理教授級專技人員兼副主任",
+    "ext": [
+     "20201",
+     "34121"
+    ]
+   },
+   "confirmedBy": "系上確認",
+   "confirmedAt": "2026-11-10",
+   "note": "旅館管理系現無設副主任；系網師資頁列為「助理教授級專技人員」（分機 34121），餐旅學院師資頁尚未移除「兼副主任」與 20201。"
+  }
+ },
+ "facts": {
+  "群賢會館": {
+   "rooms": "12 間實習客房",
+   "pms": "Oracle Hospitality OPERA PMS 與德安資訊 PMS（官網本系介紹・特殊設備）",
+   "officialShows": {
+    "rooms": null
+   },
+   "confirmedBy": "系上確認",
+   "confirmedAt": "2026-11-12",
+   "note": "官網未載明客房數；系上確認校內實習旅館群賢會館為 12 間房。網站曾誤植「54 間客房」「4 種房型」與「金旭 PMS」，已改正，並列入 scripts/sync.py 的 STALE_CLAIMS。"
+  }
+ }
+}

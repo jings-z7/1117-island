@@ -1,0 +1,23 @@
+# Cloudflare Pages response headers.
+# 資安標頭（ISO/IEC 27001:2022 Annex A 8.9 組態管理、8.23 網頁過濾、8.26 應用程式安全要求）。
+# CSP 只允許本站腳本與 index.html 的 importmap（以 sha256 雜湊放行）；所有頁面（含 p/ 分享頁）都沒有其他行內腳本或
+# 行內事件。修改 importmap 後，請執行 python3 scripts/check_csp.py --fix 更新雜湊（sync.py --verify 也會檢查）。
+# frame-src 只放行兩個官方網站（分享頁嵌入系網 PDF）；frame-ancestors 允許高餐網域內嵌本站。
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Cross-Origin-Opener-Policy: same-origin
+  X-Permitted-Cross-Domain-Policies: none
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-pu8ff1x56sDAE6aoIA10UOGxfdDKx5Ppg3fw+OI6kDs='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' data: blob:; connect-src 'self' wss://htl-island-plaza.dr-jacqueshsu.workers.dev https://htl-island-plaza.dr-jacqueshsu.workers.dev ws://localhost:* ws://127.0.0.1:*; worker-src 'self' blob:; frame-src https://hotel.nkuht.edu.tw https://shm.nkuht.edu.tw; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self' https://*.nkuht.edu.tw
+
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.mjs
+  Content-Type: text/javascript; charset=utf-8

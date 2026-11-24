@@ -1,0 +1,620 @@
+/* layout.css — loaded after every other stylesheet (2026-11-13).
+ * Companion to toolbar.js: one icon set for the command bar, a single-row desktop bar with a 「更多」 menu,
+ * and a few layout fixes found by the viewport audit. Rules are scoped under body.tbx-on (set by toolbar.js) so
+ * the page looks as before if the script fails to load. */
+
+/* ---------- 1. one icon set ---------- */
+svg.tbx {
+  display: block;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+body.tbx-on #app nav.toolbar .tb-ic,
+body.tbx-on #app .mob-top-actions .tb-ic {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 18px !important;
+  height: 18px !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  flex: 0 0 auto !important;
+}
+body.tbx-on #app .mob-top-actions > button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+body.tbx-on #app .mob-top-actions .tb-lbl {
+  display: none !important; /* phone quick actions are icon-only; their name is in aria-label/title */
+}
+
+/* ---------- 2. desktop & tablet: one row + overflow menu ---------- */
+@media (min-width: 801px) {
+  body.tbx-on #app nav.toolbar {
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    max-width: none !important;
+    overflow: visible !important;
+  }
+  body.tbx-on #app nav.toolbar > button,
+  body.tbx-on #app nav.toolbar > .tb-link,
+  body.tbx-on #app nav.toolbar .tbx-more > button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+  }
+  /* buttons that ui.css used to drop at narrow widths now fold into the menu instead of disappearing */
+  body.tbx-on #app nav.toolbar > #credits-btn:not(.tbx-folded) {
+    display: inline-flex !important;
+  }
+  /* icon-only step: same square footprint for every compact button */
+  body.tbx-on #app nav.toolbar > .tbx-compact {
+    width: 36px !important;
+    min-width: 36px !important;
+    padding: 0 !important;
+  }
+  body.tbx-on #app nav.toolbar > .tbx-compact :is(.tb-lbl, .tb-sub, .qp-btn-l, .qp-btn-s, kbd) {
+    display: none !important;
+  }
+  /* instant tooltip for icon-only buttons (hover or keyboard focus) */
+  body.tbx-on #app nav.toolbar > .tbx-compact[data-tbx-tip] {
+    position: relative;
+  }
+  body.tbx-on #app nav.toolbar > .tbx-compact[data-tbx-tip]::before {
+    content: attr(data-tbx-tip);
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 30;
+    padding: 5px 9px;
+    border-radius: 7px;
+    background: #0c1614;
+    border: 1px solid rgba(198, 161, 91, 0.6);
+    color: #f3e7cb;
+    font: 600 12px/1.2 var(--font-sans, "Noto Sans TC", system-ui, sans-serif);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 6px 16px rgba(8, 15, 13, 0.3);
+  }
+  body.tbx-on #app nav.toolbar > .tbx-compact[data-tbx-tip]:hover::before,
+  body.tbx-on #app nav.toolbar > .tbx-compact[data-tbx-tip]:focus-visible::before {
+    opacity: 1;
+    visibility: visible;
+  }
+  body.tbx-on #app nav.toolbar > #lang-btn.tbx-compact {
+    width: auto !important;
+    padding: 0 10px !important;
+  }
+  body.tbx-on #app nav.toolbar > #lang-btn.tbx-compact::after {
+    content: "EN";
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+  }
+  html[lang="en"] body.tbx-on #app nav.toolbar > #lang-btn.tbx-compact::after {
+    content: "中";
+  }
+  body.tbx-on #app nav.toolbar > .tbx-folded,
+  body.tbx-on #app nav.toolbar > .mob-only {
+    display: none !important;
+  }
+  body.tbx-on #app nav.toolbar > #help {
+    min-width: 36px !important;
+    padding: 0 9px !important;
+  }
+  .tbx-more {
+    display: flex;
+    flex: 0 0 auto;
+  }
+  .tbx-more[hidden] {
+    display: none !important;
+  }
+  body.tbx-on #app nav.toolbar #tbx-more-btn.has-on {
+    border-color: var(--hotel-gold-bright, #e6ca8a) !important;
+  }
+}
+/* the layer/time HUD hangs under the toolbar; once the toolbar is a single row it can reach up beside the brand
+   block, so when the two overlap horizontally (set by toolbar.js) it drops below the brand instead */
+@media (min-width: 801px) {
+  body.tbx-hud-low #app .hud {
+    top: calc(max(var(--toolbar-bottom, 58px), var(--brand-bottom, 98px)) + 8px) !important;
+  }
+}
+/* walk mode (漫遊): the RPG command strip was pinned at top:82px and sat on the time-of-day HUD; it now hangs
+   below the HUD (whose bottom app.js publishes as --hud-bottom) */
+@media (min-width: 801px) {
+  body.hm-driving .hm-hud-top {
+    top: calc(var(--hud-bottom, 112px) + 10px) !important;
+  }
+}
+@media (max-width: 800px) {
+  .tbx-more,
+  .tbx-menu {
+    display: none !important;
+  }
+}
+
+.tbx-menu {
+  position: fixed;
+  z-index: 70;
+  min-width: 228px;
+  max-height: calc(100dvh - 120px);
+  overflow: auto;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(16, 29, 25, 0.97) 0%, rgba(10, 19, 17, 0.98) 100%);
+  border: 1px solid rgba(198, 161, 91, 0.6);
+  box-shadow:
+    0 18px 44px rgba(8, 15, 13, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.tbx-menu[hidden] {
+  display: none;
+}
+/* no entry animation on purpose: the 「暫停」 toggle pauses every CSS animation on the page, which would freeze a
+   fade-in on its first (transparent) frame */
+.tbx-menu .tbx-row {
+  all: unset;
+  box-sizing: border-box;
+  display: flex !important;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: #f3e7cb;
+  font: 600 13px/1.2 var(--font-sans, "Noto Sans TC", system-ui, sans-serif);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.tbx-menu .tbx-row > span {
+  flex: 1;
+}
+.tbx-menu .tbx-row:hover,
+.tbx-menu .tbx-row:focus-visible {
+  background: rgba(230, 202, 138, 0.14) !important;
+  color: #fff;
+}
+.tbx-menu .tbx-row:focus-visible {
+  box-shadow: inset 0 0 0 1.5px #e6ca8a !important;
+}
+.tbx-menu .tbx-row.on {
+  color: #ebd094;
+}
+.tbx-menu .tbx-row svg.tbx:last-child:not(:first-child) {
+  width: 15px;
+  height: 15px;
+  color: #ebd094;
+}
+
+/* ---------- 3. viewport fixes ---------- */
+/* #app had min-height 580px on phones: on a phone held sideways (≈ 340 px tall) or an iPhone SE the whole page
+   scrolled and the bottom dock slid away. The 3D stage and every panel already size to the viewport. */
+@media (max-width: 800px), (max-height: 540px) and (pointer: coarse) {
+  #app {
+    min-height: 0 !important;
+  }
+}
+/* phone zoom bar matched the dark bottom dock everywhere except its cream background */
+@media (max-width: 800px) {
+  .zoom-ui {
+    background: linear-gradient(180deg, rgba(14, 26, 23, 0.95) 0%, rgba(10, 18, 16, 0.97) 100%) !important;
+    border: 1px solid rgba(198, 161, 91, 0.6) !important;
+  }
+  .zoom-ui .zoom-pct {
+    color: #f3e7cb !important;
+    background: rgba(198, 161, 91, 0.16) !important;
+    border-color: rgba(198, 161, 91, 0.4) !important;
+  }
+  .zoom-ui .zoom-btn:not(.zoom-pct) {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(198, 161, 91, 0.35) !important;
+  }
+}
+/* touch targets of at least 32 px on the quest HUD (were 26 px) */
+@media (pointer: coarse) {
+  .qp-hud .qp-hud-min-btn {
+    min-width: 32px !important;
+    min-height: 32px !important;
+  }
+  .qp-hud .qp-hud-lvl {
+    min-height: 32px !important;
+  }
+}
+/* island labels collapsed to their number (crowded views): hug the number badge instead of a wide, empty-looking pill */
+#labels .island-label.numonly {
+  min-width: 0 !important;
+  padding: 2px 3px !important;
+}
+
+/* ---------- 4. command-bar design system (2026-11-13) ----------
+ * One component language for every floating control, in the spirit of GitHub's Primer: a container ("bar") holds
+ * quiet, borderless buttons of one height and radius; state is shown by fill (hover = faint, pressed = gold), and
+ * every control has the same visible keyboard focus ring. Colours stay on the NKUHT dark-green + gold brand. */
+:root {
+  --ui-bg: linear-gradient(180deg, rgba(16, 29, 25, 0.95) 0%, rgba(10, 19, 17, 0.97) 100%);
+  --ui-border: rgba(198, 161, 91, 0.55);
+  --ui-fg: #f3e7cb;
+  --ui-hover: rgba(255, 244, 214, 0.09);
+  --ui-on-bg: linear-gradient(135deg, #ebd094 0%, #c69f52 60%, #a67e33 100%);
+  --ui-on-fg: #0c1614;
+  --ui-focus: #f2d58e;
+  --ui-radius: 12px;
+  --ui-btn-radius: 8px;
+  --ui-btn-h: 34px;
+  --ui-shadow: 0 10px 28px rgba(8, 15, 13, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+body.tbx-on #app :is(nav.toolbar, .hud, .zoom-ui, .mob-top-actions, .qp-hud) :is(button, a):focus-visible,
+.tbx-menu .tbx-row:focus-visible {
+  outline: 2px solid var(--ui-focus) !important;
+  outline-offset: 2px !important;
+}
+
+@media (min-width: 801px) {
+  /* the toolbar is one bar that hugs its buttons, anchored top-right */
+  body.tbx-on #app nav.toolbar {
+    left: auto !important;
+    width: auto !important;
+    gap: 2px !important;
+    padding: 4px !important;
+    border-radius: var(--ui-radius) !important;
+    background: var(--ui-bg) !important;
+    border: 1px solid var(--ui-border) !important;
+    box-shadow: var(--ui-shadow) !important;
+    backdrop-filter: blur(10px);
+  }
+  body.tbx-on #app nav.toolbar > :is(button, .tb-link),
+  body.tbx-on #app nav.toolbar .tbx-more > button {
+    height: var(--ui-btn-h) !important;
+    min-height: var(--ui-btn-h) !important;
+    padding: 0 10px !important;
+    border-radius: var(--ui-btn-radius) !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
+    color: var(--ui-fg) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    transform: none !important;
+    transition: background-color 0.12s ease, color 0.12s ease !important;
+  }
+  body.tbx-on #app nav.toolbar > :is(button, .tb-link):hover,
+  body.tbx-on #app nav.toolbar .tbx-more > button:hover {
+    background: var(--ui-hover) !important;
+    color: #fff !important;
+  }
+  body.tbx-on #app nav.toolbar > button:is([aria-pressed="true"], .active),
+  body.tbx-on #app nav.toolbar .tbx-more > button.active {
+    background: var(--ui-on-bg) !important;
+    color: var(--ui-on-fg) !important;
+  }
+  /* the language switch and the landmarks button no longer shout in gold: same quiet button, state by fill only */
+  body.tbx-on #app nav.toolbar > #lang-btn,
+  body.tbx-on #app nav.toolbar > #landmarks-btn:not([aria-pressed="true"]) {
+    background: transparent !important;
+    color: var(--ui-fg) !important;
+    animation: none !important;
+  }
+  body.tbx-on #app nav.toolbar > #lang-btn {
+    border-color: rgba(198, 161, 91, 0.45) !important;
+  }
+  body.tbx-on #app nav.toolbar > #tbx-more-btn,
+  body.tbx-on #app nav.toolbar .tbx-more > #tbx-more-btn {
+    border-color: rgba(198, 161, 91, 0.45) !important;
+  }
+  /* groups: navigate | explore & play | system; unknown add-ons sit in the middle group */
+  body.tbx-on #app nav.toolbar > * { order: 3; }
+  body.tbx-on #app nav.toolbar > .tbx-g1 { order: 1; }
+  body.tbx-on #app nav.toolbar > .tbx-sep1 { order: 2; }
+  body.tbx-on #app nav.toolbar > .tbx-g2 { order: 3; }
+  body.tbx-on #app nav.toolbar > .tbx-sep2 { order: 4; }
+  body.tbx-on #app nav.toolbar > .tbx-g3 { order: 5; }
+  body.tbx-on #app nav.toolbar > .tbx-more { order: 6; }
+  body.tbx-on #app nav.toolbar > .tbx-sep {
+    flex: 0 0 1px;
+    align-self: center;
+    width: 1px;
+    height: 20px;
+    margin: 0 5px;
+    background: rgba(198, 161, 91, 0.38);
+  }
+  body.tbx-on #app nav.toolbar > .tbx-sep-off { display: none !important; }
+
+  /* time-of-day + layer HUD and zoom bar: same bar + quiet-button language */
+  body.tbx-on #app .hud .toggles .seg,
+  body.tbx-on #app .zoom-ui {
+    background: var(--ui-bg) !important;
+    border: 1px solid var(--ui-border) !important;
+    border-radius: var(--ui-radius) !important;
+    box-shadow: var(--ui-shadow) !important;
+    padding: 4px !important;
+  }
+  body.tbx-on #app .hud .toggles .seg button {
+    border-radius: var(--ui-btn-radius) !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: var(--ui-fg) !important;
+  }
+  body.tbx-on #app .hud .toggles .seg button:hover { background: var(--ui-hover) !important; }
+  body.tbx-on #app .hud .toggles .seg button[aria-pressed="true"] {
+    background: var(--ui-on-bg) !important;
+    color: var(--ui-on-fg) !important;
+  }
+  body.tbx-on #app .zoom-ui .zoom-btn,
+  body.tbx-on #app .zoom-ui .zoom-pct {
+    border-radius: var(--ui-btn-radius) !important;
+  }
+}
+@media (max-width: 800px) {
+  .tbx-sep { display: none !important; }
+  /* phone quick actions (top right): one grouped bar instead of six separate circles */
+  body.tbx-on #app .mob-top-actions {
+    gap: 2px !important;
+    padding: 3px !important;
+    border-radius: 12px !important;
+    background: var(--ui-bg) !important;
+    border: 1px solid var(--ui-border) !important;
+    box-shadow: var(--ui-shadow) !important;
+  }
+  body.tbx-on #app .mob-top-actions > button {
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    padding: 0 !important;
+    border-radius: 9px !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: var(--ui-fg) !important;
+  }
+  body.tbx-on #app .mob-top-actions > button:active { background: var(--ui-hover) !important; }
+  body.tbx-on #app .mob-top-actions > #mob-lang-btn {
+    width: auto !important;
+    padding: 0 8px !important;
+    font-weight: 800 !important;
+    background: var(--ui-on-bg) !important;
+    color: var(--ui-on-fg) !important;
+  }
+  body.tbx-on #app .zoom-ui { border-radius: var(--ui-radius) !important; }
+}
+/* iPhone SE / 320 px: credits stay reachable from the list's footer, so the top bar drops that one button */
+@media (max-width: 360px) {
+  body.tbx-on #app .mob-top-actions > #mob-credits { display: none !important; }
+}
+
+/* ---------- 5. no template edge stripes (2026-11-13) ----------
+ * Cards, rows, quotes and stats used a 3–7 px coloured stripe on their left edge (border-left or an inset shadow).
+ * The owner found it template-like; blocks are now set apart by a full hairline border and a soft tint instead. */
+body.tbx-on :is(.card .phase, .shared-phase, .card blockquote.vision, .credit-box, .teacher-speech-box,
+  .heart-quiz-entry, .rows .row, .teacher-building-hero, .htl-dir-sec, .qp-hud-quest, .route-tag) {
+  border-left-width: 1px !important;
+  border-left-style: solid !important;
+  border-left-color: rgba(198, 161, 91, 0.32) !important;
+}
+body.tbx-on :is(.card .phase, .shared-phase, .card blockquote.vision) {
+  border: 1px solid rgba(198, 161, 91, 0.32) !important;
+  border-radius: 10px !important;
+  padding: 8px 12px !important;
+}
+body.tbx-on .stat {
+  box-shadow: 0 2px 8px rgba(12, 22, 20, 0.06) !important;
+  border: 1px solid rgba(198, 161, 91, 0.3) !important;
+}
+body.tbx-on #tree details.current > summary {
+  box-shadow: none !important;
+  outline: 1px solid rgba(198, 161, 91, 0.55);
+  outline-offset: -1px;
+}
+body.tbx-on .qp-card {
+  border: 1px solid rgba(198, 161, 91, 0.4) !important;
+}
+body.tbx-on .card .plain {
+  border: 1px solid rgba(198, 161, 91, 0.3) !important;
+}
+
+/* ---------- 6. text legibility (2026-11-13) ----------
+ * - The selected row in card lists inherited a dark-theme light text colour while another rule forced its background
+ *   to white, so its name almost vanished. Selected rows now keep dark text on a soft gold tint.
+ * - Row names shared one line with the island tag on the right and broke mid-word; the tag now sits under the name.
+ * - Headings balance their lines, paragraphs avoid one-character last lines, CJK uses strict line breaking. */
+body.tbx-on .rows .row {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto !important;
+  grid-template-areas: "dot nm chev" "dot ph chev" !important;
+  align-items: center !important;
+  column-gap: 10px !important;
+  row-gap: 2px !important;
+  text-align: left !important;
+}
+body.tbx-on .rows .row > .dot { grid-area: dot; align-self: center; }
+body.tbx-on .rows .row > .nm {
+  grid-area: nm;
+  min-width: 0;
+  line-height: 1.4 !important;
+  text-wrap: balance;
+}
+body.tbx-on .rows .row > .ph {
+  grid-area: ph;
+  justify-self: start !important;
+  margin: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  color: #6f6259 !important;
+}
+body.tbx-on .rows .row > i { grid-area: chev; }
+body.tbx-on .rows .row.active,
+body.tbx-on .rows .row[aria-current="true"] {
+  background: #fbf3df !important;
+  border-color: #c69f52 !important;
+  box-shadow: 0 0 0 1px rgba(198, 159, 82, 0.35) !important;
+}
+body.tbx-on .rows .row.active :is(.nm, .nm b, .ph),
+body.tbx-on .rows .row[aria-current="true"] :is(.nm, .nm b, .ph) {
+  color: #14231f !important;
+  opacity: 1 !important;
+}
+body.tbx-on .rows .row.active .ph { color: #6a5530 !important; }
+:is(.card, .sidebar, .log, .tbx-menu, .qp-overlay, .cpro-modal) :is(h1, h2, h3, h4) {
+  text-wrap: balance;
+}
+:is(.card, .sidebar, .log, .qp-overlay, .cpro-modal) :is(p, li, .plain) {
+  text-wrap: pretty;
+}
+:is(.card, .sidebar, .log, .qp-overlay, .cpro-modal) {
+  line-break: strict;
+}
+/* contrast fixes found by the WCAG scan (all now ≥ 4.5:1) */
+body.tbx-on .card .eyebrow { color: #7a5a1c !important; }
+body.tbx-on .card [class^="qp-"] b,
+body.tbx-on .card [class*=" qp-"] b { color: #7a4f12 !important; }
+body.tbx-on .teacher-3d-avatar span { font-size: 9px !important; color: #fff !important; background: #14231f !important; }
+body.tbx-on .bfb-label { color: #5e4a2a !important; }
+.tp-nw { white-space: nowrap; }
+body.tbx-on .rows .row > .nm { text-wrap: pretty; }
+
+/* ---------- 7. connection route card (2026-11-13) ---------- */
+.fl-bar { display: flex; gap: 8px; margin: 12px 0 10px; }
+.fl-bar button {
+  min-height: 40px; border-radius: 10px; font: 700 13px/1 var(--font-sans, "Noto Sans TC", sans-serif); cursor: pointer;
+  border: 1px solid rgba(198, 161, 91, 0.55); background: #fffdf8; color: #14231f;
+}
+.fl-bar .fl-play { flex: 1; background: var(--ui-bg); color: var(--ui-fg); border-color: var(--ui-border); }
+.fl-bar .fl-step { width: 44px; font-size: 20px; }
+.fl-bar button:focus-visible, .fl-stops button:focus-visible { outline: 2px solid #c69f52; outline-offset: 2px; }
+.fl-stops { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 6px; counter-reset: fl; }
+.fl-stop { display: flex; align-items: stretch; gap: 6px; }
+.fl-stop .fl-go {
+  flex: 1; display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 6px 10px; text-align: left; cursor: pointer;
+  border-radius: 10px; border: 1px solid rgba(198, 161, 91, 0.32); background: #fff; color: #14231f;
+}
+.fl-stop .fl-go:hover { background: #fffaf0; }
+.fl-stop .fl-txt { display: grid; gap: 2px; min-width: 0; }
+.fl-stop .fl-txt small { font-size: 11.5px; color: #6f6259; letter-spacing: 0.02em; }
+.fl-stop .fl-txt b { font-size: 14px; line-height: 1.35; text-wrap: balance; }
+.fl-stop .fl-open {
+  width: 40px; border-radius: 10px; border: 1px solid rgba(198, 161, 91, 0.32); background: #fff; color: #7a5a1c;
+  font-size: 20px; cursor: pointer;
+}
+.fl-stop.on .fl-go { background: #fbf3df; border-color: #c69f52; box-shadow: 0 0 0 1px rgba(198, 159, 82, 0.35); }
+/* balanced wrapping isolates short CJK clauses (「實習、」 alone on a line) in long card titles; prefer pretty there */
+.card .card-head h2 { text-wrap: pretty; }
+
+/* ---------- 6. 選單整併（2026-11-14） ----------
+ * 桌機工具列只留主要功能（全景、清單、漫遊、護照、旅伴、快搜、圖層、語言），其餘固定收進「更多」（toolbar.js ITEMS.pin）。
+ * 時段與圖層開關（.hud）預設收起，按「圖層」才展開；手機右上只留搜尋、旅伴與「⋯ 更多」。 */
+@media (min-width: 801px) {
+  body.tbx-on #app nav.toolbar > #mob-time:not(.tbx-folded) {
+    display: inline-flex !important;
+  }
+  body.tbx-on:not(.m-time) #app .hud {
+    display: none !important;
+  }
+  /* 圖層面板收起時，漫遊模式的指令列改掛在工具列下方 */
+  body.tbx-on.hm-driving:not(.m-time) .hm-hud-top {
+    top: calc(var(--toolbar-bottom, 58px) + 10px) !important;
+  }
+}
+#mob-time.has-unread,
+#tbx-mob-more.has-unread {
+  position: relative;
+}
+#mob-time.has-unread::before,
+#tbx-mob-more.has-unread::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #18b86a;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 8px rgba(24, 184, 106, 0.85);
+  pointer-events: none;
+}
+.tbx-menu .tbx-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #18b86a;
+  flex: none;
+}
+@media (max-width: 800px) {
+  /* 「更多」選單在手機上以底部面板呈現（桌機的「更多」按鈕仍隱藏） */
+  .tbx-menu {
+    display: flex !important;
+  }
+  .tbx-menu[hidden] {
+    display: none !important;
+  }
+  .tbx-menu.tbx-sheet {
+    left: 8px !important;
+    right: 8px !important;
+    top: auto !important;
+    bottom: calc(68px + env(safe-area-inset-bottom, 0px)) !important;
+    max-height: 62dvh;
+    border-radius: 16px;
+    padding: 8px;
+  }
+  .tbx-menu.tbx-sheet .tbx-row {
+    min-height: 48px;
+    font-size: 14.5px;
+  }
+  /* 右上快捷列：只留 🔍 搜尋、👥 旅伴、⋯ 更多；其餘由「更多」代理點擊 */
+  body.tbx-on #app .mob-top-actions > :is(#mob-lang-btn, #mob-log-btn, #mob-credits, #mob-help) {
+    display: none !important;
+  }
+  body.tbx-on #app .mob-top-actions > button {
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+  }
+  body.tbx-on #app .mob-top-actions > #tbx-mob-more.active {
+    background: var(--ui-hover) !important;
+  }
+  /* 底部列「護照」：顯示「護照」字樣，進度 n/20 改成角落小徽章 */
+  #app nav.toolbar > #passport-btn {
+    position: relative !important;
+  }
+  #app nav.toolbar > #passport-btn .qp-btn-l {
+    display: block !important;
+  }
+  #app nav.toolbar > #passport-btn .tb-lbl {
+    position: absolute !important;
+    top: 2px !important;
+    right: 4px !important;
+    padding: 0 4px !important;
+    border-radius: 999px !important;
+    background: #e6ca8a !important;
+    color: #14120e !important;
+    font: 800 9px/14px var(--font-sans, "Noto Sans TC", system-ui, sans-serif) !important;
+  }
+}

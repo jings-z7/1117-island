@@ -1,0 +1,2207 @@
+{
+ "schemaVersion": 1,
+ "sources": {
+  "faculty": "https://shm.nkuht.edu.tw/p/412-1016-854.php?Lang=zh-tw",
+  "department": "https://hotel.nkuht.edu.tw/?Lang=zh-tw"
+ },
+ "department": {
+  "name": "國立高雄餐旅大學 旅館管理系",
+  "url": "https://hotel.nkuht.edu.tw/?Lang=zh-tw",
+  "contact": {
+   "address": "812301高雄市小港區松和路一號，第一教學大樓(F棟)1樓",
+   "phone": "07-8060505轉20202、20201",
+   "fax": "07-8062361"
+  },
+  "menu": [
+   {
+    "group": "系所簡介",
+    "label": "本系介紹",
+    "url": "https://hotel.nkuht.edu.tw/p/412-1018-6657.php?Lang=zh-tw"
+   },
+   {
+    "group": "系所簡介",
+    "label": "教育理念",
+    "url": "https://hotel.nkuht.edu.tw/p/412-1018-1396.php?Lang=zh-tw"
+   },
+   {
+    "group": "系所簡介",
+    "label": "行政與系務",
+    "url": "https://hotel.nkuht.edu.tw/p/412-1018-1399.php?Lang=zh-tw"
+   },
+   {
+    "group": "本系成員",
+    "label": "師資介紹",
+    "url": "https://hotel.nkuht.edu.tw/p/412-1018-1402.php?Lang=zh-tw"
+   },
+   {
+    "group": "本系成員",
+    "label": "行政人員",
+    "url": "https://hotel.nkuht.edu.tw/p/412-1018-2484.php?Lang=zh-tw"
+   },
+   {
+    "group": "課程資訊",
+    "label": "課程標準表",
+    "url": "https://hotel.nkuht.edu.tw/p/412-1018-2489.php?Lang=zh-tw"
+   },
+   {
+    "group": "課程資訊",
+    "label": "畢業條件標準表",
+    "url": "https://hotel.nkuht.edu.tw/p/403-1018-416.php?Lang=zh-tw"
+   },
+   {
+    "group": "課程資訊",
+    "label": "課程地圖",
+    "url": "https://hotel.nkuht.edu.tw/p/403-1018-800.php?Lang=zh-tw"
+   },
+   {
+    "group": "群賢會館",
+    "label": "官網連結",
+    "url": "http://elitehouse.nkuht.edu.tw/"
+   },
+   {
+    "group": "群賢會館",
+    "label": "訂房連結",
+    "url": "https://tlathena.ec-hotel.net/webhotel-v4/0904/index?locale=zh_TW"
+   },
+   {
+    "group": "群賢會館",
+    "label": "導覽預約系統",
+    "url": "https://forms.office.com/pages/responsepage.aspx?id=NTXD0kdlqUm7-7HsdWA8-9_NJc_ilQFFprV_wQFz9j5UQlZVN0c4WVk1WTBRUUEzUVRYUTBORlUwOS4u"
+   },
+   {
+    "group": "群賢會館",
+    "label": "相關法規",
+    "url": "https://hotel.nkuht.edu.tw/p/403-1018-608.php?Lang=zh-tw"
+   },
+   {
+    "group": "本系規章",
+    "label": "相關法規",
+    "url": "https://hotel.nkuht.edu.tw/p/403-1018-411.php?Lang=zh-tw"
+   },
+   {
+    "group": "菁英實習合作機構",
+    "label": "按地理位置區分",
+    "url": "https://hotel.nkuht.edu.tw/p/404-1018-37998.php?Lang=zh-tw"
+   },
+   {
+    "group": "菁英實習合作機構",
+    "label": "按集團品牌區分",
+    "url": "https://hotel.nkuht.edu.tw/p/404-1018-38099.php?Lang=zh-tw"
+   },
+   {
+    "group": "菁英實習合作機構",
+    "label": "校外實習分發相關資料",
+    "url": "https://hotel.nkuht.edu.tw/p/404-1018-39253.php?Lang=zh-tw"
+   },
+   {
+    "group": "招生資訊",
+    "label": "本校招生資訊網",
+    "url": "https://exam.nkuht.edu.tw/?_ga=2.107644930.1809221221.1711339476-1770996015.1710462806"
+   },
+   {
+    "group": "招生資訊",
+    "label": "國際交流資訊網",
+    "url": "https://international.nkuht.edu.tw/?Lang=en"
+   },
+   {
+    "group": "招生資訊",
+    "label": "語文中心華語組",
+    "url": "https://mandarin.nkuht.edu.tw/app/index.php"
+   },
+   {
+    "group": "招生資訊",
+    "label": "智財專區",
+    "url": "https://lic.nkuht.edu.tw/p/412-1007-199.php?Lang=zh-tw"
+   }
+  ],
+  "activities": [
+   {
+    "title": "28週年校慶",
+    "url": "https://hotel.nkuht.edu.tw/p/132-1018-720,r11-1.php?Lang=zh-tw"
+   },
+   {
+    "title": "112學年度薪火相傳",
+    "url": "https://hotel.nkuht.edu.tw/p/132-1018-722,r11-1.php?Lang=zh-tw"
+   },
+   {
+    "title": "112學年度偏鄉關懷",
+    "url": "https://hotel.nkuht.edu.tw/p/132-1018-721,r11-1.php?Lang=zh-tw"
+   },
+   {
+    "title": "112學年度新生職涯講座",
+    "url": "https://hotel.nkuht.edu.tw/p/132-1018-724,r11-1.php?Lang=zh-tw"
+   }
+  ]
+ },
+ "intro": {
+  "url": "https://hotel.nkuht.edu.tw/p/412-1018-6657.php?Lang=zh-tw",
+  "sections": [
+   {
+    "heading": "沿革",
+    "text": [
+     "本校於民國八十一年八月三十一日成立籌備處，積極展開各項前置作業，經三年精心推展，得於八十四年七月一日奉教育部核定成立旅館管理科，於八十五年三月一日正式開課。本系（科）為全國首創，以實用至上為理念，結合突破性之新學制如：三明治教學法、勞作教育等，辦學深受業界青睞、學生認同與家長首肯。本系長年苦心經營，於師資陣容、教學規劃、軟硬體設備等各方面逐步成長茁壯，於八十九年二月份成立夜間部，更於八十九年八月份獲准升格為二年制，九十一年增設四年制，為旅館事業中高階人才培養貢獻心力。九十六年招收四年制旅館管理系外籍－越南生專班，九十七年招收產學攜手專班，九十九年八月份本校升格改制為國立高雄餐旅大學。"
+    ]
+   },
+   {
+    "heading": "課程規劃",
+    "text": [
+     "本系教學發展目標，積極配合我國技職教育「務實致用」之核心發展方向與重點，學術理論與實務能力並行，從而培育具備旅館業專業知能之優秀人才，促使本系學生於畢業後符合產業所需，落實培育旅館管理專業人才之教育目標與理念。本系課程規劃分為實務技能與管理能力之定位，課程亦涵蓋資訊科技、數位行銷與大數據分析等內容與旅館產業發展趨勢接軌，同時推動精進外語能力，並鼓勵至國際觀光旅館與海外實習以拓展視野。系上師資與產業密切合作掌控社會脈動，邀請業界專家學者蒞校進行雙師課程及舉辦各式講座，並參與系上課程規劃會議提供建言，期許本系能給予學生正確觀念、專業實務與管理技能，符合旅館產業人力發展需求，有效提升就業競爭力。"
+    ]
+   },
+   {
+    "heading": "發展特色",
+    "text": [
+     "配合我國技職教育發展狀況及市場導向為規劃之重點，藉由校內學習專業理論及校外赴旅館產業實習，預期理論與實際兼具。建構「產業學院」為現今本系發展特色目標，透過與旅館產業界密切合作與深耕，不僅提高業界穩定性極高的人力資源，也為本系學生開創順利就業之藍海。從而培育本系學生成為具備旅館專業知識、實務技術、資訊科技應用能力、數位行銷能力與大數據分析能力之優秀旅館專業人才，期能使本系學生於畢業後符合業界及社會所需之專業旅館管理人才，以達本系之教育目標。"
+    ]
+   },
+   {
+    "heading": "特殊設備",
+    "text": [
+     "本系為考量技職教育教學成效，因此對於符合職場需求之訓練器材設備及職場模擬環境高度重視。鑑此，教學環境之軟體與硬體設備設有：校內實習旅館－群賢會館（供示範模擬教學與實務及外賓接待）、智能服務中心、旅館資訊管理專業教室、旅館專業技術教室、一般授課教學教室，以及旅館資訊管理系統(Oracle Hospitality OPERA PMS與德安資訊PMS飯店前台管理系統)。"
+    ]
+   },
+   {
+    "heading": "師資",
+    "text": [
+     "本系特聘用留美、澳、英之餐旅專業相關領域之博、碩士，且多來自旅館業界，具有職場實務經歷或專業證照，擔任專任（案）教師。亦另延攬國內外具有豐富餐旅實務經驗之旅館專業人士、本系畢業且於旅館飯店工作優秀校友蒞校兼任授課，或開設各類主題「餐旅講座」，借重其現身說法之實務經驗分享，給予學生多元師資以潛能開發。"
+    ]
+   },
+   {
+    "heading": "獎學金",
+    "text": [
+     "請參閱本校課外活動組之奬學金辦法。"
+    ]
+   },
+   {
+    "heading": "升學",
+    "text": [
+     "主要進修管道如國內各大學相關研究所、餐旅管理研究所、國外大學旅館管理或觀光餐飲研究所等繼續進修。"
+    ]
+   },
+   {
+    "heading": "就業",
+    "text": [
+     "本系畢業生可前往旅館業、餐飲業、或住宿等相關服務業，以及與本系課程領域性質相近之公私立機構任職。"
+    ]
+   }
+  ]
+ },
+ "philosophy": {
+  "url": "https://hotel.nkuht.edu.tw/p/412-1018-1396.php?Lang=zh-tw",
+  "sections": [
+   {
+    "heading": "教學理念",
+    "text": [
+     "依據本系設系理念，教學工作主要在開設旅館管理方面之實用課程，研擬旅館相關學科之教材，充實其教學內容及教學設備，延攬具有實務經驗之優良師資，注重教學方法，提升教學實效，以期達到本系培育具有國際觀且兼具專業知識、技能、服務道德及敬業樂群之中級旅館專業幹部人才之教育目標。故一切教學措施，除遵照大學法與專科學校法與教育部頒布之專科學校規程，並依據本系（科）之特殊屬性，擬定具有前瞻性、實務性及國際性之教學工作計畫，務期各項工作均能落實而有良好績效。"
+    ]
+   },
+   {
+    "heading": "教材教學",
+    "text": [
+     "本系教學大綱均先請相關學者、業界專家共同研討後定案，並由任課教師編撰教材，以實用為主，且輔以課外讀物、雜誌、期刊、教學錄影帶、講座及校外參訪。",
+     "同時，教學方式著重老師示範，學生親自操作，並錄影留存，俾作檢討與改進參考。盡量採用觀摩式及討論式教學方法，激發學生學習興趣。",
+     "此外，為靈活機學方式，提升教學效果，除加強師生雙向討論，充分溝通切磋之外，皆以書寫報告敘述開創性之心得的做法，取代一般繳交作業的傳統模式，以激發學生「找資料、創新意」的潛能。"
+    ]
+   },
+   {
+    "heading": "培育目標",
+    "text": []
+   },
+   {
+    "heading": "總培育目標",
+    "text": [
+     "為順應世界觀光潮流，配合國家餐旅服務業之蓬勃發展及業界人才需求，以突破目前我國旅館發展瓶頸。"
+    ]
+   },
+   {
+    "heading": "分類培育目標",
+    "text": []
+   },
+   {
+    "heading": "專業能力目標",
+    "text": [
+     "為培養具有國際觀且兼具專業知識、技能、服務道德及敬業樂群的中階旅館管理專業幹部人才。"
+    ]
+   },
+   {
+    "heading": "特色目標",
+    "text": [
+     "兼具旅館專業與管理知識之整合。",
+     "理論與實務並重。",
+     "熟悉現代旅館內之軟硬體",
+     "精通外國語言。",
+     "落實職業道德與服務精神"
+    ]
+   }
+  ]
+ },
+ "administration": {
+  "url": "https://hotel.nkuht.edu.tw/p/412-1018-1399.php?Lang=zh-tw",
+  "sections": [
+   {
+    "heading": "行政措施",
+    "text": [
+     "本系設置主任一人，負責推動系行政業務，督導系與系學會運作，並聯繫系友會。另置組員一人，協助辦理行政工作。",
+     "在系務工作的規劃推展方面，本系定期及在必要時召開系務會議，以議決系內重要事項。對於新進教師的聘任，依公開、公正的原則，按課程規劃需要，先由系教評委員會議初審通過，經餐旅學院教師評審委員會議複審通過後，移送本校教師評審委員會議通過後進行聘任。",
+     "有關教師的升等、進修等事宜，亦通過系教評委員會初審通過，經餐旅學會教師評審委員會議複審通過後，移送本校教師評審委員會議審查。"
+    ]
+   },
+   {
+    "heading": "系務工作",
+    "text": [
+     "本系除安排召開系務會議、教學研討會與導師會議，使系務運作制度化與合理化外，其他行政措施擇要如下：",
+     "安排學生校外參觀及教學等活動，並聘請產、官、學等專業學者蒞臨本系餐旅專題演講。",
+     "為達到「校外實習乃校內學習之延伸」的教育功能，本系教師均定期赴學生實習場所訪視，並與旅館業界保持密切連繫。",
+     "積極規劃學生就業輔導工作。",
+     "每週安排導師時間、週會時間。",
+     "配合校方所設立的勞作教育制度，落實校園環境清潔工作態度。",
+     "指導系學會社團活動，使學生能從活動中學習組織、執行能力。",
+     "除上述之外，本系積極推動「三合一策略」，即本系與業界建立良性的密切互動關係，學生得以充分獲得校外實習機會，汲取實務經驗，進而畢業後即可順利就業。"
+    ]
+   }
+  ]
+ },
+ "faculty": {
+  "url": "https://shm.nkuht.edu.tw/p/412-1016-854.php?Lang=zh-tw",
+  "departmentUrl": "https://hotel.nkuht.edu.tw/p/412-1018-1402.php?Lang=zh-tw",
+  "members": [
+   {
+    "name": "謝文欽",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-9653,c854.php?Lang=zh-tw",
+    "title": "副教授兼系主任兼學務長",
+    "ext": [
+     "13000",
+     "13700",
+     "20200",
+     "35201"
+    ],
+    "email": "enchin@mail.nkuht.edu.tw",
+    "specialties": [
+     "旅館服務業管理",
+     "旅館行銷管理",
+     "賭場管理"
+    ],
+    "photo": "https://shm.nkuht.edu.tw/var/file/16/1016/pictures/106/m/mczh-tw480x480_small9653_112726732435.jpg",
+    "profile": {
+     "ext": [
+      "13000",
+      "13700",
+      "20200",
+      "35201"
+     ],
+     "email": "wenchin@mail.nkuht.edu.tw",
+     "category": "專任師資",
+     "title": "副教授兼系主任兼學務長",
+     "specialties": [
+      "旅館服務業管理",
+      "旅館行銷管理",
+      "賭場管理"
+     ],
+     "heading": "謝文欽"
+    },
+    "departmentProfile": {
+     "name": "謝文欽",
+     "ext": [
+      "35201"
+     ],
+     "email": "wenchin@mail.nkuht.edu.tw",
+     "title": "副教授",
+     "specialties": [
+      "服務業管理",
+      "餐旅觀光行銷管理",
+      "企業經營管理"
+     ],
+     "heading": "謝文欽 副教授兼系主任",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-8049,c1402.php?Lang=zh-tw"
+    }
+   },
+   {
+    "name": "楊仁德",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-9652,c854.php?Lang=zh-tw",
+    "title": "教授",
+    "ext": [
+     "5261"
+    ],
+    "email": "jenteyang@mail.nkuht.edu.tw",
+    "specialties": [
+     "知識經濟與管理",
+     "管理心理學",
+     "組織行為",
+     "策略管理",
+     "服務業管理"
+    ],
+    "courses": [
+     "客房管理",
+     "餐飲管理",
+     "旅館管家實務",
+     "服務中心實務",
+     "客房營收管理"
+    ],
+    "photo": null,
+    "profile": {
+     "ext": [
+      "20200",
+      "35261"
+     ],
+     "email": "jenteyang@mail.nkuht.edu.tw",
+     "category": "專任師資",
+     "title": "教授",
+     "specialties": [
+      "知識經濟與管理",
+      "管理心理學",
+      "組織行為",
+      "策略管理",
+      "服務業管理"
+     ],
+     "heading": "楊仁德"
+    },
+    "departmentProfile": {
+     "name": "楊仁德",
+     "ext": [
+      "35261"
+     ],
+     "email": "jenteyang@mail.nkuht.edu.tw",
+     "title": "教授",
+     "specialties": [
+      "餐飲管理",
+      "客務管理",
+      "服務品質管理",
+      "旅館營收管理",
+      "餐旅管理",
+      "服務管理",
+      "人才培訓與發展"
+     ],
+     "heading": "楊仁德 教授",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-8048,c1402.php?Lang=zh-tw"
+    }
+   },
+   {
+    "name": "沙荃",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-5295,c854.php?Lang=zh-tw",
+    "title": "助理教授級專技人員兼副主任",
+    "ext": [
+     "20201",
+     "34121"
+    ],
+    "email": "rogersha@mail.nkuht.edu.tw",
+    "specialties": [
+     "旅館管理",
+     "人力資源",
+     "組織行為"
+    ],
+    "photo": "https://shm.nkuht.edu.tw/var/file/16/1016/pictures/926/m/mczh-tw480x480_small5295_541561524213.jpg",
+    "profile": {
+     "ext": [
+      "20201",
+      "34121"
+     ],
+     "email": "rogersha@mail.nkuht.edu.tw",
+     "education": "國立中興大學企業管理系博士",
+     "category": "專任師資",
+     "title": "助理教授級專技人員兼副主任",
+     "specialties": [
+      "組織行為",
+      "人力資源"
+     ],
+     "heading": "沙荃"
+    },
+    "departmentProfile": {
+     "name": "沙荃",
+     "ext": [
+      "34121"
+     ],
+     "email": "rogersha@mail.nkuht.edu.tw",
+     "education": "國立中興大學企業管理系博士",
+     "category": "專技教師具體事蹟、特殊造詣：業界資歷豐富完整、通過全國技能競賽裁判資格甄選、旅館客房服務技術士技能檢定監評、全國技能競賽旅館接待選手(第一名、第二名、第三名)指導老師、國立中興大學企業管理系博士",
+     "title": "助理教授級專技人員",
+     "specialties": [
+      "旅館管理",
+      "人力資源",
+      "組織行為"
+     ],
+     "heading": "沙 荃 助理教授級專技人員",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-8053,c1402.php?Lang=zh-tw"
+    }
+   },
+   {
+    "name": "謝家黎",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-9654,c854.php?Lang=zh-tw",
+    "title": "副教授",
+    "ext": [
+     "35241"
+    ],
+    "email": "amber@mail.nkuht.edu.tw",
+    "specialties": [
+     "人力資源管理",
+     "客務實務",
+     "國際禮儀"
+    ],
+    "photo": "https://shm.nkuht.edu.tw/var/file/16/1016/pictures/254/m/mczh-tw480x480_small9654_619208624586.png",
+    "profile": {
+     "ext": [
+      "35241"
+     ],
+     "email": "amber@mail.nkuht.edu.tw",
+     "category": "專任師資",
+     "title": "副教授",
+     "specialties": [
+      "人力資源管理",
+      "客務實務",
+      "國際禮儀"
+     ],
+     "heading": "謝家黎"
+    },
+    "departmentProfile": {
+     "name": "謝家黎",
+     "ext": [
+      "35241"
+     ],
+     "email": "amber@mail.nkuht.edu.tw",
+     "title": "副教授",
+     "specialties": [
+      "人力資源管理",
+      "客房實務與管理",
+      "國際禮儀",
+      "永續觀光"
+     ],
+     "heading": "謝家黎 副教授",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-8051,c1402.php?Lang=zh-tw"
+    }
+   },
+   {
+    "name": "黃啟揚",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-9655,c854.php?Lang=zh-tw",
+    "title": "助理教授",
+    "ext": [
+     "35111"
+    ],
+    "email": "chiyangh@mail.nkuht.edu.tw",
+    "specialties": [
+     "旅館資訊管理",
+     "旅館行銷管理",
+     "餐廳管理"
+    ],
+    "photo": "https://shm.nkuht.edu.tw/var/file/16/1016/pictures/292/m/mczh-tw480x480_small9655_542752924274.jpg",
+    "profile": {
+     "ext": [
+      "35111"
+     ],
+     "email": "chiyangh@mail.nkuht.edu.tw",
+     "category": "專任師資",
+     "title": "助理教授",
+     "specialties": [
+      "旅館資訊管理",
+      "旅館行銷管理",
+      "餐廳管理"
+     ],
+     "heading": "黃啟揚"
+    },
+    "departmentProfile": {
+     "name": "黃啟揚",
+     "ext": [
+      "35111"
+     ],
+     "email": "chiyangh@mail.nkuht.edu.tw",
+     "title": "助理教授",
+     "specialties": [
+      "旅館行銷管理",
+      "餐廳管理"
+     ],
+     "heading": "黃啟揚 助理教授",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-8054,c1402.php?Lang=zh-tw"
+    }
+   },
+   {
+    "name": "游明鳳",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-9657,c854.php?Lang=zh-tw",
+    "title": "助理教授",
+    "ext": [
+     "35011"
+    ],
+    "email": "sallyyu@mail.nkuht.edu.tw",
+    "specialties": [
+     "旅館採購",
+     "旅館財務管理"
+    ],
+    "photo": "https://shm.nkuht.edu.tw/var/file/16/1016/pictures/14/m/mczh-tw480x480_small9657_389999424253.jpg",
+    "profile": {
+     "ext": [
+      "35011"
+     ],
+     "email": "sallyyu@mail.nkuht.edu.tw",
+     "category": "專任師資",
+     "title": "助理教授",
+     "specialties": [
+      "旅館採購",
+      "旅館財務管理"
+     ],
+     "heading": "游明鳳"
+    },
+    "departmentProfile": {
+     "name": "游明鳳",
+     "ext": [
+      "35011"
+     ],
+     "email": "sallyyu@mail.nkuht.edu.tw",
+     "title": "助理教授",
+     "specialties": [
+      "旅館採購",
+      "旅館財務管理"
+     ],
+     "heading": "游明鳳 助理教授",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-8056,c1402.php?Lang=zh-tw"
+    }
+   },
+   {
+    "name": "謝金龍",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-9658,c854.php?Lang=zh-tw",
+    "title": "助理教授兼實習輔導組長",
+    "ext": [
+     "16200",
+     "36142"
+    ],
+    "email": "hsiehbenson@mail.nkuht.edu.tw",
+    "specialties": [
+     "旅館客務管理",
+     "旅館行銷管理"
+    ],
+    "photo": "https://shm.nkuht.edu.tw/var/file/16/1016/pictures/966/m/mczh-tw480x480_small9658_985293224362.jpg",
+    "profile": {
+     "ext": [
+      "16200",
+      "36142"
+     ],
+     "email": "hsiehbenson@mail.nkuht.edu.tw",
+     "category": "專任師資",
+     "title": "助理教授兼實習輔導組長",
+     "specialties": [
+      "旅館客務管理",
+      "旅館行銷管理"
+     ],
+     "heading": "謝金龍"
+    },
+    "departmentProfile": {
+     "name": "謝金龍",
+     "ext": [
+      "36142",
+      "16200"
+     ],
+     "email": "hsiehbenson@mail.nkuht.edu.tw",
+     "title": "助理教授",
+     "specialties": [
+      "旅館客務管理",
+      "旅館行銷管理"
+     ],
+     "heading": "謝金龍 助理教授兼實習組組長",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-8058,c1402.php?Lang=zh-tw"
+    }
+   },
+   {
+    "name": "許孟鈞",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-5297,c854.php?Lang=zh-tw",
+    "title": "助理教授兼校務策略研究組長",
+    "ext": [
+     "10180",
+     "36322"
+    ],
+    "email": "jacqueshsu@staff.nkuht.edu.tw",
+    "specialties": [
+     "雲端科技應用",
+     "資訊管理",
+     "知識管理",
+     "電子商務",
+     "餐旅資訊系統",
+     "數位行銷"
+    ],
+    "photo": "https://shm.nkuht.edu.tw/var/file/16/1016/pictures/598/m/mczh-tw480x480_small5297_928189103562.png",
+    "profile": {
+     "ext": [
+      "10180",
+      "36322"
+     ],
+     "fax": "07-8060838",
+     "email": "jacqueshsu@staff.nkuht.edu.tw",
+     "education": "國立高雄科技大學管理博士",
+     "category": "專任師資",
+     "title": "助理教授兼校務策略研究組組長",
+     "specialties": [
+      "雲端科技應用",
+      "資訊管理",
+      "知識管理",
+      "電子商務",
+      "餐旅資訊系統",
+      "數位行銷"
+     ],
+     "heading": "許孟鈞"
+    },
+    "departmentProfile": {
+     "name": "許孟鈞(許家祥)",
+     "ext": [
+      "36322"
+     ],
+     "email": "jacqueshsu@staff.nkuht.edu.tw",
+     "title": "助理教授",
+     "specialties": [
+      "雲端科技應用",
+      "資訊管理",
+      "知識管理",
+      "電子商務",
+      "餐旅資訊系統",
+      "數位行銷"
+     ],
+     "heading": "許孟鈞 助理教授兼校務策略研究組組長",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-9106,c1402.php?Lang=zh-tw"
+    }
+   },
+   {
+    "name": "張慧貞",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-5300,c854.php?Lang=zh-tw",
+    "title": "專案助理教授",
+    "ext": [
+     "34152"
+    ],
+    "email": "winnie@mail.nkuht.edu.tw",
+    "specialties": [
+     "旅館會計學",
+     "旅館財務管理",
+     "會議管理",
+     "客務實務"
+    ],
+    "photo": "https://shm.nkuht.edu.tw/var/file/16/1016/pictures/640/m/mczh-tw480x480_small5300_44230126097.jpg",
+    "profile": {
+     "name": "張慧貞",
+     "ext": [
+      "34152"
+     ],
+     "fax": "07-8062361",
+     "email": "winnie@mail.nkuht.edu.tw",
+     "education": "英國曼徹斯特都會大學旅館研究所碩士",
+     "category": "專案師資",
+     "title": "專案助理教授",
+     "specialties": [
+      "旅館會計學",
+      "旅館財務管理",
+      "會議管理",
+      "客務實務"
+     ],
+     "heading": "張慧貞"
+    },
+    "departmentProfile": {
+     "name": "張慧貞",
+     "ext": [
+      "34101"
+     ],
+     "email": "winnie@mail.nkuht.edu.tw",
+     "title": "專案助理教授",
+     "specialties": [
+      "旅館財務管理",
+      "會計學",
+      "旅館銷售實務",
+      "客房管理",
+      "旅館管理"
+     ],
+     "heading": "張慧貞 專案助理教授",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-8057,c1402.php?Lang=zh-tw"
+    }
+   },
+   {
+    "name": "盧小琴",
+    "profileUrl": "https://shm.nkuht.edu.tw/p/405-1016-34056,c854.php?Lang=zh-tw",
+    "title": "專案助理教授",
+    "ext": [
+     "36221"
+    ],
+    "email": "jamielo@staff.nkuht.edu.tw",
+    "specialties": [
+     "food and beverage management",
+     "consumer behaviours",
+     "tourism development",
+     "hospitality education",
+     "management in hospitality industry"
+    ],
+    "photo": "https://shm.nkuht.edu.tw/var/file/16/1016/pictures/229/m/mczh-tw480x480_small34056_862803023513.png",
+    "profile": {
+     "name": "盧小琴",
+     "ext": [
+      "36221"
+     ],
+     "email": "jamielo@staff.nkuht.edu.tw",
+     "education": "香港理工大學酒店及旅遊管理博士",
+     "category": "專案師資",
+     "title": "專案助理教授",
+     "specialties": [
+      "food and beverage management",
+      "consumer behaviours",
+      "tourism development",
+      "hospitality education",
+      "management in hospitality industry"
+     ],
+     "heading": "盧小琴"
+    },
+    "departmentProfile": {
+     "name": "盧小琴",
+     "ext": [
+      "36221"
+     ],
+     "email": "jamielo@staff.nkuht.edu.tw",
+     "education": "香港理工大學酒店及旅遊管理博士",
+     "title": "專案助理教授",
+     "specialties": [
+      "餐旅資訊系統",
+      "酒店業管理",
+      "餐飲管理",
+      "旅遊發展",
+      "消費者行為"
+     ],
+     "heading": "盧小琴 專案助理教授",
+     "url": "https://hotel.nkuht.edu.tw/p/405-1018-34027,c1402.php?Lang=zh-tw"
+    }
+   }
+  ]
+ },
+ "staff": {
+  "url": "https://hotel.nkuht.edu.tw/p/412-1018-2484.php?Lang=zh-tw",
+  "members": [
+   {
+    "role": "行政組員",
+    "name": "李姿瑩",
+    "ext": "20202",
+    "email": "lty0210@mail.nkuht.edu.tw",
+    "deputy": "陳柚蓁",
+    "duties": [
+     "行政系務綜整業務",
+     "教師教學與學生事務相關行政事務",
+     "教師聘任、升等、敘薪等相關教師評審會議業務",
+     "招生相關作業工作管理",
+     "校務基本資料庫及教育部各單位表單填報綜整管理",
+     "系網頁維護與更新",
+     "協助推展單位各項計畫活動相關事宜",
+     "協辦單位經費預算控管及核銷、執行",
+     "協辦教室及辦公室環境、設備維護",
+     "協辦群賢會館營運行政庶務相關事務",
+     "主管臨時交辦事項"
+    ]
+   },
+   {
+    "role": "行政組員",
+    "name": null,
+    "ext": "20201",
+    "email": null,
+    "deputy": null,
+    "duties": [
+     "課程協調、排課及畢業專業條件等課務相關業務管理",
+     "系課程委員會及校外實習輔導小組會議業務",
+     "辦理系教室及辦公室財產設備維護及管理",
+     "單位經費預算控管、編列、執行及核銷追蹤",
+     "系務相關規章擬訂與研修及行政會議工作報告彙整",
+     "協辦招生相關工作、系網頁維護與更新及各項會議召開作業",
+     "協辦及夜間時段處理師生教學與行政庶務業務",
+     "協辦群賢會館營運行政庶務相關事務",
+     "主管臨時交辦事項"
+    ]
+   },
+   {
+    "role": "行政組員",
+    "name": "陳柚蓁",
+    "ext": "20204",
+    "email": "o19950524@mail.nkuht.edu.tw",
+    "deputy": "李姿瑩",
+    "duties": [
+     "群賢會館實習營運場域綜整業務管理",
+     "第二實習教室環境維護管理",
+     "協辦學生事務溝通協調相關事務",
+     "協辦系務行政事務",
+     "其他臨時交辦事項"
+    ]
+   }
+  ]
+ },
+ "curriculum": {
+  "url": "https://hotel.nkuht.edu.tw/p/412-1018-2489.php?Lang=zh-tw",
+  "tables": [
+   {
+    "program": "日間部四年制課程標準表",
+    "columns": [
+     "畢業學分數",
+     "校訂必修",
+     "院訂必修",
+     "系訂必修",
+     "系訂選修",
+     "備註"
+    ],
+    "rows": [
+     {
+      "label": "98學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/465277086.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "40",
+      "院訂必修": "0",
+      "系訂必修": "70",
+      "系訂選修": "22",
+      "備註": ""
+     },
+     {
+      "label": "99-100學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/726874460.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "66",
+      "系訂選修": "18",
+      "備註": ""
+     },
+     {
+      "label": "101學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/668760222.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "66",
+      "系訂選修": "18",
+      "備註": ""
+     },
+     {
+      "label": "103學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/480458666.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "66",
+      "系訂選修": "18",
+      "備註": ""
+     },
+     {
+      "label": "104學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/145279661.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "58",
+      "系訂選修": "26",
+      "備註": ""
+     },
+     {
+      "label": "105學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/857581572.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "58",
+      "系訂選修": "26",
+      "備註": "1090528教務會議通過"
+     },
+     {
+      "label": "106學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/892941401.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "58",
+      "系訂選修": "26",
+      "備註": "1090528教務會議通過"
+     },
+     {
+      "label": "107學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/686683191.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "57",
+      "系訂選修": "27",
+      "備註": "1101216教務會議(統包)通過:新增跨領域微學分課程說明"
+     },
+     {
+      "label": "108學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/662640756.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "57",
+      "系訂選修": "27",
+      "備註": "1111130教務會議通過:新增院訂選修"
+     },
+     {
+      "label": "109學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/540529360.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "54",
+      "系訂選修": "26",
+      "備註": "1111130教務會議通過:新增院訂選修"
+     },
+     {
+      "label": "110學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/890557040.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "54",
+      "系訂選修": "26",
+      "備註": "1111130教務會議通過:新增院訂選修"
+     },
+     {
+      "label": "111學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/890557040.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "54",
+      "系訂選修": "26",
+      "備註": "適用110學年度實施課程標準表"
+     },
+     {
+      "label": "2021 Academic Year",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/2021AcademicYear.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "54",
+      "系訂選修": "26",
+      "備註": ""
+     },
+     {
+      "label": "112學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/253828570.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "54",
+      "系訂選修": "26",
+      "備註": "1120531教務會議通過"
+     },
+     {
+      "label": "2023 Academic Year",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/2023AcademicYear.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "54",
+      "系訂選修": "26",
+      "備註": "1120531教務會議通過"
+     },
+     {
+      "label": "113學年度實施(2024 Academic Year)",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/883809833.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "56",
+      "系訂選修": "24",
+      "備註": "1140514校課程委員會通過：修改校訂必修"
+     },
+     {
+      "label": "114學年度實施(2025 Academic Year)",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/344630076.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "56",
+      "系訂選修": "24",
+      "備註": "1141203教務會議通過：修改校訂必修"
+     },
+     {
+      "label": "115學年度實施(2026 Academic Year)",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/455909285.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "55",
+      "系訂選修": "25",
+      "備註": "1150829校課程會議通過：修改校訂必修"
+     }
+    ]
+   },
+   {
+    "program": "進修部四年制課程標準表",
+    "columns": [
+     "畢業學分數",
+     "校訂必修",
+     "院訂必修",
+     "系訂必修",
+     "系訂選修",
+     "備註"
+    ],
+    "rows": [
+     {
+      "label": "98-100學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/473874195.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "40",
+      "院訂必修": "—",
+      "系訂必修": "62",
+      "系訂選修": "26",
+      "備註": ""
+     },
+     {
+      "label": "101學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/242156655.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "38",
+      "院訂必修": "—",
+      "系訂必修": "66",
+      "系訂選修": "24",
+      "備註": ""
+     },
+     {
+      "label": "104學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/145279661.pdf",
+      "畢業學分數": "134",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "58",
+      "系訂選修": "26",
+      "備註": ""
+     },
+     {
+      "label": "105學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/857581572.pdf",
+      "畢業學分數": "134",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "58",
+      "系訂選修": "26",
+      "備註": "1090528教務會議通過"
+     },
+     {
+      "label": "106學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/892941401.pdf",
+      "畢業學分數": "134",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "58",
+      "系訂選修": "26",
+      "備註": "1090528教務會議通過"
+     },
+     {
+      "label": "107學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/686683191.pdf",
+      "畢業學分數": "134",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "57",
+      "系訂選修": "27",
+      "備註": "1101216教務會議(統包)通過:新增跨領域微學分課程說明"
+     },
+     {
+      "label": "108學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/662640756.pdf",
+      "畢業學分數": "134",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "57",
+      "系訂選修": "27",
+      "備註": "1111130教務會議通過:新增院訂選修"
+     },
+     {
+      "label": "109學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/540529360.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "54",
+      "系訂選修": "24",
+      "備註": "1111130教務會議通過:新增院訂選修"
+     },
+     {
+      "label": "110學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/890557040.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "54",
+      "系訂選修": "24",
+      "備註": "1111130教務會議通過:新增院訂選修"
+     },
+     {
+      "label": "112學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/253828570.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "54",
+      "系訂選修": "24",
+      "備註": "1120531教務會議通過"
+     },
+     {
+      "label": "113學年度實施(2024 Academic Year)",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/785686818.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "56",
+      "系訂選修": "22",
+      "備註": "1140514校課程委員會通過：修改校訂必修"
+     },
+     {
+      "label": "114學年度實施(2025 Academic Year)",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/446726714.pdf",
+      "畢業學分數": "128",
+      "校訂必修": "38",
+      "院訂必修": "12",
+      "系訂必修": "56",
+      "系訂選修": "22",
+      "備註": "1141203教務會議通過：修改校訂必修"
+     }
+    ]
+   },
+   {
+    "program": "大陸地區學生適用課程標準表",
+    "columns": [
+     "畢業學分數",
+     "校訂必修",
+     "院訂必修",
+     "系訂必修",
+     "系訂選修",
+     "備註"
+    ],
+    "rows": [
+     {
+      "label": "105學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/341244825.pdf",
+      "畢業學分數": "132",
+      "校訂必修": "36",
+      "院訂必修": "12",
+      "系訂必修": "58",
+      "系訂選修": "26",
+      "備註": ""
+     }
+    ]
+   },
+   {
+    "program": "產業攜手合作專班四年制課程標準表",
+    "columns": [
+     "畢業學分數",
+     "通識必修",
+     "院訂必修",
+     "系訂必修",
+     "系訂選修",
+     "備註"
+    ],
+    "rows": [
+     {
+      "label": "106學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/777979514.pdf",
+      "畢業學分數": "128",
+      "通識必修": "36",
+      "院訂必修": "—",
+      "系訂必修": "74",
+      "系訂選修": "18",
+      "備註": ""
+     }
+    ]
+   },
+   {
+    "program": "進修部二年制課程標準表",
+    "columns": [
+     "畢業學分數",
+     "通識學分",
+     "系訂必修",
+     "系訂選修",
+     "備註"
+    ],
+    "rows": [
+     {
+      "label": "100學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/118079950.pdf",
+      "畢業學分數": "72",
+      "通識學分": "14",
+      "系訂必修": "38",
+      "系訂選修": "20",
+      "備註": ""
+     },
+     {
+      "label": "108學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/553085799.pdf",
+      "畢業學分數": "72",
+      "通識學分": "16",
+      "系訂必修": "35",
+      "系訂選修": "22",
+      "備註": "1081128教務會議通過"
+     },
+     {
+      "label": "109學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/355282028.pdf",
+      "畢業學分數": "72",
+      "通識學分": "16",
+      "系訂必修": "32",
+      "系訂選修": "24",
+      "備註": "1101216教務會議(統包)通過:新增跨領域微學分課程說明"
+     },
+     {
+      "label": "110學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/681142830.pdf",
+      "畢業學分數": "72",
+      "通識學分": "16",
+      "系訂必修": "32",
+      "系訂選修": "24",
+      "備註": "1101216教務會議(統包)通過:新增跨領域微學分課程說明"
+     },
+     {
+      "label": "112學年度實施",
+      "pdf": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/239/384655134.pdf",
+      "畢業學分數": "72",
+      "通識學分": "16",
+      "系訂必修": "32",
+      "系訂選修": "24",
+      "備註": "1120531教務會議通過"
+     }
+    ]
+   }
+  ]
+ },
+ "graduation": {
+  "url": "https://hotel.nkuht.edu.tw/p/403-1018-416.php?Lang=zh-tw",
+  "documents": [
+   {
+    "title": "畢業門檻已登錄系統名單(115.11.2更新)",
+    "url": "https://hotel.nkuht.edu.tw/p/406-1018-40456,r416.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系畢業門檻申請暨專業證照登錄相關事項及作業時程",
+    "url": "https://hotel.nkuht.edu.tw/p/406-1018-30184,r416.php?Lang=zh-tw"
+   },
+   {
+    "title": "Graduation Requirements and Criteria:Department of Hotel Management(2022+ Enrollees)-Last updated: May 2025",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-43066,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系畢業條件標準表(111學年度起入學適用)-1140528教務會議通過",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-38352,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系畢業條件標準表(110學年度起入學適用)-1140528教務會議通過",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-38353,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系畢業條件標準表(108學年度起入學適用)-1120621校務會議通過",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-28722,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系畢業條件標準表(106學年度起入學適用)-1100619校務會議通過",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-18623,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系畢業條件標準表(103學年度起入學適用)",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-8085,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系畢業條件標準表(102學年度起入學適用)",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-8084,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系畢業條件標準表(101學年度起入學適用)",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-8083,c0.php?Lang=zh-tw"
+   }
+  ]
+ },
+ "curriculumMap": {
+  "url": "https://hotel.nkuht.edu.tw/p/403-1018-800.php?Lang=zh-tw",
+  "documents": [
+   {
+    "title": "旅館管理系課程地圖-113",
+    "url": "https://hotel.nkuht.edu.tw/p/406-1018-35959,r800.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系課程地圖-112",
+    "url": "https://hotel.nkuht.edu.tw/p/406-1018-35958,r800.php?Lang=zh-tw"
+   }
+  ]
+ },
+ "regulations": {
+  "url": "https://hotel.nkuht.edu.tw/p/403-1018-411.php?Lang=zh-tw",
+  "documents": [
+   {
+    "title": "旅館管理系校外實習輔導小組設置要點-1150408校務會議修正通過",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-42072,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系務會議設置要點-1140521行政會議核備",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-38144,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系系學會組織要點-1081009審議通過.pdf",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-9423,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系自我評鑑實施要點-1150521院務會議通過.pdf",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-8268,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系教師評審委員會設置辦法-1131023核備通過.pdf",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-7979,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "系委辦計畫行政管理費支用管理要點.pdf",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-7983,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系專業教室管理要點-111.9.28核備通過(中英文版).pdf",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-7981,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館管理系課程委員會設置要點.pdf",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-7980,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "旅館菁英實習計畫3.0實施方式-114.4.28修訂通過",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-38067,c0.php?Lang=zh-tw"
+   }
+  ]
+ },
+ "eliteHouse": {
+  "site": "http://elitehouse.nkuht.edu.tw/",
+  "booking": "https://tlathena.ec-hotel.net/webhotel-v4/0904/index?locale=zh_TW",
+  "tourBooking": "https://forms.office.com/pages/responsepage.aspx?id=NTXD0kdlqUm7-7HsdWA8-9_NJc_ilQFFprV_wQFz9j5UQlZVN0c4WVk1WTBRUUEzUVRYUTBORlUwOS4u",
+  "regulationsUrl": "https://hotel.nkuht.edu.tw/p/403-1018-608.php?Lang=zh-tw",
+  "regulations": [
+   {
+    "title": "本校群賢會館場地使用管理要點-1141209校務基金管理委員會通過",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-41332,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "本校群賢會館場地使用管理要點-1140311校務基金管理委員會通過",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-18363,c0.php?Lang=zh-tw"
+   },
+   {
+    "title": "本校群賢會館設備使用管理要點-1121207校務基金管理委員會通過",
+    "url": "https://hotel.nkuht.edu.tw/p/450-1018-18364,c0.php?Lang=zh-tw"
+   }
+  ]
+ },
+ "internshipPartners": {
+  "published": "2025-06-02",
+  "regionsFromTableOrder": true,
+  "partners": [
+   {
+    "name": "臺北文華東方酒店",
+    "region": "北部",
+    "url": "https://www.motpenews.com/"
+   },
+   {
+    "name": "台北W飯店",
+    "region": "北部",
+    "url": "https://www.marriott.com/en-us/hotels/tpewh-w-taipei/overview/"
+   },
+   {
+    "name": "臺北嘉佩樂酒店",
+    "region": "北部",
+    "url": "https://capellahotels.com/zh-tc/capella-taipei"
+   },
+   {
+    "name": "台北君悅酒店",
+    "region": "北部",
+    "url": "https://www.hyatt.com/grand-hyatt/zh-HK/taigh-grand-hyatt-taipei"
+   },
+   {
+    "name": "台北遠東香格里拉",
+    "region": "北部",
+    "url": "https://tpe.fareasternhotel.com.tw/"
+   },
+   {
+    "name": "台北喜來登大飯店",
+    "region": "北部",
+    "url": "https://www.sheratongrandtaipei.com/"
+   },
+   {
+    "name": "台北寒舍艾美酒店",
+    "region": "北部",
+    "url": "https://www.lemeridien-taipei.com/"
+   },
+   {
+    "name": "台北漢來大飯店",
+    "region": "北部",
+    "url": "http://www.grand-hilai.com.tw/taipei/"
+   },
+   {
+    "name": "新竹豐邑喜來登大飯店",
+    "region": "北部",
+    "url": "https://www.sheraton-hsinchu.com/zh-tw/"
+   },
+   {
+    "name": "新北北海溫泉洲際酒店",
+    "region": "北部",
+    "url": "https://www.intercontinental.com/hotels/tw/zh/new-taipei-city/tpehs/hoteldetail?fromRedirect=true&qSrt=sBR&qSlH=TPEHS&setPMCookies=true&qSHBrC=IC&qDest=No.%20210%2C%20Huanjin%20Rd.%2C%20Jinshan%20District%2C%20New%20Taipei%2C%20TW&dp=true&showApp=true"
+   },
+   {
+    "name": "礁溪老爺酒店",
+    "region": "北部",
+    "url": "https://www.hotelroyal.com.tw/zh-tw/chiaohsi"
+   },
+   {
+    "name": "礁溪寒沐酒店",
+    "region": "北部",
+    "url": "https://www.muhotels.com/"
+   },
+   {
+    "name": "臺中勤美洲際酒店",
+    "region": "中部",
+    "url": "https://www.ihg.com/intercontinental/hotels/tw/zh/taichung/rmqtt/hoteldetail"
+   },
+   {
+    "name": "台中李芳艾美酒店",
+    "region": "中部",
+    "url": "https://www.lemeridien-taichung.com.tw/"
+   },
+   {
+    "name": "雲品溫泉酒店",
+    "region": "中部",
+    "url": "https://www.fleurdechinehotel.com/"
+   },
+   {
+    "name": "虹夕諾雅 谷關",
+    "region": "中部",
+    "url": "https://hoshinoresorts.com/zh_tw/hotels/hoshinoyaguguan/"
+   },
+   {
+    "name": "裕元花園酒店",
+    "region": "中部",
+    "url": "https://www.windsorinlife.com/"
+   },
+   {
+    "name": "台中豐邑MOXY酒店",
+    "region": "中部",
+    "url": "https://www.moxytaichung.com/"
+   },
+   {
+    "name": "台南遠東香格里拉",
+    "region": "南部",
+    "url": "https://www.shangri-la.com/tc/tainan/fareasternplazashangrila/"
+   },
+   {
+    "name": "台南大員皇冠假日酒店",
+    "region": "南部",
+    "url": "https://www.cptainan.com/"
+   },
+   {
+    "name": "然一酒店",
+    "region": "南部",
+    "url": "https://www.theamnistlc.com/"
+   },
+   {
+    "name": "高雄漢來大飯店",
+    "region": "南部",
+    "url": "https://www.grand-hilai.com/"
+   },
+   {
+    "name": "高雄中央公園英迪格酒店",
+    "region": "南部",
+    "url": "https://www.ihg.com/hotelindigo/hotels/tw/zh/kaohsiung/khhin/hoteldetail"
+   },
+   {
+    "name": "瑞穗天合國際觀光酒店",
+    "region": "東部",
+    "url": "https://www.grandcosmos.com.tw/"
+   }
+  ],
+  "url": "https://hotel.nkuht.edu.tw/p/404-1018-37998.php?Lang=zh-tw",
+  "brandGroupsUrl": "https://hotel.nkuht.edu.tw/p/404-1018-38099.php?Lang=zh-tw",
+  "brandGroups": [
+   [
+    "雲品溫泉酒店",
+    "礁溪老爺酒店",
+    "礁溪寒沐酒店",
+    "台北漢來大飯店",
+    "高雄漢來大飯店",
+    "裕元花園酒店",
+    "瑞穗天合國際觀光酒店"
+   ],
+   [
+    "台北W飯店",
+    "然一酒店",
+    "台北喜來登大飯店",
+    "新竹豐邑喜來登大飯店",
+    "台北寒舍艾美酒店",
+    "台中李芳艾美酒店",
+    "台中豐邑MOXY酒店"
+   ],
+   [
+    "臺中勤美洲際酒店",
+    "台南大員皇冠假日酒店",
+    "新北北海溫泉洲際酒店",
+    "高雄中央公園英迪格酒店"
+   ],
+   [
+    "臺北文華東方酒店",
+    "臺北嘉佩樂酒店",
+    "台北遠東香格里拉",
+    "台南遠東香格里拉",
+    "台北君悅酒店",
+    "虹夕諾雅 谷關"
+   ]
+  ]
+ },
+ "internshipNotices": {
+  "url": "https://hotel.nkuht.edu.tw/p/404-1018-39253.php?Lang=zh-tw",
+  "items": [
+   "2025.12.19 A0175 臺中勤美洲際酒店 (部門與崗位) 錄取名單公告 (系統維護中，先行公告) 👉 Google 雲端",
+   "2025.12.18 A0180 臺北嘉佩樂酒店 (部門及工作崗位) 錄取名單 👉 Google 雲端",
+   "2025.12.18 A0098 台南遠東香格里拉 (部門及工作崗位) 錄取名單 👉 Google 雲端",
+   "2025.12.18 A0154 台北文華東方酒店 (部門及工作崗位) 錄取名單 👉 Google 雲端",
+   "2025.12.18 寒舍集團旗下三家旅館 (部門及工作崗位) 錄取名單 👉 Google 雲端",
+   "2025.12.18 第115學年度 「校外實習」課程菁英實習單位分發進度說明 (15:00) 👉 Google 雲端",
+   "2025.12.15 12月16日 (二) 菁英實習單位面試流程指引 👉Google 雲端連結",
+   "2025.12.11 今日13:30 起開啟「旅館系校外實習預選系統」，可查詢面試時段及更新履歷。",
+   "2025.12.10 報名【臺北嘉佩樂酒店】面試的同學，請於 12 月 16 日面試前填妥職位申請表（附檔）。面試當天請將表格直接交給面試主管。 👉 工作申請表 Google 雲端連結",
+   "2025.12.09 報名【寒舍集團旗下三家酒店】面試的同學，請於12月11日（五）17:00前完成工作申請表（附檔）並上傳至Google表單（https://forms.gle/ScK3KHcEkGnU3HSP9 ）。 👉 工作申請表Google雲端連結",
+   "2025.12.08 已錄取同學請於12月10日（星期三）17:00前填寫回報表：https://forms.gle/Xz6GvBeauinueo9e7 (請使用學校的Gmail帳號 ＠stu.nkuht.edu.tw)",
+   "2025.12.08 報名【臺中勤美洲際酒店】面試的同學，務必於12月11日（星期四）17:00前填寫線上工作申請表：https://ap10.ragic.com/ICTaichung/ichr/18?webview&webaction=form&ver=new&version=2"
+  ]
+ },
+ "otherCollegeFaculty": {
+  "note": "餐旅學院其他單位與退休教師姓名，僅供檢查本站不得出現非旅館系教師",
+  "names": [
+   "劉秀慧",
+   "劉聰仁",
+   "吳武忠",
+   "吳淑華",
+   "吳繼文",
+   "孫路弘",
+   "張書憲",
+   "張鴻亮",
+   "徐立偉",
+   "施華芳",
+   "李映萱",
+   "李東儒",
+   "林宜親",
+   "林建雄",
+   "林玥秀",
+   "柳希諺",
+   "梁靜文",
+   "楊帆",
+   "楊百世",
+   "楊芝澐",
+   "洪良志",
+   "洪麗珠",
+   "王炳富",
+   "王聖傑",
+   "葉上葆",
+   "蔡宗君",
+   "蘇國垚",
+   "賴冠伶",
+   "賴顧賢",
+   "連緯祥",
+   "郭德賓",
+   "鄭淑鳳",
+   "陳千浩",
+   "陳文聰",
+   "陳淑娟",
+   "陳牧可",
+   "陳秀玉",
+   "陳逸郎"
+  ]
+ },
+ "documents": {
+  "graduationLatest": {
+   "title": "旅館管理系畢業條件標準表(111學年度起入學適用)-1140528教務會議通過",
+   "url": "https://hotel.nkuht.edu.tw/p/450-1018-38352,c0.php?Lang=zh-tw",
+   "sha256": "d2f3afb124caa10a14d89c39dd7c194f97e1f692af8d8858f691df76a8c2e078",
+   "text": [
+    "四技日間部及進修部旅館管理系畢業條件標準表",
+    "(111 學年度(含)以後入學適用)",
+    "109 年 11 月 25 日 109 學年度第 1 學期第 3 次臨時系務會議通過/110 年 3 月 31 日 109 學年度第 2 學期第 2 次系務會議通過",
+    "109 年 11 月 30 日 109 學年度第 1 學期第 2 次臨時院務會議審議通過/110 年 5 月 11 日 109 學年度第 2 學期第 2 次院務會議審議通過",
+    "109 年 12 月 3 日 109 學年度第 1 學期教務會議議決通過/110 年 5 月 27 日 109 學年度第 2 學期教務會議議決通過/110 年 6 月 29 日 109 學年度第 2 學期第 1 次校務會議通過",
+    "111 年 9 月 20 日 111 學年度第 1 學期第 1 次系務會議通過/111 年 9 月 28 日 111 學年度第 1 學期第 1 次院務會議通過/111 年 11 月 30 日 111 學年度第 1 學期教務會議通過/111 年 12 月 21 日 111 學年度第 1 學期校務會議通過",
+    "112 年 3 月 7 日 111 學年度第 2 學期第 1 次系務會議通過/112 年 3 月 15 日 111 學年度第 2 學期第 1 次院務會議通過",
+    "112 年 3 月 28 日 111 學年度第 2 學期第 3 次臨時系務會議通過/112 年 5 月 10 日第 2 次院務會議通過",
+    "112 年 5 月 31 日 111 學年度第 2 學期教務會議通過/112 年 6 月 21 日 111 學年度第 2 學期第 1 次校務會議通過",
+    "114 年 4 月 15 日 113 學年度第 2 學期第 2 次系務會議通過/114 年 4 月 30 日 113 學年度第 2 學期第 2 次院務會議通過",
+    "114 年 5 月 28 日 113 學年度第 2 學期教務會議通過",
+    "項目",
+    "系名",
+    "A 類：",
+    "外語檢定標準",
+    "B 類：",
+    "一般專業或外語證照",
+    "C 類：",
+    "中高階專業證照或國際證照",
+    "旅",
+    "館",
+    "管",
+    "理",
+    "系",
+    "相 當 於TOEIC 600分(含)以上",
+    "B 類專業證書入學前取得者，不得列入計算：",
+    "【專業證照】",
+    "1. 勞動部勞動力發展署餐飲服務丙級技術士",
+    "2. 勞動部勞動力發展署旅館客房服務丙級技術士",
+    "3. 美國飯店業教育學院(AHLEI)一般課程證書(含職業證照 CGSP)",
+    "4. 英國葡萄酒與烈酒教育基金會 WSET(Wine and Sprirt Education Trust)Leve 1 證書",
+    "5. 國際專業調酒師 IBA(International Bartenders Association)初級證書(Foundation Course",
+    "in Bartending)",
+    "6. 美國國際侍酒師協會 ISG Wine Fundamentals I 證書",
+    "7. AI-900:Microsoft Azure AI Fundamentals 證照",
+    "8. PL-900: Microsoft Power Platform Fundamentals",
+    "9. SC-900: Microsoft Security, Compliance, Identity",
+    "10. 北美教育學院「英式管家證照」",
+    "11. Google Ads Search Certification",
+    "12. Google Analytics Certification",
+    "13. AI-powered performance ads certification",
+    "14. LINE 官方帳號專家認證",
+    "【外語證照】",
+    "1. 英語能力檢定相當於TOEIC 700分(含)以上",
+    "2. 日本語能力測驗 N3 級(含)以上",
+    "【C 類證照 1 張可抵 2 張 B 類證照】",
+    "1. 餐旅類相關乙級證照(國家證照)",
+    "2. 美國飯店業協會(AH&LA)CHS 證書",
+    "3. 英語能力檢定相當於 TOEIC850 分(含)以上",
+    "4. 日本語能力測驗 N2 級(含)以上",
+    "5. 英國葡萄酒與烈酒教育基金會 WSET Level 2",
+    "6. IBA 國際專業吧台調酒師(中階)證書",
+    "7. IBA 國際葡萄酒(Wine of the World)認證證書",
+    "8. 美國國際侍酒師協會 ISG Wine Fundamentals II 證書",
+    "9. 美國旅館暨住宿業協會(AHLEI)-餐旅部門培訓課程(CHDT)",
+    "10. PL-300: Microsoft Power BI Data Analyst",
+    "11. PL-500: Microsoft Power Automate RPA Developer",
+    "12. AWS Certified AI Practitioner",
+    "13. PL-200：Microsoft Power Platform Functional Consultant",
+    "14. Google Digital Marketing & E-commerce Professional Certificate",
+    "15. LINE 企業解決方案大師認證",
+    "備註：一、本校四技日間部及進修部實施1+3畢業條件，係指學生畢業時應具備1張畢業證書及3張相關證照，3張相關證照得以下列兩種方式擇一：",
+    "(一)通過 A 類語文證照及 2 張 B 類證照。          (二)通過 A 類語文證照及 1 張 C 類證照",
+    "二、實施對象：以本系四技日間部及進修部 111 學年度(含)以後入學之學生為實施對象，外籍生及僑生不適用。",
+    "三、A 類外語檢定標準：依「國立高雄餐旅大學四技學生英文能力檢定實施要點」辦理。",
+    "四、其他未列於上表內，與本系相關之證照，由系務會議審查核定之。",
+    "五、截至大四尚有未通過本系畢業條件相關之證照者，得參加系務會議決議之指定補救措施(如表)，成績及格視同取得該證照。",
+    "六、原適用 111 學年度入學至 113 學年度入學學生畢業條件標準表之證照(112 年 6 月 21 日 111 學年度第 2 學期第 1 次校務會議通過)，於入學後至 114 年 7 月 31 日以前取得下列證照者得列入畢業門檻計算：",
+    "(一) B 類證照",
+    "1. 100-101:Meta Certified Digital Marketing Associate",
+    "2. 600-101:Meta Certified Community Manager",
+    "3. AWS Certified Cloud Practitioner",
+    "4. 【以下證照須搭配 Google Fundamentals of digital marketing 方為 1 張 B 類證照】",
+    "(1)Google Ads Search Certification 證照",
+    "(2)Google Analytics Individual Qualification 證照",
+    "(3)Google Analytics Certification",
+    "(4)Google Ads Display Certification",
+    "(5)Google Ads - Measurement Certification",
+    "(6)Google Ads Video Certification",
+    "(7)Shopping ads Certification",
+    "(8)Google Ads Apps Certification",
+    "(9)Google Ads Creative Certification",
+    "(10)Grow Offline Sales Certification",
+    "(二) C 類證照",
+    "1. 400-101: Meta Certified Media Planning Professional",
+    "2. PL-100: Microsoft Power Platform Apps Maker",
+    "3. AWS Certified Solutions Architect – Associate",
+    "四技日間部及進修部旅館管理系畢業條件(B 類)配套措施",
+    "109 年 11 月 25 日 109 學年度第 1 學期第 3 次臨時系務會議通過/110 年 3 月 31 日 109 學年度第 2 學期第 2 次系務會議通過",
+    "109 年 11 月 30 日 109 學年度第 1 學期第 2 次臨時院務會議審議通過/110 年 5 月 11 日 109 學年度第 2 學期第 2 次院務會議審議通過",
+    "109 年 12 月 3 日 109 學年度第 1 學期教務會議議決通過/110 年 5 月 27 日 109 學年度第 2 學期教務會議議決通過/110 年 6 月 29 日 109 學年度第 2 學期第 1 次校務會議通過",
+    "111 年 9 月 20 日 111 學年度第 1 學期第 1 次系務會議通過/111 年 9 月 28 日 111 學年度第 1 學期第 1 次院務會議通過/111 年 11 月 30 日 111 學年度第 1 學期教務會議通過/111 年 12 月 21 日 111 學年度第 1 學期校務會議通過",
+    "項目",
+    "系名 B 類：一般專業 B 類：外語證照",
+    "旅",
+    "館",
+    "管",
+    "理",
+    "系",
+    "「餐飲服務丙級」及「旅館客房服務丙級」技術士證照方面，提出報考成績單者，如未通過 2 次以",
+    "上者需通過：",
+    "1.「房務實務」(104 學年度適用)或「房務實務與管理」(109 學年度適用)之必修課程。",
+    "2.「餐飲服務」(99 學年度適用)或「餐飲實務」(101 學年度適用)之必修課程。",
+    "＊若應屆畢業生仍未取得畢業門檻相關證照，上述 2 門課程成績逹 80 分以上者等同通過 B 類一般專",
+    "業證照畢業門檻。",
+    "(一)「英文能力檢定」相當於 TOEIC700 分(含)以上，並提出報考成績單者，如未通過 2 次以上需通",
+    "過 ：",
+    "1.第四學年第 1 學期開設「進階旅館英文」2 學分 2 小時之選修課程。",
+    "2.第四學年第 2 學期開設「高階旅館英文」2 學分 2 小時之選修課程。",
+    "＊若應屆畢業生仍未取得畢業門檻相關證照，上述2 門課程成績及格者等同通過 B 類外語證照畢業門",
+    "檻。",
+    "(二)「日本語能力測驗 N3 級」(含)以上，並提出報考成績單者，如未通過 2 次以上需通過 ：",
+    "1.第四學年第 1 學期開設「進階旅館日文」2 學分 2 小時之選修課程。",
+    "2.第四學年第 2 學期開設「高階旅館日文」2 學分 2 小時之選修課程。",
+    "＊若應屆畢業生仍未取得畢業門檻相關證照，上述 2 門課程成績及格者等同通 B 類外語證照畢業門",
+    "檻。"
+   ]
+  },
+  "eliteInternship": {
+   "title": "旅館菁英實習計畫3.0實施方式-114.4.28修訂通過",
+   "url": "https://hotel.nkuht.edu.tw/p/450-1018-38067,c0.php?Lang=zh-tw",
+   "sha256": "8f4ee97647c8c31abdeda22f2c5995ecf6647332ce594aaf941ca78438a294f1",
+   "text": [
+    "1/3",
+    "旅館菁英實習計畫 3.0 實施方式",
+    "114 年 3 月 5 日 113 學年第 2 學期第 1 次臨時系課程委員會審議通過",
+    "114 年 3 月 26 日 113 學年第 2 學期第 1 次系課程委員會修訂通過",
+    "114 年 4 月 9 日 113 學年第 2 學期第 1 次系實習輔導委員會修訂通過",
+    "114 年 4 月 28 日 113 學年第 2 學期第 2 次臨時系實習輔導委員會修訂通過",
+    "一、計畫目的",
+    "(一) 「旅館菁英實習計畫3.0 (Refined Elite Internship Program)」旨在為學生提供更完整、多",
+    "元的培訓輪調機制(會)，以及爭取更具競爭力的薪酬方案 ，促使學生能深入了解旅館營",
+    "運部門的運作。",
+    "(二) 為確保本校旅館管理系學生在校所學之專業職能充分學以致用 ，規劃本系學生於校外",
+    "實習前六個月須於客房部(如：櫃檯、服務中心、客服中心/總機、訂房、商務樓層貴賓",
+    "廳、房務等)進行實習培訓。",
+    "(三) 透過多元部門輪調機制，提升學生 探索旅館營運的廣度與深度，進一步發掘其職業發",
+    "展潛能，故訂定本計畫。",
+    "二、培訓輪調方案",
+    "(一) 培訓方案：",
+    "1. 企業培訓課程由業者自行設計規劃。培訓課程須有別於其他一般實習生。其內容",
+    "可包含館內外研習課程 、 工作坊或館外體驗活動等 ， 使菁英生對旅館(相關)產業更",
+    "具備廣度及深度的認知。",
+    "2. 實習第七個月起 ， 由企業指定一位職場導師(Mentor) 給予菁英生個別專業指導及處",
+    "事建議。",
+    "(二) 輪調型態：",
+    "1. 同一單位垂直晉升/培訓(工作職掌調整)(如: 資深人員、實習領班/組長培訓等) 。",
+    "2. 同一部門平行輪調或交叉訓練(如:服務中心/貴賓樓層) 。",
+    "3. 跨部門輪調(如:客務部/餐廳外場或酒吧)。輪調部門不含與本系教學課程不符之單",
+    "位(如：安全部、工程部 等)。",
+    "4. 同集團跨館輪調。",
+    "5. 實習起即為多工輪調機制。",
+    "(三) 業者須於學生實習前一年的9月提出 「培訓輪調規畫方案」 。 若非本校已建教合作單位 ，",
+    "須同步填妥「建教合作申請表」 。",
+    "(四) 若業者規劃 「同集團跨館」 輪調方案，經系課程會議審議後，若非本校建教合作單位，",
+    "本系將安排於10月進行該旅館實地訪視，並完成校內「三級三審」校外實習委員會會",
+    "議審查通過後，方予以納入實習生挑選單位。",
+    "(五) 參加本計畫之業者須自行設計「旅館菁英學生學習成效回饋表」格式 (可書面/數位/電",
+    "子方式持續或階段性記錄 )，記錄內容須涵蓋各階段實習具體規劃及時程分配 (含完成",
+    "學習日期)、企業培訓課程(課程名稱與完成日期 )、企業主管對實習生的成效考核與回",
+    "饋等。",
+    "三、薪資調整(或儲備津貼)",
+    "(一) 起(本)薪至少高於勞基法最低工資（以實習生報到日計算）的5%。",
+    "2/3",
+    "(二) 實習第七個月起調薪新臺幣1,000元(含)以上，業者亦可提前實施薪資調整，並得以本薪",
+    "調整、津貼補助或職務加給等方式辦理。",
+    "四、考核方式",
+    "(一) 本系學生於報到後實習第5個月 ， 由原單位主管進行考核 ， 通過(審核資格確認)後即具備",
+    "「菁英實習生(簡稱：菁英生)」資格。",
+    "(二) 再經人力資源部面談後，根據館內職缺提供學生選擇，並依據實習狀況及菁英生實習目",
+    "標共同擬定「培訓輪調規畫方案」。",
+    "(三) 菁英生於第六個月經轉(輪)調主管面試 ， 通過後 ， 自第七個月起轉至新實習部門及職務 。",
+    "(四) 若因營運需求考量無法即時轉調，至遲於第八個月起執行，延遲規劃須於申請時註記說",
+    "明。",
+    "(五) 每屆錄取「菁英生候選人」的人數，至少須達50%(含)以上成為「菁英生」。",
+    "(六) 第一階段（實習前六個月）未通過考核及面試者，業者給予菁英 生候選人實質改善建",
+    "議。經3～4週的觀察與輔導後，再次予以考核。",
+    "(七) 學生實習報到後第5至6個月由業主依實際狀況執行考核作業程序；菁英生於第七個月",
+    "起，調整薪資及執行培訓輪調方案。",
+    "五、 「校外實習」課程學生面試分發時程規劃",
+    "(一) 為鼓勵旅館業者提供本系學生更多元的培訓輪調機制 (會)與更優渥的薪酬方案， 本系將",
+    "提供「優先選才機制」以互惠業者。",
+    "(二) 自114學年度起，本系「優先選才」機制，於每年10~12月份，僅提供(1) 國(海)外實習及研",
+    "習及(2) 參與「旅館菁英實習計畫」並經系課程及實習輔導委員會審核通過之國內旅館",
+    "業者。",
+    "(三) 有關「國(海)外實習及研習」選才機制與作業時程，依本校研究發展處及國際事務處等相",
+    "關單位公告辦理。",
+    "(四) 有關「國內旅館菁英實習」單位選才，作業時程規劃如下：",
+    "1. (實習前一年度)  9 月份開學前一週，業者提交「菁英實習實施計畫提案申請書」。",
+    "2. (實習前一年度)  9~10 月份系課程及實習輔導委員會審議。",
+    "3. (實習前一年度)  10~11 月份辦理旅館管理系學生招募。",
+    "4. (實習前一年度)  11~12 月舉辦面試前培訓工作坊及菁英實習生面試。",
+    "5. (實習當年度)    1 月公告錄取名單， 學生確認實習單位。獲錄取者, 成為菁英生候",
+    "選人。",
+    "(五) 未參與本計畫之業者，依本校研究發展處實習輔導組公告「實習媒合暨甄選活動學生面",
+    "試選填作業時程」辦理相關實習生選才作業。本系在該規範時程前 ，經系課程及實習",
+    "輔導委員會提出實習單位推薦名單。",
+    "六、業者與學生退場機制",
+    "(一) 為保障參與本計畫業者之權益，若菁英生候選人因工作態度、職場行為道德與操守或",
+    "工作能力等因素，影響現場營運，請業者與該生輔導教師聯繫； 經由一個月的共同輔",
+    "導後，若學生仍無法改善，則終止其參與本計畫。",
+    "(二) 為保障菁英生候選人及學校之權益，業者於實習前一年度完成優先選才作業，須依所",
+    "3/3",
+    "提計劃之實施方式執行完整的一學年度菁英實習計劃。如遇業者因營運特殊情形須於",
+    "學年度期間終止執行本計畫，則須於至少 30個工作天前，以書面（電子郵件）向系主",
+    "任提出申請並敘明理由，且經系課程委員會及實習輔導委員會會議審議通過，業者始",
+    "得終止執行本計畫；若經系級會議審議未通過，且業者仍提出異議，學校將予以暫停",
+    "業者申請本計劃資格一年。",
+    "(三) 菁英生候選人報到後，若因個人能力或適應問題，可隨時向輔導教師提出與討論，經",
+    "輔導教師協同部門主管共同晤談與紀錄一個月 後，若仍無法改善，學生可選擇退出 本",
+    "計畫。",
+    "(四) 若菁英生候選人違反學校相關規定，將依本校「學生獎懲辦法」及「校外實習請假及",
+    "獎懲要點」辦理。若情節重大懲處大過(含)一支以上者，則立即中止其參與本計畫。",
+    "(五) 若菁英生候選人終止本計畫，可選擇留任原單位或轉換至其他單位。業者應根據該生",
+    "在實習期間的工作表現與人格特質進行評估，協助學生轉換單位，新單位的擇定宜考",
+    "量學生對職場環境的適應情況以及適切的主管領導風格，以利學生之學習與發展。",
+    "七、本實施方式如有未盡事宜，依本校「校外實習輔導實施要點」相關規定辦理 。",
+    "八、本實施方式經系課程委員會及系實習輔導委員會訂定審議通過，陳請系主任核定後公布實",
+    "施；修正時亦同。",
+    "本規章負責單位：旅館管理系"
+   ]
+  },
+  "internshipCommittee": {
+   "title": "旅館管理系校外實習輔導小組設置要點-1150408校務會議修正通過",
+   "url": "https://hotel.nkuht.edu.tw/p/450-1018-42072,c0.php?Lang=zh-tw",
+   "sha256": "0939f21a4b28611203343b6a87c3aacde512a54ba2ed7ec1bcd7930a6e30c85b",
+   "text": [
+    "國立高雄餐旅大學旅館管理系校外實習輔導小組設置要點",
+    "107年3月1日106學年度第2學期第1次系務會議審議通過",
+    "111年9月20日111學年度第1學 期 第1次系務會議修訂通過",
+    "115年4月8日114學年度第2學期第1次臨時校務會議修正通過",
+    "一、 旅館管理系(以下簡稱本系)為促使本系學生培養實務專業能力，成為符合業界",
+    "需求之人才，於理論與實務密切結合，加強學生之校外實習輔導，瞭解學生在",
+    "業界實習現況與適應未來職場能力，解決實習業界與本系學生於實習期間衍生",
+    "之問題，且依據本校「校外實習輔導實施要點」及 106年6月8日第158次實習輔",
+    "導委員會議決議辦理訂定「國立高雄餐旅大學旅館管理系校外實習輔導小組設",
+    "置及輔導實施要點」(以下簡稱本要點)。",
+    "二、 本系校外實習輔導小組成員為三至七人，由系主任、系副主任、四技日間部及四",
+    "技進修部 導師為當然委員，並由當年度校外實習班級 導師擔任該班實習輔導教",
+    "師。小組會議由本系主任或副主任擔任主持，檢討校外實習輔導相關事宜、監",
+    "督，並於必要時得協助代理實習輔導教師至校外訪視及輔導工作。每學期需至",
+    "少召開兩次校外實習輔導小組會議，並依程序簽辦會議紀錄之陳核。",
+    "三、 本系校外實習輔導小組負責審核、遴選及推薦相關校外實習合作單位，且討論",
+    "及決議本系學生實習相關課程與輔導，與實習單位轉換及獎勵等事宜。",
+    "四、 學生校外實習課程訪視及輔導各事宜，該實習輔導教師應需配合本系及研究發",
+    "展處、國際事務處等相關規定作業辦理。",
+    "五、 實習輔導教師之職責如下：",
+    "(一)與業界密切合作指導實習學生並負責聯繫及研議實習學習事宜。",
+    "(二)主動通報本系及研究發展處、國際事務處等有關校外實習學生及業界各項資",
+    "料異動。",
+    "(三)評閱學生期中、期末專業實習報告、實習日誌或週記等。",
+    "(四)出席實習輔導小組會議，反映問題及提出解決建議。",
+    "(五)協助本系或學校相關行政單位公告及轉知注意事項，且負責校方與學生間之",
+    "溝通。",
+    "(六)工作細項如：",
+    "1.按照計畫實施訪視及輔導。",
+    "2.填繳訪視及輔導記錄。",
+    "3.評定實習成績，登錄業界評核實習成績，核算後繳交教務處。",
+    "4.協助處理學生實習之生活及其他相關事宜。",
+    "六、 實習課程之訪視與輔導分平時定期訪視輔導及聯合訪視與輔導，其相關實習輔",
+    "導內容及方式由研究發展處及國際事務處訂定與辦理，不足部分另由本系訂",
+    "之。",
+    "七、 本系實習輔導教師赴校外訪視輔導應依學校規定申請 (公)差假，並得按規定申",
+    "請差旅費之補助。",
+    "八、 實習學生單位轉換輔導原則如下：",
+    "(一)應依本校校外實習課程輔導實施要點相關規定辦理。",
+    "(二)學生因各項因素申請轉換單位，若經輔導後，實習輔導教師應於本系 實習輔",
+    "導小組會議中提出輔導紀錄、說明轉換單位緣由並獲審議通過後，填寫轉換",
+    "實習單位申請表(學生)及輔導紀錄表(導師)，送繳至本校實習輔導組或國際",
+    "事務處完成辦理相關作業後，方得始覓新實習單位。",
+    "九、 學生實習單位之轉換，若係因學生之過失(含不適應)，得視情節輕重，依本校",
+    "校外實習請假及獎懲要點辦理懲處，提送本系小組會議審議後送實習輔導委員",
+    "會核備。",
+    "十、 針對特殊個案學生，將由本系實習輔導小組討論決議其實習方式後，依本校規",
+    "定移送研究發展處實習輔導委員會提案審議。",
+    "十一、實習學生獎懲原則如下：",
+    "(一)應依本校校務外實習請假及獎懲要點辦理。",
+    "(二)針對重大違規事件(小過以上)，實習輔導老師應於本系實習輔導小組會議中",
+    "提出輔導紀錄、說明，再由小組成員議定懲處結果。",
+    "(三)針對重大獎勵事件(大功以上)，實習輔導老師應於本系實習輔導小組議會中",
+    "說明，再由小組成員議定獎勵處理結果。",
+    "十二、本要點經系級校外實習輔導小組會議、院級實習委員會議、實習輔導委員會議",
+    "及校務會議審議通過，陳請校長核定後實施，修正時亦同。",
+    "十三、本要點如未有周延，將依本校「本校校外實習輔導實施要點」相關規定辦理。",
+    "本規章負責單位：旅館管理系"
+   ]
+  },
+  "curriculumLatest": {
+   "title": "日間部四年制課程標準表 115學年度實施(2026 Academic Year)",
+   "url": "https://hotel.nkuht.edu.tw/var/file/18/1018/img/455909285.pdf",
+   "sha256": "1e307887be6be4932b35a560aa9772017fda8293497c0d30985c11f56587c02d",
+   "text": [
+    "1 / 3",
+    "113 學年起入學適用",
+    "國立高雄餐旅大學   旅館管理系日間部 四年制技術系課程標準表",
+    "115 學年度第一學期實施 For 2026 Academic Year",
+    "109 年 11 月 17 日 109 學年度第 1 學期第 1 次臨時系課程委員會修訂通過/110 年 4 月 15 日 109 學年度第 2 學期院課程會議審議通過",
+    "4110 年 5 月 13 日 109 學年度第 2 學期校課程會議審議通過/110 年 5 月 27 日 109 學年度第 2 學期教務會議審議通過／110 年 12 月 16 日 110 學年度第 1 學期教務會議審議通過",
+    "113 年 04 月 10 日 112 學年度第 2 學期第 2 次系課程委員會修訂通過/113 年 4 月 16 日 112 學年第 2 學期第 2 次臨時系課程委員會(通訊會議)修訂通過",
+    "113 年 4 月 23 日 112 學年度第 2 學期院課程會議會議審議通過/113 年 5 月 15 日校課程會議審議通過/113 年 5 月 29 日 112 學年第 2 學期教務會議審議通過",
+    "114 年 1 月 21 日臨時校課程會議審議通過/114 年 1 月 23 日臨時教務會議通過/114 年 4 月 15 日 113 學年度第 2 學期第 3 次臨時系課程委員會修訂通過(依本校「課程審查作業要點(113.05.29 修正)」第十一點第二項」辦理)",
+    "113 學年度第 2 學期校課程委員會(114.05.14)通過/114 學年度第 1 學期教務會議(114.12.3)通過",
+    "114 年第 2 學期第 1 次系課程會議(115.04.15)、114 學年度第 2 學期第一次院課程會議(115.04.21)通過",
+    "114 學年度第 2 學期校課程委員會(114.05.13)通過、114 學年度第 2 學期教務會議(115.05.27)通過",
+    "115 學年度第 1 學期臨時校課程會議(115.08.19)通過",
+    "第一學年 First School Year 第二學年 Second School Year 第三學年 Third School Year 第四學年 Forth School Year",
+    "類別",
+    "Classification",
+    "科目",
+    "Subject",
+    "第一學期",
+    "First",
+    "Semester",
+    "第二學期",
+    "Second Semester 科目",
+    "Subject",
+    "第一學期",
+    "First Semester",
+    "第二學期",
+    "Second",
+    "Semester 科目 Subject",
+    "第一學期",
+    "First Semester",
+    "第二學期",
+    "Second",
+    "Semester 科目 Subject",
+    "第一學期",
+    "First Semester",
+    "第二學期",
+    "Second Semester",
+    "總計",
+    "Total",
+    "學分",
+    "Credit",
+    "時數",
+    "Hour",
+    "學分",
+    "Credit",
+    "時數",
+    "Hour",
+    "學分",
+    "Credit",
+    "時數",
+    "Hour",
+    "學分",
+    "Credit",
+    "時數",
+    "Hour",
+    "學分",
+    "Credit",
+    "時數",
+    "Hour",
+    "學分",
+    "Credit",
+    "時數",
+    "Hour",
+    "時數",
+    "Hour",
+    "學分",
+    "Credit",
+    "學分",
+    "Credit",
+    "時數",
+    "Hour",
+    "校",
+    "訂",
+    "必",
+    "修General Education Required Course",
+    "語文－英文（讀/寫）（一）（二）",
+    "English (Reading & Writing)(I) (II) 2 2 2 2",
+    "職場英文",
+    "Workplace English 2 2",
+    "通識領域",
+    "Social Science Courses 2 2 2 2",
+    "36",
+    "學分",
+    "Credits",
+    "語文-餐旅英語會話（一） （二）",
+    "Hospitality English Conversation I II 2 2 2 2",
+    "語文-第二外語*",
+    "Second Foreign Language 2＊ 2",
+    "人文-國語文能力訓練",
+    "Chinese Speech & Writing",
+    "2 2 2 2",
+    "人文－文學欣賞",
+    "Chinese Literature Appreciation",
+    "人文-餐旅文學",
+    "Culinary and Travel Literature",
+    "人文-生命閱讀與書寫",
+    "Life Education in Reading and Writing     人文─網路文學與創意書寫",
+    "Cyber Literature and Creative writing",
+    "社會－經濟與生活",
+    "Economics and Life",
+    "2 2 2 2",
+    "社會－社會科學概論",
+    "Introduction to Social Sciences",
+    "社會－法學緒論",
+    "Introduction to law studies",
+    "社會－心理學",
+    "Introduction to Psychology",
+    "社會－媒體識讀",
+    "News Interpretation and Analysis      社會-法學與生活",
+    "Law and life",
+    "自然-邏輯思維與資料管理",
+    "Logic Thinking and Data Management 1 2",
+    "人文－歷史與文化",
+    "History and Culture",
+    "2 2 2 2",
+    "自然-影像處理與 AI 應用",
+    "Image processing and AI applications   1 2",
+    "藝術－美學與生活",
+    "Aesthetics and Life",
+    "自然-統計思維與生活*",
+    "Statistical Thinking and Daily Life 2* 2",
+    "藝術－世界音樂",
+    "Music of the World",
+    "體育（一）（二）",
+    "Physical Education(I) (II) 1 2 1 2 體育分項   Physical Education 1 2 1 2",
+    "小計 Subtotal (12) (14) (10) (12) 小計 Subtotal （7） （8） （3） （4） 小計 Subtotal     小計 Subtotal 2 2 2 2",
+    "院訂",
+    "必修 School",
+    "Required",
+    "Course",
+    "餐旅管理",
+    "Introduction of Hospitality Management 3 3",
+    "管理學",
+    "Management 3 3",
+    "服務設計與創新",
+    "Service Design and Innovation 3 3   12",
+    "學分",
+    "Credits",
+    "服務管理 Service Management   3 3",
+    "小計 Subtotal 3 3 0 0 小計 Subtotal 3 3 3 3 小計 Subtotal 0 0 0 0 小計 Subtotal 3 3 0 0",
+    "院訂選修",
+    "School",
+    "雲端商業軟體應用(2 學分/2 時數)、數位多媒體設計實務(2 學分/2 時數)、餐旅自媒體行銷(2 學分/2 時數)",
+    "Cloud Business Software Application (2 Credit / 2 Hour)、Hospitality Self-Media Marketing (2 Credit / 2 Hour)、Applications of Digital Media Content Design (2 Credit / 2 Hour)",
+    "115 學年度起入學適用",
+    "2 / 3",
+    "Elective",
+    "Course",
+    "系訂必修",
+    "Department",
+    "Required",
+    "Course",
+    "旅館英文(一)",
+    "Hotel English (I) 2 2",
+    "客務實務",
+    "Front Office Operations 3 3   校外實習(一)",
+    "Internship(I) 10",
+    "旅館財務管理",
+    "Hotel Financial Management 2 2",
+    "系",
+    "訂",
+    "必",
+    "修",
+    "56 改",
+    "55",
+    "學",
+    "分",
+    "Departme",
+    "nt",
+    "Required",
+    "Course",
+    "55Credits",
+    "旅館日文(一)",
+    "Hotel Japanese(I) 2 2",
+    "校內實習(一)",
+    "On-Campus Internship(I)",
+    "1",
+    "2 2",
+    "校內實習(三)",
+    "On-Campus Internship(III)",
+    "(擬刪除)",
+    "1 2",
+    "餐旅資訊科技應用實務",
+    "Practical Applications of Hospitality",
+    "Information Technology",
+    "2 2",
+    "餐旅專題講座",
+    "Hospitality Seminars 1 2",
+    "校外實習(二)",
+    "Internship(II)   10",
+    "旅館人力資源管理",
+    "Hotel Human Resources",
+    "Management",
+    "2 2",
+    "餐飲實務＊",
+    "Food and Beverage Service＊   3＊ 3 餐旅人工智慧管理 AI in Hospitality Management 2 2",
+    "旅館行銷管理",
+    "Hotel Marketing Management   2 2",
+    "旅館資產管理系統與操作實務",
+    "Hotel Property Management System and",
+    "Operation",
+    "2 2",
+    "校內實習(二)",
+    "On-Campus Internship(II)",
+    "調整為系訂選修",
+    "1 2",
+    "房務實務與管理＊",
+    "Housekeeping Operation and",
+    "Management＊",
+    "3＊ 3 旅館安全與衛生管理 Hotel Security & Sanitation Management   2 2",
+    "旅館日文(二)",
+    "Hotel Japanese(II)   2 2",
+    "旅館會計學",
+    "Hospitality Accounting   3 3",
+    "小計 Subtotal 6 6 13 13 小計 Subtotal 8 9 2 2 小計 Subtotal 10  10  小計 Subtotal 2 2 4 4",
+    "系",
+    "訂",
+    "選",
+    "修",
+    "Department",
+    "Elective",
+    "Course",
+    "觀光學",
+    "Tourism Management 2 2   旅館英文(三) Hospitality English (III) 2 2        進階旅館英文 Intermediate Hotel English 2 2",
+    "系",
+    "訂",
+    "選",
+    "修",
+    "24 改",
+    "25",
+    "學",
+    "分",
+    "Departme",
+    "nt Elective",
+    "Course",
+    "25",
+    "Credits",
+    "人際關係與溝通技巧",
+    "Human Relations and Communication",
+    "Skills",
+    "2 2   旅館日文(三) Hotel Japanese(III) 2 2        進階旅館日文 Intermediate Hotel Japanese 2 2",
+    "服務中心作業實務",
+    "Concierge Operation 2 2   酒類專業知識 Wines knowledge 2 2        旅館督導實務 Supervision in the hotel industry 2 2",
+    "餐旅法規",
+    "Hospitality and Tourism Law 2 2   宴會管理 Banquet Management 2 2        旅館管理個案探討 Case Study of Hotel Management 2 2",
+    "國際禮儀",
+    "International Etiquette   2 2 旅館客房銷售技能實務 Hotel Upselling Technique 2 2        餐旅大數據視覺化應用 Hospitality Big Data and Strategic Planning 2 2",
+    "跨文化服務與管理",
+    "Cross-cultural Service and Management   2 2",
+    "旅館英文(四)",
+    "Hospitality English (IV)   2 2",
+    "海外參訪(一)",
+    "Field Study (I) 1 1",
+    "旅館英文(二)",
+    "Hospitality English (II)   2 2 旅館日文(四) Hotel Japanese(IV)   2 2      高階旅館英文 Advance Hotel English   2 2",
+    "管家服務",
+    "Butler Service   2 2",
+    "高階旅館日文",
+    "Advance Hotel Japanese   2 2",
+    "旅館業訓練技能實務 Coaching Techniques for Hotel Industry   2 2      旅館籌備與規劃 Hotel Pre-Opening   2 2",
+    "餐旅數位行銷",
+    "Hospitality Digital Marketing   2 2",
+    "旅館採購管理與成本控制",
+    "Hotel Purchasing Management and",
+    "Cost Control",
+    "2 2",
+    "餐旅自動化機器人應用實務",
+    "Hospitality Autonomous Robots Practical",
+    "Applications",
+    "2 2",
+    "智慧餐旅永續營運治理",
+    "Smart Hospitality for Sustainable",
+    "Governance",
+    "2 2",
+    "校內實習(二) On-Campus Internship(II)   2 2      海外參訪(二) Field Study (II)   1 1",
+    "128",
+    "學分",
+    "Credits",
+    "3 / 3",
+    "備",
+    "註",
+    "1.畢業學分數為 128 學分(含校訂必修 36 學分、院訂必修 12 學分、系訂必修 55 學分、系訂選修 25 學分)，跨系選修(含跨校、含跨領域微學分課程)至多承認 6 學分。",
+    "The number of graduation credits is 128 credits (including 36 credits for school -based compulsory courses, 12 credits for college-based compulsory courses, 55 credits for department-based compulsory courses, 25 credits for department-based elective courses), cross-",
+    "department electives (including cross-school and cross-field micro-credit courses) are recognized for up to 6 credits.",
+    "2.為辦理系訂必修『旅館英文(一)』課程抵免標準及規定：英語能力檢定相當於TOEIC850分(含)以上者並檢附測驗證明正本及影本可提出免修申請，惟免修之學分數須選修餐旅學院其他必修課程補足，並依本校「學生抵免學分要點」及「學生選課辦",
+    "法」規定辦理。",
+    "To apply for the exemption standards and regulations for the compulsory \"Hotel English (I)\" course: Those whose English profi ciency test score is equivalent to TOEIC 850 (inclusive) or above and who attach the original and photocopy of the test certi ficate can apply for",
+    "exemption, but the exempted credits must be supplemented by other required elective courses of the School of Hospitality, and  must be handled in accordance with the school's \"Key Points for Student Credit Exemption\" and \"Student Course Selec tion Procedures\".",
+    "3.為辦理系訂必修『旅館日文(一)、(二)』課程抵免標準及規定：日文檢定測驗達N3(含)以上者並檢附測驗證明正本及影本可提出免修申請，惟免修之學分數須選修國際學院應用日語系之系訂必修、選修課程或修習本系大二或大四之日文選修課程補",
+    "足，並依本校「學生抵免學分要點」及「學生選課辦法」規定辦理。",
+    "To address the exemption criteria and guidelines for the required courses \"Hotel Japanese I\" and \"Hotel Japanese II,\" student s who have achieved a level of N3 or higher on the Japanese Language Proficiency Test and can provide both the original and a  copy of their",
+    "certification are eligible to apply for a course exemption. However, any exempted credits must be fulfilled by taking require d or elective courses within the Department of Applied Japanese in the International College or by enrolling in sophomore - or senior-level Japanese",
+    "electives offered by the department. The exemption process will be conducted in accordance with the “Key Points for Student C redit Exemption” and “Student Course Selection Procedures.”",
+    "4.校外實習成績需提據廠商實習證明並檢附該實習成果，作為成績評定標準。",
+    "Off-campus internship results must be submitted with the manufacturer’s internship certificate and attached internship outcomes a s the performance evaluation standard.",
+    "5.學生欲選修海外參訪（二）須修畢海外參訪（一） 。",
+    "Students intending to enroll in Field Study (II) must have successfully completed Field Study (I) as a prerequisite.",
+    "6.學生每學期修習學分及互跨選修須依本校『日間部學生選課辦法』及『進修部學生選課辦法』相關規定辦理。",
+    "Students’ credits each semester and cross-department electives must be handled in accordance with the relevant regulations of the school’s “Course Selection Procedures  for Daytime Students” and “Course Selection Procedures for Continuing Education Students ”.",
+    "7.畢業前須符合本系訂定之畢業條件標準。",
+    "Before graduation, students must meet the graduation requirements set by the department.",
+    "8.＊代表通識課程及系必修課程，得依班級數及實際需求彈性調整開課學期。",
+    "＊ denotes General Education and Department-Required Courses, for which the semester of offering may be flexibly adjusted in accordance with class size and operational n eeds.",
+    "9.體育為分項選課。",
+    "Physical education is an optional course.",
+    "10.通識領域係指由通識教育中心所開設之選修課程。",
+    "General studies areas refer to the elective courses offered by the General Education Center.",
+    "11.境外生校訂必修課程除軍訓外，參照「華語課程實施要點」辦理。",
+    "In addition to military training, the compulsory courses for overseas students should be handled in accordance with the \"Impl ementation Points of Chinese Courses\".",
+    "12.依據本校大學部學則第 28 條規定，實習每週授課 1-3 小時滿一學期者為一學分。",
+    "According to Article 28 of the University’s Academic Regulations, an internship that lasts 1 -3 hours per week for one semester will be counted as one credit."
+   ]
+  }
+ }
+}

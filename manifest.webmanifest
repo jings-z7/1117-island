@@ -1,0 +1,56 @@
+{
+  "name": "HOTEL 旅館島｜國立高雄餐旅大學・旅館管理系 3D 學習與職涯導覽",
+  "short_name": "高餐旅館島",
+  "description": "一座立體六角島嶼城市，依國立高雄餐旅大學旅館管理系官網與餐旅學院師資頁，呈現 20 座主題島嶼、133 個細項：課程標準、1+3 畢業條件、10 位專任(案)教師、群賢會館與菁英實習計畫3.0 合作旅館。",
+  "lang": "zh-Hant-TW",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#fff8f4",
+  "theme_color": "#E5A922",
+  "icons": [
+    {
+      "src": "./assets/favicon.png",
+      "sizes": "64x64 128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/nkuht_htl_logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "3D 旅館島互動地圖",
+      "short_name": "3D 旅館島",
+      "description": "探索 20 座六角島嶼與 133 座微縮教學實習建築",
+      "url": "./",
+      "icons": [{ "src": "./assets/nkuht_htl_logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "3D 角色漫遊模式",
+      "short_name": "角色漫遊",
+      "description": "操控高餐 3D 角色自由走訪 20 座島嶼與跨島拱橋",
+      "url": "./?drive=1",
+      "icons": [{ "src": "./assets/nkuht_htl_logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "旅館島學習護照",
+      "short_name": "學習護照",
+      "description": "查看 20 島集章進度、三明治主線任務與星級禮賓成就",
+      "url": "./?passport=1",
+      "icons": [{ "src": "./assets/nkuht_htl_logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "2D 四年時間軸與卡片總覽",
+      "short_name": "2D 總覽",
+      "description": "依四年學習期程與官網特色目標篩選課程、證照與合作旅館",
+      "url": "./timeline.html",
+      "icons": [{ "src": "./assets/nkuht_htl_logo.png", "sizes": "192x192" }]
+    }
+  ]
+}

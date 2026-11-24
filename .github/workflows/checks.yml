@@ -1,0 +1,84 @@
+# 自動化品質與資安檢查（ISO/IEC 27001:2022 Annex A 8.25 安全開發生命週期、8.29 安全測試、8.32 變更管理）。
+# 每次推送與 PR 都會執行；任一步失敗即顯示紅燈，避免有問題的變更合併上線。
+# 第三方 Actions 一律釘選 commit SHA（防供應鏈竄改），權限僅限讀取。
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+
+      - name: Official data verification (offline)
+        run: python3 scripts/sync.py --verify
+
+      - name: CSP hashes match inline scripts
+        run: python3 scripts/check_csp.py
+
+      - name: policies.json served copy is identical
+        run: cmp data/policies.json policies.json
+
+      - name: JavaScript syntax
+        run: |
+          git ls-files '*.js' ':!:vendor/**' | while read -r f; do
+            node --check "$f" || exit 1
+          done
+
+      - name: Plaza Worker security regression tests
+        run: node --test tests/*.test.mjs
+
+      # Supply-chain integrity (Annex A 8.7 / 8.30): third-party libraries are self-hosted in vendor/.
+      # Any change to them, or a new unlisted file, must be deliberate: update vendor/SHA256SUMS in the same PR
+      #   (cd vendor && git ls-files . | grep -v '^SHA256SUMS$' | sort | xargs sha256sum > SHA256SUMS)
+      - name: Vendored libraries unchanged (SHA-256)
+        run: |
+          cd vendor
+          sha256sum --check --strict --quiet SHA256SUMS
+          listed=$(awk '{print $2}' SHA256SUMS | sort)
+          actual=$(git ls-files . | grep -v '^SHA256SUMS$' | sort)
+          if [ "$listed" != "$actual" ]; then
+            echo "::error::vendor/ files differ from vendor/SHA256SUMS:"; diff <(echo "$listed") <(echo "$actual"); exit 1
+          fi
+
+      # RFC 9116 requires an Expires field; fail 30 days before it lapses so the contact never goes stale.
+      - name: security.txt not expiring
+        run: |
+          python3 - <<'PY'
+          import datetime, re, sys
+          s = open(".well-known/security.txt", encoding="utf-8").read()
+          m = re.search(r"^Expires:\s*(\S+)$", s, re.M)
+          if not m or not re.search(r"^Contact:\s*https://", s, re.M):
+              sys.exit("::error::security.txt needs Contact and Expires fields")
+          exp = datetime.datetime.fromisoformat(m.group(1).replace("Z", "+00:00"))
+          left = (exp - datetime.datetime.now(datetime.timezone.utc)).days
+          print(f"security.txt expires in {left} days")
+          if left < 30:
+              sys.exit("::error::security.txt Expires is within 30 days - set it up to one year ahead")
+          PY
+
+      - name: No secrets committed
+        run: |
+          pattern='AIza[0-9A-Za-z_-]{35}|ghp_[0-9A-Za-z]{36}|github_pat_[0-9A-Za-z_]{40,}|sk-[A-Za-z0-9]{32,}|-----BEGIN [A-Z ]*PRIVATE KEY-----|xox[baprs]-[0-9A-Za-z-]{10,}'
+          if git grep -nIE "$pattern" -- ':!:vendor/**'; then
+            echo "::error::Possible secret committed (see lines above). Move it to Cloudflare environment variables and rotate it."
+            exit 1
+          fi

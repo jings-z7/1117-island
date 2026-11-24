@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nkuht-htl.drmjhsu.com/sitemap.xml

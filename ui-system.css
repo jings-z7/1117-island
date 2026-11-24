@@ -1,0 +1,1720 @@
+/* ui-system.css — one spec for every control (2026-11-15). Loaded after all other stylesheets.
+ *
+ * Why a separate last layer: ui.css / layout.css / heart-me.js grew by overriding each other (ui.css alone has ~1,900
+ * !important rules), which left ~15 button heights, 28 corner radii and decorative left stripes. Rather than edit those
+ * rules one by one, this file states the spec once and wins the cascade (html-level selectors, !important only where
+ * the older rule already used it). Older rules stay until they are cleaned up.
+ *
+ * Spec
+ *   spacing   4 · 8 · 12 · 16 · 24 · 32
+ *   heights   32 (inside panels and lists) · 40 (primary buttons, tabs) — touch screens raise both to 40 / 44
+ *   radii     8 (buttons, inputs) · 12 (cards, blocks) · 16 (floating panels) · 999 only for tags and badges
+ *   type      11 · 12 · 13 · 14 · 16 · 20
+ *   lines     one 1px line colour per surface; panels get one border and one shadow, nothing inside them gets a frame
+ */
+
+:root {
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --h-sm: 32px;
+  --h-md: 40px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --fs-1: 11px;
+  --fs-2: 12px;
+  --fs-3: 13px;
+  --fs-4: 14px;
+  --fs-5: 16px;
+  --fs-6: 20px;
+  /* dark panels (plaza, radar, walk pad) */
+  --c-surface: #0f1d1a;
+  --c-surface-2: #172925;
+  --c-surface-3: #20352f;
+  --c-line: rgba(230, 202, 138, 0.18);
+  --c-line-strong: rgba(230, 202, 138, 0.42);
+  --c-text: #f6f0e2;
+  --c-text-dim: #b9ad94;
+  --c-accent: #d9b56a;
+  --c-accent-ink: #14120d;
+  --c-danger: #e0796a;
+  /* light panels (sidebar) */
+  --c-paper: #fffdf8;
+  --c-paper-2: #f5efe2;
+  --c-paper-line: rgba(19, 54, 46, 0.12);
+  --c-ink: #13241f;
+  --c-ink-dim: #5d6b64;
+  --focus-ring: 0 0 0 2px var(--c-surface), 0 0 0 4px #f5d33a;
+}
+@media (pointer: coarse) {
+  :root {
+    --h-sm: 40px;
+    --h-md: 44px;
+  }
+}
+
+/* ---------- icons ---------- */
+.ui-ic {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+}
+
+/* ---------- base: the global 44px button height deformed small controls; components set their own size ---------- */
+:where(.is-plaza-drawer, .hm-act-cluster, #zoom-ui, #kh-panel) button {
+  min-height: 0;
+  line-height: 1.2;
+}
+
+/* ---------- close buttons: one 32px round button everywhere (the X is drawn by ui.css) ---------- */
+html body .card .close,
+html body .mobile-close,
+html body #log-close,
+html body .qp-close,
+html body .cpro-modal-close,
+html body .is-btn-close,
+html body .is-plaza-drawer .is-btn-close,
+html body .hm-x:not(.hm-min),
+html body .hx-close,
+html body .khp-close {
+  width: var(--h-sm) !important;
+  height: var(--h-sm) !important;
+  min-width: var(--h-sm) !important;
+  min-height: var(--h-sm) !important;
+  max-width: var(--h-sm) !important;
+  max-height: var(--h-sm) !important;
+  flex: 0 0 var(--h-sm) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+/* =====================================================================================================================
+ * Plaza panel
+ * ===================================================================================================================*/
+html body .is-plaza-drawer {
+  border-radius: var(--r-lg);
+  background: var(--c-surface);
+  border: 1px solid var(--c-line-strong);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.42);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+html body .is-plaza-head {
+  align-items: center;
+  padding: var(--sp-3) var(--sp-4);
+  background: none;
+  border-bottom: 1px solid var(--c-line);
+}
+html body .is-plaza-title {
+  font: 700 var(--fs-5) / 1.3 "Noto Sans TC", sans-serif;
+  letter-spacing: 0.01em;
+}
+html body .is-plaza-status {
+  margin-top: 2px;
+  font-size: var(--fs-2);
+}
+html body .is-plaza-headbtns {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+/* square icon button (network settings, roster ⋯) */
+html body .ui-icon-btn {
+  width: var(--h-sm) !important;
+  height: var(--h-sm) !important;
+  min-width: var(--h-sm) !important;
+  min-height: var(--h-sm) !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--r-sm) !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  color: var(--c-text-dim) !important;
+  box-shadow: none !important;
+  font-size: 0 !important;
+  cursor: pointer;
+  transition: background 0.14s ease, color 0.14s ease;
+}
+html body .ui-icon-btn:hover,
+html body .ui-icon-btn.on,
+html body .ui-icon-btn[aria-expanded="true"] {
+  background: var(--c-surface-3) !important;
+  color: var(--c-text) !important;
+}
+html body .ui-icon-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring) !important;
+}
+
+/* segmented controls: rooms and chat/people tabs share one look — one frame, no inner frames, selected cell filled */
+html body .is-plaza-rooms,
+html body .is-plaza-tabs {
+  display: grid;
+  gap: 2px;
+  margin: var(--sp-3) var(--sp-4) 0;
+  padding: 2px;
+  border: 1px solid var(--c-line);
+  border-radius: var(--r-sm);
+  background: rgba(0, 0, 0, 0.2);
+}
+html body .is-plaza-rooms {
+  grid-template-columns: repeat(3, 1fr);
+}
+html body .is-plaza-tabs {
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: var(--sp-2);
+}
+html body .is-room-btn,
+html body .is-ptab {
+  height: calc(var(--h-md) - 6px);
+  min-height: 0;
+  padding: 0 var(--sp-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--c-text-dim);
+  font: 600 var(--fs-3) / 1 "Noto Sans TC", sans-serif;
+  white-space: nowrap;
+  box-shadow: none;
+}
+html body .is-room-btn .ui-ic,
+html body .is-ptab .ui-ic {
+  width: 16px;
+  height: 16px;
+}
+html body .is-room-btn:hover,
+html body .is-ptab:hover {
+  color: var(--c-text);
+  background: rgba(255, 255, 255, 0.04);
+}
+html body .is-room-btn.active,
+html body .is-ptab.active {
+  background: var(--c-surface-3);
+  color: var(--c-text);
+  border: 0;
+}
+html body .is-room-btn.active .ui-ic,
+html body .is-ptab.active .ui-ic {
+  color: var(--c-accent);
+}
+html body .is-ptab-n {
+  min-width: 18px;
+  padding: 2px 6px;
+  font: 700 var(--fs-1) / 1 "Plus Jakarta Sans", sans-serif;
+  border-radius: 999px;
+}
+html body .is-room-btn:focus-visible,
+html body .is-ptab:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* roster */
+html body .is-plaza-roster {
+  padding: 0 var(--sp-4) var(--sp-3);
+}
+html body .is-roster-head {
+  padding: var(--sp-2) 0;
+  font-size: var(--fs-2);
+  color: var(--c-text-dim);
+}
+html body .is-roster-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--c-line);
+}
+/* fixed three columns: status swatch · name · one 32px action button, so every row's button sits on the same line */
+html body .is-roster-item {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) var(--h-sm);
+  align-items: center;
+  column-gap: var(--sp-3);
+  row-gap: var(--sp-2);
+  padding: var(--sp-2) 0;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid var(--c-line);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+html body .is-roster-item.me,
+html body .is-roster-item.following,
+html body .is-roster-item.expanded {
+  background: none;
+  padding-bottom: var(--sp-3);
+}
+html body .is-roster-sw {
+  width: 10px;
+  height: 10px;
+  margin: 0 3px;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08);
+}
+html body .is-roster-who {
+  min-width: 0;
+  gap: 2px;
+}
+html body .is-roster-who b {
+  font: 600 var(--fs-4) / 1.3 "Noto Sans TC", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+html body .is-roster-meta {
+  font-size: var(--fs-2);
+  color: var(--c-text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+html body .is-roster-lv {
+  font-size: var(--fs-2);
+}
+html body .is-roster-more .ui-ic {
+  width: 18px;
+  height: 18px;
+}
+/* expanded actions: equal cells in one row, icon above a short word — never wraps into a second ragged row */
+html body .is-roster-item.expanded .is-roster-acts {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: none;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+  gap: var(--sp-1);
+  margin: 0;
+}
+html body .is-roster-item .is-roster-act,
+html body .is-roster-item.expanded .is-roster-act {
+  min-width: 0;
+  height: 52px;
+  min-height: 0;
+  padding: var(--sp-1) 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-1);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: var(--c-surface-2);
+  color: var(--c-text);
+  font: 500 var(--fs-2) / 1.1 "Noto Sans TC", sans-serif;
+  box-shadow: none;
+}
+html body .is-roster-act:hover {
+  background: var(--c-surface-3);
+}
+html body .is-roster-act.on {
+  background: var(--c-surface-3);
+  color: var(--c-accent);
+}
+html body .is-roster-act:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+html body .is-roster-act-lbl {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--fs-2);
+}
+@media (max-width: 380px) {
+  html body .is-roster-item.expanded .is-roster-act {
+    height: var(--h-md);
+  }
+  html body .is-roster-act-lbl {
+    display: none;
+  }
+}
+html body .is-roster-away-toggle {
+  width: 100%;
+  min-height: var(--h-md);
+  margin-top: var(--sp-2);
+  padding: 0 var(--sp-3);
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  border: 0;
+  border-radius: var(--r-sm);
+  background: var(--c-surface-2);
+  color: var(--c-text-dim);
+  font: 500 var(--fs-3) / 1.2 "Noto Sans TC", sans-serif;
+  text-align: left;
+}
+html body .is-roster-away-toggle > span {
+  flex: 1;
+}
+html body .is-roster-away-toggle .ui-ic {
+  width: 16px;
+  height: 16px;
+}
+html body .is-roster-empty {
+  padding: var(--sp-4) 0;
+  font-size: var(--fs-3);
+  color: var(--c-text-dim);
+}
+
+/* emote row: five equal cells, no frames */
+html body .is-plaza-emotes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--sp-1);
+  padding: var(--sp-2) var(--sp-4);
+  border-bottom: 1px solid var(--c-line);
+}
+html body .is-plaza-emotes .is-emote-btn {
+  height: var(--h-md);
+  min-height: 0;
+  padding: 0 var(--sp-1);
+  flex-direction: row;
+  gap: 6px;
+  border: 0;
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--c-text);
+  font: 500 var(--fs-2) / 1 "Noto Sans TC", sans-serif;
+  box-shadow: none;
+}
+html body .is-plaza-emotes .is-emote-btn:hover,
+html body .is-plaza-emotes .is-emote-btn.on {
+  background: var(--c-surface-2);
+}
+html body .is-emote-ico {
+  display: inline-flex;
+  font-size: 0;
+  color: var(--c-accent);
+}
+html body .is-emote-ico .ui-ic {
+  width: 17px;
+  height: 17px;
+}
+
+/* quick phrases: plain chips */
+html body .is-phrase-btn {
+  min-height: var(--h-sm);
+  padding: 0 var(--sp-3);
+  border: 0;
+  border-radius: 999px;
+  background: var(--c-surface-2);
+  color: var(--c-text);
+  font: 500 var(--fs-2) / 1.2 "Noto Sans TC", sans-serif;
+  box-shadow: none;
+}
+html body .is-phrase-btn:hover {
+  background: var(--c-surface-3);
+}
+
+/* chat */
+html body .is-chat-row.mention {
+  box-shadow: none;
+  background: rgba(217, 181, 106, 0.12);
+  border-radius: var(--r-sm);
+}
+
+/* composer */
+html body .is-plaza-form {
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-4) var(--sp-3);
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-line);
+}
+html body .is-plaza-input {
+  height: var(--h-md);
+  min-height: 0;
+  padding: 0 var(--sp-3);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--c-line-strong);
+  background: var(--c-surface-2);
+  color: var(--c-text);
+  font: 400 var(--fs-4) / 1 "Noto Sans TC", sans-serif;
+}
+html body .is-plaza-input::placeholder {
+  color: var(--c-text-dim);
+}
+html body .is-plaza-input:focus {
+  border-color: var(--c-accent);
+}
+html body .is-plaza-send {
+  width: var(--h-md);
+  height: var(--h-md);
+  min-width: var(--h-md);
+  min-height: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: var(--r-sm);
+  background: var(--c-accent);
+  color: var(--c-accent-ink);
+  box-shadow: none;
+}
+html body .is-plaza-send:hover {
+  background: #e6c47c;
+}
+
+/* network settings box */
+html body .is-plaza-netcfg {
+  margin: 0 var(--sp-4);
+  border-radius: var(--r-sm);
+  font-size: var(--fs-2);
+}
+html body .is-roster-go {
+  min-height: var(--h-sm);
+  padding: 0 var(--sp-3);
+  border-radius: var(--r-sm);
+}
+
+/* =====================================================================================================================
+ * Sidebar list cards: flat rows instead of gradient cards with a gold left stripe
+ * ===================================================================================================================*/
+html body .landmark-tree-item {
+  margin: 0 !important;
+  padding: var(--sp-3) var(--sp-2) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--c-paper-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+html body .landmark-tree-item:hover,
+html body .landmark-tree-item.active {
+  background: var(--c-paper-2) !important;
+  border-color: var(--c-paper-line) !important;
+  border-radius: var(--r-sm) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+html body .landmark-tree-item .lmt-row {
+  align-items: center;
+  gap: var(--sp-3);
+}
+html body .landmark-tree-item .lmt-ico {
+  width: var(--h-sm);
+  height: var(--h-sm);
+  flex: 0 0 var(--h-sm);
+  border-radius: var(--r-sm);
+  border: 0;
+  background: var(--c-surface-2);
+  box-shadow: none;
+}
+
+/* =====================================================================================================================
+ * Decorative left stripes and inset bars ("AI template" look) — removed everywhere
+ * ===================================================================================================================*/
+html body .card .phase,
+html body .rows .row,
+html body .stat,
+html body .qp-card,
+html body .log-item,
+html body .log-row,
+html body .hm-panel,
+html body .qp-cover {
+  border-left-width: 1px !important;
+}
+html body .qp-cover {
+  box-shadow: none !important;
+}
+
+/* =====================================================================================================================
+ * Zoom bar: one row of 32px square buttons on the same radius
+ * ===================================================================================================================*/
+html body #zoom-ui {
+  gap: var(--sp-1) !important;
+  padding: var(--sp-1) !important;
+  border-radius: var(--r-md) !important;
+  align-items: center !important;
+}
+html body #zoom-ui .zoom-btn,
+html body #zoom-ui .zoom-pct {
+  height: var(--h-sm) !important;
+  min-height: var(--h-sm) !important;
+  border-radius: var(--r-sm) !important;
+  box-shadow: none !important;
+}
+html body #zoom-ui .zoom-btn {
+  width: var(--h-sm) !important;
+  min-width: var(--h-sm) !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+html body #zoom-ui .zoom-pct {
+  min-width: 52px !important;
+  padding: 0 var(--sp-2) !important;
+  font: 600 var(--fs-2) / 1 "Plus Jakarta Sans", sans-serif !important;
+}
+html body #zoom-ui .zoom-north svg,
+html body #zoom-ui .zoom-full svg,
+html body #zoom-ui .zoom-drag svg {
+  display: block;
+}
+html body #zoom-ui .zoom-drag + .zoom-north {
+  margin-left: 0;
+}
+html body #zoom-ui .zoom-full {
+  margin-right: var(--sp-1);
+}
+
+/* =====================================================================================================================
+ * Radar: the map is not framed a second time inside the panel
+ * ===================================================================================================================*/
+html body .hx-radar {
+  border-width: 1px;
+  border-radius: var(--r-lg);
+  background: var(--c-surface);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+html body .hx-svg {
+  border: 0;
+  border-radius: var(--r-sm);
+}
+
+/* =====================================================================================================================
+ * Walk-mode action buttons: 48 / 64 circles, flat fill, one icon size, one label size
+ * ===================================================================================================================*/
+html body .hm-act-row {
+  gap: var(--sp-2);
+  align-items: center;
+}
+html body .hm-act-cluster {
+  gap: var(--sp-2);
+}
+html body .hm-act-sub {
+  width: 48px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  border-width: 1px !important;
+  background: var(--c-surface) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28) !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  gap: 3px !important;
+}
+html body .hm-act-main {
+  width: 64px !important;
+  height: 64px !important;
+  min-height: 64px !important;
+  border-width: 1px !important;
+  background: var(--c-surface-2) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32) !important;
+  gap: 3px !important;
+}
+html body .hm-act-main.ready {
+  background: var(--c-accent) !important;
+  color: var(--c-accent-ink) !important;
+  border-color: #fff4d6 !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32), 0 0 0 3px rgba(217, 181, 106, 0.35) !important;
+}
+html body .hm-act-sub i,
+html body .hm-act-main i {
+  display: inline-flex;
+  font-size: 0 !important;
+}
+html body .hm-act-sub .ui-ic {
+  width: 18px;
+  height: 18px;
+}
+html body .hm-act-main .ui-ic {
+  width: 22px;
+  height: 22px;
+}
+html body .hm-act-sub small,
+html body .hm-act-main small {
+  font: 600 var(--fs-1) / 1 "Noto Sans TC", sans-serif !important;
+}
+html body .hm-act-sub[aria-pressed="true"] {
+  background: var(--c-accent) !important;
+  color: var(--c-accent-ink) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28) !important;
+}
+@media (max-width: 800px) {
+  html body .hm-act-sub {
+    width: 44px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+  }
+  html body .hm-act-main {
+    width: 58px !important;
+    height: 58px !important;
+    min-height: 58px !important;
+  }
+}
+
+/* =====================================================================================================================
+ * Harbour panel (Kaohsiung cityscape)
+ * ===================================================================================================================*/
+html body #kh-panel .khp-btn {
+  min-height: var(--h-md) !important;
+  border-radius: var(--r-sm) !important;
+  box-shadow: none !important;
+}
+
+/* =====================================================================================================================
+ * Sidebar groups (#tree): no left stripe or outline on open groups; item rows use a fixed icon column so a wrapped
+ * title lines up under the first line instead of flowing back under the icon
+ * ===================================================================================================================*/
+html body #tree details {
+  border-radius: var(--r-md) !important;
+  box-shadow: none !important;
+  margin-bottom: var(--sp-2) !important;
+}
+html body #tree details[open] > summary,
+html body #tree details.current > summary {
+  background: var(--c-surface) !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+html body #tree summary {
+  min-height: 48px !important;
+  padding: var(--sp-2) var(--sp-3) !important;
+  gap: var(--sp-3) !important;
+  align-items: center !important;
+}
+html body #tree .index {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: var(--r-sm) !important;
+  box-shadow: none !important;
+}
+html body #tree .count {
+  border-radius: 999px !important;
+  padding: 3px 8px !important;
+}
+html body #tree .children {
+  padding: var(--sp-1) var(--sp-2) var(--sp-2) !important;
+  gap: 0 !important;
+}
+html body #tree .children button {
+  display: grid !important;
+  grid-template-columns: 20px minmax(0, 1fr);
+  column-gap: var(--sp-3);
+  align-items: start !important;
+  text-align: left !important;
+  min-height: var(--h-md) !important;
+  padding: 10px var(--sp-2) !important;
+  border: 0 !important;
+  border-radius: var(--r-sm) !important;
+  line-height: 1.45 !important;
+  box-shadow: none !important;
+}
+html body #tree .children button:hover,
+html body #tree .children button.hot {
+  background: var(--c-paper) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+html body #tree .children button .pin-no {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 !important;
+  border-radius: 6px !important;
+  border: 0 !important;
+  line-height: 20px;
+}
+
+/* ==========================================================================
+   第二期 B：地圖標籤＝「房號牌」(港都典藏)
+   Dark emerald plaque, one 1px brass rule, 6px corners, a square brass number/icon tile; no glow, no gradient,
+   no double white outline. Replaces the coral-ringed cream capsules the reference site uses.
+   ========================================================================== */
+:root {
+  --plq-bg: rgba(18, 38, 33, 0.94);
+  --plq-bg-hot: #0e1f1b;
+  --plq-rule: rgba(200, 160, 82, 0.78);
+  --plq-rule-strong: #c8a052;
+  --plq-text: #f6efdf;
+  --plq-sub: #cdbb92;
+  --plq-tile: #c8a052;
+  --plq-tile-ink: #13241f;
+}
+html body .landmark-pin,
+html body .landmark-pin.landmark-pin-hero {
+  gap: var(--sp-2) !important;
+  padding: 3px 10px 3px 3px !important;
+  border-radius: 6px !important;
+  background: var(--plq-bg) !important;
+  border: 1px solid var(--plq-rule) !important;
+  color: var(--plq-text) !important;
+  box-shadow: 0 6px 16px rgba(6, 14, 12, 0.32) !important;
+}
+html body .landmark-pin.landmark-pin-hero {
+  border-color: var(--plq-rule-strong) !important;
+  /* hero landmarks: a second, inset brass rule like an engraved plaque, instead of a red ring and glow */
+  box-shadow: inset 0 0 0 2px var(--plq-bg), inset 0 0 0 3px rgba(200, 160, 82, 0.42), 0 8px 20px rgba(6, 14, 12, 0.36) !important;
+}
+html body .landmark-pin .lm-pin-ico,
+html body .landmark-pin.landmark-pin-hero .lm-pin-ico {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: var(--plq-tile);
+  border: 0;
+  color: var(--plq-tile-ink);
+  box-shadow: none;
+  font-size: 13px;
+}
+html body .landmark-pin .lm-pin-txt b,
+html body .landmark-pin.landmark-pin-hero .lm-pin-txt b {
+  color: var(--plq-text);
+  font-weight: 800;
+  font-size: 12px;
+}
+html body .landmark-pin .lm-pin-txt small,
+html body .landmark-pin.landmark-pin-hero .lm-pin-txt small {
+  color: var(--plq-sub);
+  font-weight: 600;
+  font-size: 10px;
+}
+html body .landmark-pin:hover,
+html body .landmark-pin.hot,
+html body .landmark-pin.sel,
+html body .landmark-pin:focus-visible {
+  background: var(--plq-bg-hot) !important;
+  border-color: var(--plq-rule-strong) !important;
+  color: #fff !important;
+  box-shadow: 0 0 0 2px rgba(200, 160, 82, 0.35), 0 10px 22px rgba(6, 14, 12, 0.42) !important;
+}
+html body .landmark-pin:hover .lm-pin-ico,
+html body .landmark-pin.hot .lm-pin-ico,
+html body .landmark-pin.sel .lm-pin-ico {
+  background: #e2c27a;
+  border: 0;
+}
+/* 高雄城市地景: same plaque, ivory instead of emerald, slate tile — clearly "city", clearly not a department card */
+html body .landmark-pin.landmark-pin-city {
+  background: rgba(246, 240, 226, 0.95) !important;
+  border-color: rgba(61, 88, 102, 0.55) !important;
+  color: #1d2a30 !important;
+}
+html body .landmark-pin.landmark-pin-city .lm-pin-ico {
+  background: #3d5866;
+  color: #f6efdf;
+}
+html body .landmark-pin.landmark-pin-city .lm-pin-txt b {
+  color: #1d2a30;
+}
+html body .landmark-pin.landmark-pin-city .lm-pin-txt small {
+  color: #4d6672;
+}
+html body .landmark-pin.landmark-pin-city:hover,
+html body .landmark-pin.landmark-pin-city:focus-visible {
+  background: #fffaf0 !important;
+  border-color: #3d5866 !important;
+}
+/* item pins (numbered): square brass number tile on the same plaque */
+html body .item-pin:not(.hotel-name-pin) {
+  border-radius: 6px !important;
+  border: 1px solid var(--plq-rule) !important;
+  background: var(--plq-bg) !important;
+  color: var(--plq-text) !important;
+  box-shadow: 0 6px 16px rgba(6, 14, 12, 0.3) !important;
+}
+html body .item-pin:not(.hotel-name-pin) b {
+  border-radius: 4px !important;
+  background: transparent !important;
+  color: var(--plq-tile) !important;
+  box-shadow: inset 0 0 0 1px var(--plq-rule) !important;
+}
+html body .item-pin.sel:not(.hotel-name-pin) {
+  background: var(--plq-tile) !important;
+  color: var(--plq-tile-ink) !important;
+  border-color: var(--plq-tile) !important;
+}
+html body .item-pin.sel:not(.hotel-name-pin) b {
+  color: var(--plq-tile-ink) !important;
+  box-shadow: inset 0 0 0 1px rgba(19, 36, 31, 0.5) !important;
+}
+
+/* 實習島地區牌 (第三期): small engraved plaque at ground level, same family as the room-number plaques */
+html body .region-plaque {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(246, 240, 226, 0.94);
+  border: 1px solid rgba(156, 122, 58, 0.7);
+  color: #2c2a22;
+  font: 700 11px/1.35 "Noto Sans TC", sans-serif;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 3px 8px rgba(6, 14, 12, 0.22);
+}
+
+/* 朝陽鐘樓 敲鐘 row in the landmark card */
+html body .clk-ring-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin: var(--sp-2) 0 var(--sp-3);
+}
+html body .clk-ring {
+  min-height: var(--h-md) !important;
+  padding: 0 var(--sp-4) !important;
+  border-radius: var(--r-sm) !important;
+  border: 1px solid var(--plq-rule-strong) !important;
+  background: var(--plq-bg) !important;
+  color: var(--plq-text) !important;
+  font: 700 var(--fs-4) / 1 "Noto Sans TC", sans-serif !important;
+  cursor: pointer;
+  flex: none;
+}
+html body .clk-ring:hover,
+html body .clk-ring:focus-visible {
+  background: var(--plq-bg-hot) !important;
+}
+html body .clk-ring-row small {
+  color: inherit;
+  opacity: 0.72;
+  font-size: var(--fs-2);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   第四期：Lv、菁英實習護照、每日任務、布告欄 (passport is a light paper surface)
+   ========================================================================== */
+html body .qp-lv {
+  display: inline-block;
+  margin-right: 4px;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: #c8a052;
+  color: #13241f;
+  font: 800 11px/18px "Noto Sans TC", sans-serif;
+  letter-spacing: 0.02em;
+  vertical-align: 1px;
+}
+html body .qp-daily-extra {
+  list-style: none;
+  margin: calc(-1 * var(--sp-2)) 0 var(--sp-4);
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background: rgba(19, 36, 31, 0.08);
+}
+html body .qp-daily-extra li {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: var(--h-md);
+  padding: 0 var(--sp-3);
+  background: #fffdf8;
+  font-size: var(--fs-3);
+}
+html body .qp-daily-extra li b {
+  font-size: var(--fs-2);
+  color: #9c7a3a;
+}
+html body .qp-daily-extra li.done {
+  color: #6b6a62;
+}
+html body .qp-daily-extra li.done span {
+  color: #2f5f52;
+  font-weight: 800;
+}
+html body .qp-intern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+html body .qp-intern-region {
+  border: 1px solid rgba(19, 36, 31, 0.12);
+  border-radius: var(--r-md);
+  background: #fffdf8;
+  overflow: hidden;
+}
+html body .qp-intern-region h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: var(--sp-2) var(--sp-3);
+  border-bottom: 1px solid rgba(19, 36, 31, 0.1);
+  font: 800 var(--fs-4) / 1.3 "Noto Sans TC", sans-serif;
+  letter-spacing: 0.08em;
+}
+html body .qp-intern-region h4 small {
+  color: #9c7a3a;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+html body .qp-intern-region ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+html body .qp-intern-region li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: var(--h-md);
+  padding: 4px var(--sp-3);
+  font-size: var(--fs-3);
+}
+html body .qp-intern-region li + li {
+  border-top: 1px solid rgba(19, 36, 31, 0.06);
+}
+html body .qp-intern-region li.got span:first-child {
+  color: #2f5f52;
+  font-weight: 700;
+}
+html body .qp-intern-done {
+  display: grid;
+  place-items: center;
+  width: var(--h-sm);
+  height: var(--h-sm);
+  border-radius: 50%;
+  border: 1.5px solid #2f5f52;
+  color: #2f5f52;
+  font-weight: 900;
+  transform: rotate(-12deg);
+}
+html body .qp-go.sm,
+html body .qp-ghost.sm {
+  min-height: var(--h-sm) !important;
+  padding: 0 var(--sp-3) !important;
+  border-radius: var(--r-sm) !important;
+  font-size: var(--fs-2) !important;
+  white-space: nowrap;
+}
+html body .qp-ghost.sm {
+  background: transparent !important;
+  border: 1px solid rgba(19, 36, 31, 0.22) !important;
+  color: #13241f !important;
+  cursor: pointer;
+}
+html body .qp-intern-q {
+  margin-bottom: var(--sp-3);
+}
+html body .qp-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-4);
+}
+html body .qp-board > div {
+  padding: var(--sp-3);
+  border: 1px solid rgba(19, 36, 31, 0.12);
+  border-radius: var(--r-md);
+  background: #fffdf8;
+}
+html body .qp-board h4 {
+  margin: 0 0 var(--sp-2);
+  font: 800 var(--fs-3) / 1.3 "Noto Sans TC", sans-serif;
+  letter-spacing: 0.08em;
+}
+html body .qp-board ul {
+  margin: 0;
+  padding-left: 1.1em;
+  display: grid;
+  gap: 6px;
+  font-size: var(--fs-3);
+  line-height: 1.5;
+}
+html body .qp-board-more {
+  display: inline-block;
+  margin-top: var(--sp-2);
+  font-size: var(--fs-2);
+}
+
+/* 鐘聲反應：人物頭上的短句與鐘樓上的節次牌 */
+html body .bell-bubble {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 8px;
+  background: #fffdf6;
+  border: 1px solid rgba(156, 122, 58, 0.55);
+  color: #1d2724;
+  font: 700 11px/1.3 "Noto Sans TC", sans-serif;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 10px rgba(6, 14, 12, 0.22);
+  animation: bell-pop 0.25s ease-out;
+}
+html body .bell-bubble.bell-sign {
+  background: var(--plq-bg);
+  color: var(--plq-text);
+  border-color: var(--plq-rule-strong);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+@keyframes bell-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-30%) scale(0.85);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .bell-bubble {
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   第五期：旅伴多人互動（plaza-games.js）
+   ========================================================================== */
+html body .pg-quiz {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: var(--sp-4);
+  background: rgba(6, 14, 12, 0.48);
+}
+html body .pg-box {
+  width: min(520px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: var(--sp-5);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--c-line);
+  background: var(--c-surface);
+  color: var(--c-text);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.4);
+}
+html body .pg-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--h-sm);
+  gap: var(--sp-3);
+  align-items: start;
+  margin-bottom: var(--sp-3);
+}
+html body .pg-head b {
+  display: block;
+  font-size: var(--fs-5);
+}
+html body .pg-head small,
+html body .pg-prog,
+html body .pg-cat {
+  color: var(--c-text-dim);
+  font-size: var(--fs-2);
+}
+html body .pg-q {
+  margin: var(--sp-3) 0;
+  font-size: var(--fs-4);
+  line-height: 1.6;
+}
+html body .pg-opts {
+  display: grid;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+html body .pg-opt {
+  min-height: var(--h-md) !important;
+  padding: var(--sp-2) var(--sp-3) !important;
+  border-radius: var(--r-sm) !important;
+  border: 1px solid var(--c-line) !important;
+  background: var(--c-surface-2) !important;
+  color: var(--c-text) !important;
+  text-align: left;
+  font-size: var(--fs-3) !important;
+  line-height: 1.45;
+  cursor: pointer;
+}
+html body .pg-opt:hover:not([disabled]) {
+  border-color: var(--c-accent) !important;
+}
+html body .pg-opt.ok {
+  border-color: #5fb38a !important;
+  background: rgba(95, 179, 138, 0.18) !important;
+}
+html body .pg-opt.bad {
+  border-color: var(--c-danger) !important;
+  background: rgba(214, 92, 92, 0.16) !important;
+}
+html body .pg-score {
+  font-size: var(--fs-5);
+  font-weight: 800;
+}
+html body .pg-result {
+  display: grid;
+  gap: var(--sp-2);
+}
+html body .pg-board {
+  margin: 0;
+  padding-left: 1.4em;
+  display: grid;
+  gap: 4px;
+  font-size: var(--fs-3);
+}
+html body .pg-board li {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--sp-3);
+}
+html body .pg-board li.me {
+  color: var(--c-accent);
+  font-weight: 800;
+}
+html body .pg-bell-chip {
+  position: fixed;
+  left: 50%;
+  top: 72px;
+  z-index: 40;
+  transform: translateX(-50%);
+  min-height: var(--h-md) !important;
+  padding: 0 var(--sp-4) !important;
+  border-radius: 999px !important;
+  border: 1px solid var(--plq-rule-strong) !important;
+  background: var(--plq-bg) !important;
+  color: var(--plq-text) !important;
+  font: 700 var(--fs-3) / 1 "Noto Sans TC", sans-serif !important;
+  box-shadow: 0 8px 22px rgba(6, 14, 12, 0.35);
+  cursor: pointer;
+}
+html body .pg-bell-chip[hidden] {
+  display: none !important;
+}
+html body .is-peer-tag.is-mate {
+  box-shadow: 0 0 0 2px #c8a052 !important;
+}
+/* six or more actions (multiplayer): two aligned rows of four equal cells instead of eight squeezed cells */
+html body .is-roster-item.expanded .is-roster-acts:has(> :nth-child(6)) {
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+html body .pg-board {
+  list-style: decimal;
+}
+html body .pg-board li {
+  display: list-item;
+}
+html body .pg-board li > span {
+  display: inline-block;
+  min-width: 60%;
+}
+html body .pg-board li > small {
+  float: right;
+}
+
+
+/* 遊艇碼頭面板：與高雄港灣面板同一套樣式（由 ui.css #kh-panel 複製） */
+#marina-panel {
+  position: fixed;
+  left: 50%;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 40;
+  width: min(560px, calc(100vw - 32px));
+  padding: 12px 14px 14px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(14, 34, 46, 0.94), rgba(18, 52, 66, 0.94));
+  border: 1.5px solid rgba(143, 205, 232, 0.55);
+  box-shadow: 0 14px 38px rgba(4, 16, 24, 0.45);
+  color: #eef8fc;
+  font-family: "Noto Sans TC", "Plus Jakarta Sans", sans-serif;
+  backdrop-filter: blur(8px);
+}
+#marina-panel[hidden] {
+  display: none;
+}
+#marina-panel .khp-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+#marina-panel .khp-ico {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: linear-gradient(135deg, #3a8fb5, #1d5874);
+  border: 1.5px solid #cdeaf7;
+  flex-shrink: 0;
+}
+#marina-panel .khp-title {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+#marina-panel .khp-title b {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+#marina-panel .khp-title small {
+  font-size: 11.5px;
+  color: #a9d6e8;
+}
+#marina-panel .khp-close {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+}
+#marina-panel .khp-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+  gap: 8px;
+}
+#marina-panel .khp-btn {
+  appearance: none;
+  min-height: 42px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(169, 214, 232, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  color: #eef8fc;
+  font: 800 13.5px/1.2 "Noto Sans TC", sans-serif;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+#marina-panel .khp-btn:hover,
+#marina-panel .khp-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #8fcde8;
+  outline: none;
+}
+#marina-panel .khp-btn.is-primary {
+  background: linear-gradient(135deg, #f5d33a, #e5a922);
+  border-color: #f5d33a;
+  color: #1b1a12;
+}
+@media (max-width: 640px) {
+  #marina-panel {
+    bottom: calc(max(12px, env(safe-area-inset-bottom)) + 64px);
+    padding: 10px 12px 12px;
+  }
+  #marina-panel .khp-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* 操控角色時，底部有搖桿與動作鍵：面板移到它們上方 */
+body.hm-driving #marina-panel {
+  bottom: calc(max(18px, env(safe-area-inset-bottom)) + 150px);
+}
+@media (max-width: 640px) {
+  body.hm-driving #marina-panel {
+    bottom: calc(max(12px, env(safe-area-inset-bottom)) + 190px);
+  }
+}
+:where(#marina-panel) button {
+  min-height: 0;
+}
+html body #marina-panel .khp-btn {
+  min-height: var(--h-md) !important;
+  border-radius: var(--r-sm) !important;
+  box-shadow: none !important;
+}
+html body #marina-panel .khp-sub,
+html body #marina-panel .khp-note {
+  margin: 4px 0 8px;
+  font-size: var(--fs-2);
+  line-height: 1.5;
+  opacity: 0.82;
+}
+html body #marina-panel .khp-note {
+  margin: 8px 0 0;
+}
+
+/* ==========================================================================
+   學習路線（協作線改版）：主題色點、側欄分組、島嶼卡片的路線小卡
+   ========================================================================== */
+html body .fl-dot {
+  display: inline-block;
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--rc, #888);
+}
+html body #tree .route-group {
+  margin: 0 0 var(--sp-3);
+  border: 1px solid rgba(19, 36, 31, 0.12);
+  border-radius: var(--r-md);
+  background: #fffdf8;
+  overflow: hidden;
+}
+html body #tree .route-head {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: var(--h-md);
+  padding: 0 var(--sp-3);
+  border-bottom: 1px solid rgba(19, 36, 31, 0.08);
+  box-shadow: inset 0 3px 0 var(--rc);
+}
+html body #tree .route-head b {
+  font-size: var(--fs-4);
+  color: #13241f;
+}
+html body #tree .route-head .count {
+  font-size: var(--fs-2);
+  color: #6b6a62;
+}
+html body #tree .route-show {
+  min-height: var(--h-sm) !important;
+  padding: 0 var(--sp-3) !important;
+  border-radius: var(--r-sm) !important;
+  border: 1px solid var(--rc) !important;
+  background: transparent !important;
+  color: var(--rc) !important;
+  font: 700 var(--fs-2) / 1 "Noto Sans TC", sans-serif !important;
+  cursor: pointer;
+}
+html body #tree .route-group .flow-item {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  min-height: var(--h-md) !important;
+  margin: 0 !important;
+  padding: 6px var(--sp-3) !important;
+  border: 0 !important;
+  border-top: 1px solid rgba(19, 36, 31, 0.06) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  text-align: left;
+  font-size: var(--fs-3) !important;
+  line-height: 1.45;
+  color: #13241f !important;
+}
+html body #tree .route-group .flow-item:hover {
+  background: rgba(19, 36, 31, 0.04) !important;
+}
+html body #tree .route-group .flow-item .count {
+  font-size: var(--fs-1);
+  color: #8a8578;
+  white-space: nowrap;
+}
+html body .flow-chip {
+  display: grid !important;
+  grid-template-columns: 10px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--sp-2);
+  text-align: left;
+}
+html body .flow-chip small {
+  display: block;
+  opacity: 0.7;
+  font-size: var(--fs-1);
+}
+
+/* ==========================================================================
+   旅伴交誼島：公告牆、名牌；站在島上時只留人物名牌與對話（其他島的標籤隱藏）
+   ========================================================================== */
+html body .plaza-board {
+  width: 300px;
+  padding: var(--sp-3);
+  border-radius: 6px;
+  border: 1px solid var(--plq-rule-strong);
+  background: rgba(18, 38, 33, 0.94);
+  color: var(--plq-text);
+  font: 500 12px/1.5 "Noto Sans TC", sans-serif;
+  pointer-events: auto;
+  transform: translateY(-50%);
+  box-shadow: 0 10px 24px rgba(6, 14, 12, 0.35);
+}
+html body .plaza-board[hidden] {
+  display: none;
+}
+html body .plaza-board .pb-head {
+  display: grid;
+  gap: 2px;
+  padding-bottom: var(--sp-2);
+  margin-bottom: var(--sp-2);
+  border-bottom: 1px solid rgba(200, 160, 82, 0.35);
+}
+html body .plaza-board .pb-head b {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+}
+html body .plaza-board .pb-head small {
+  color: var(--plq-sub);
+}
+html body .plaza-board .pb-official {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--sp-2);
+  align-items: start;
+  min-height: 38px;
+}
+html body .plaza-board .pb-kind {
+  padding: 0 6px;
+  border-radius: 4px;
+  background: var(--plq-tile);
+  color: var(--plq-tile-ink);
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+html body .plaza-board .pb-notices {
+  list-style: none;
+  margin: var(--sp-2) 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+html body .plaza-board .pb-notices li {
+  padding: 2px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+html body .plaza-board .pb-empty {
+  color: var(--plq-sub);
+}
+html body .plaza-board .pb-post {
+  width: 100%;
+  min-height: var(--h-sm) !important;
+  border-radius: var(--r-sm) !important;
+  border: 0 !important;
+  background: var(--plq-tile) !important;
+  color: var(--plq-tile-ink) !important;
+  font: 800 12px/1 "Noto Sans TC", sans-serif !important;
+  cursor: pointer;
+}
+html body .plaza-board .pb-post[hidden] {
+  display: none !important;
+}
+html body.on-plaza-island .item-pin,
+html body.on-plaza-island .landmark-pin,
+html body.on-plaza-island .island-label:not(.plaza-island-label),
+html body.on-plaza-island .region-plaque,
+html body.on-plaza-island .hotel-name-pin {
+  visibility: hidden !important;
+}
+
+/* ---------- 合照分享（photo-share.js） ---------- */
+#photo-share.ps-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: grid;
+  place-items: center;
+  padding: var(--sp-4);
+  background: rgba(6, 16, 14, 0.62);
+}
+#photo-share[hidden] {
+  display: none;
+}
+#photo-share .ps-box {
+  width: min(980px, 100%);
+  max-height: calc(100dvh - 32px);
+  display: flex;
+  flex-direction: column;
+  background: var(--c-surface);
+  color: var(--c-text);
+  border: 1px solid var(--c-line-strong);
+  border-radius: var(--r-lg);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+#photo-share .ps-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--c-line);
+}
+#photo-share h2 {
+  margin: 0;
+  font-size: var(--fs-5);
+  font-weight: 700;
+}
+#photo-share .ps-close {
+  width: var(--h-sm);
+  height: var(--h-sm);
+  min-height: 0;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--c-line);
+  background: var(--c-surface-2);
+  color: var(--c-text);
+  font-size: 20px;
+  line-height: 1;
+}
+#photo-share .ps-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: var(--sp-4);
+  padding: var(--sp-4);
+  overflow: auto;
+}
+#photo-share .ps-stage {
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  background: var(--c-surface-2);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+}
+#photo-share .ps-preview {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100dvh - 160px);
+  width: auto;
+  height: auto;
+  border-radius: var(--r-sm);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+#photo-share .ps-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  min-width: 0;
+}
+#photo-share .ps-label {
+  font-size: var(--fs-2);
+  color: var(--c-text-dim);
+  margin-top: var(--sp-1);
+}
+#photo-share .ps-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-1);
+}
+#photo-share .ps-chip {
+  height: var(--h-sm);
+  min-height: 0;
+  padding: 0 var(--sp-3);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--c-line);
+  background: var(--c-surface-2);
+  color: var(--c-text);
+  font-size: var(--fs-3);
+}
+#photo-share .ps-chip[aria-checked="true"] {
+  background: var(--c-accent);
+  border-color: var(--c-accent);
+  color: var(--c-accent-ink);
+  font-weight: 700;
+}
+#photo-share .ps-place,
+#photo-share .ps-caption {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--c-line);
+  background: var(--c-surface-2);
+  color: var(--c-text);
+  font: inherit;
+  font-size: var(--fs-3);
+  padding: var(--sp-2);
+}
+#photo-share .ps-place {
+  height: var(--h-sm);
+}
+#photo-share .ps-caption {
+  resize: vertical;
+  line-height: 1.5;
+}
+#photo-share .ps-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2);
+  margin-top: var(--sp-2);
+}
+#photo-share .ps-btn {
+  height: var(--h-md);
+  min-height: 0;
+  padding: 0 var(--sp-2);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--c-line-strong);
+  background: var(--c-surface-3);
+  color: var(--c-text);
+  font-size: var(--fs-4);
+}
+#photo-share .ps-btn.is-primary {
+  grid-column: 1 / -1;
+  background: var(--c-accent);
+  border-color: var(--c-accent);
+  color: var(--c-accent-ink);
+  font-weight: 700;
+}
+#photo-share .ps-msg {
+  margin: 0;
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-sm);
+  background: var(--c-surface-3);
+  font-size: var(--fs-3);
+  line-height: 1.5;
+}
+#photo-share .ps-note {
+  margin: 0;
+  font-size: var(--fs-2);
+  color: var(--c-text-dim);
+  line-height: 1.5;
+}
+@media (max-width: 760px) {
+  #photo-share.ps-overlay {
+    padding: 0;
+    place-items: stretch;
+  }
+  #photo-share .ps-box {
+    max-height: 100dvh;
+    border-radius: 0;
+  }
+  #photo-share .ps-body {
+    grid-template-columns: 1fr;
+  }
+  #photo-share .ps-body {
+    display: flex;
+    flex-direction: column;
+  }
+  #photo-share .ps-stage {
+    flex: none;
+  }
+  #photo-share .ps-preview {
+    max-height: 46dvh;
+  }
+}
+.ps-flash {
+  position: fixed;
+  inset: 0;
+  z-index: 9100;
+  background: #fff;
+  pointer-events: none;
+  animation: ps-flash 0.45s ease-out forwards;
+}
+@keyframes ps-flash {
+  from { opacity: 0.85; }
+  to { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ps-flash { display: none; }
+}

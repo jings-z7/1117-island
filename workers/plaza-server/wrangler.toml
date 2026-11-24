@@ -1,0 +1,12 @@
+name = "htl-island-plaza"
+main = "worker.js"
+compatibility_date = "2025-02-01"
+
+[durable_objects]
+bindings = [
+  { name = "PLAZA_ROOM", class_name = "PlazaRoom" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["PlazaRoom"]

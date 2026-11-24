@@ -1,0 +1,12 @@
+# Keeps the commit-SHA-pinned GitHub Actions in .github/workflows/ up to date
+# (ISO/IEC 27001:2022 Annex A 8.8 management of technical vulnerabilities).
+# Dependabot opens a PR when a pinned action has a new release; CI must pass before merging.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: ci
