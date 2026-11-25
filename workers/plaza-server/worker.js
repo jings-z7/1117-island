@@ -66,10 +66,12 @@ const KEY_RE = /^[A-Za-z0-9_-]{16,64}$/;
 const TOKEN_RE = /^[a-z][a-z0-9_-]{0,15}$/i; // emote 名稱等短代碼
 
 const DEFAULT_ALLOWED_ORIGINS = [
-  "https://nkuht-htl.drmjhsu.com", // 正式網址（自訂網域）
-  "https://htl-island-navigator.pages.dev", // 舊網址（仍可使用）
+  "https://1117-island.mandy073334.workers.dev", // 高雄觀光島嶼正式端點
+  "https://nkuht-htl.drmjhsu.com", // 原始正式網址
+  "https://htl-island-navigator.pages.dev", // 原始舊網址
   /^https:\/\/[a-z0-9-]+\.htl-island-navigator\.pages\.dev$/, // Cloudflare Pages 預覽部署
-  /^http:\/\/(localhost|127\.0\.0\.1)(:\d{1,5})?$/, // 本機開發（scripts/serve.sh）
+  /^https:\/\/[a-z0-9-]+\.mandy073334\.workers\.dev$/, // 新 Workers 預覽部署
+  /^http:\/\/(localhost|127\.0\.0\.1)(:\d{1,5})?$/, // 本機開發
 ];
 
 const CORS_HEADERS = {
@@ -904,3 +906,4 @@ export class PlazaRoom {
     } catch {}
   }
 }
+
